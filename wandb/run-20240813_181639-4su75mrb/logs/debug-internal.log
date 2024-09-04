@@ -1,0 +1,345 @@
+2024-08-13 18:16:39,184 INFO    StreamThr :8812 [internal.py:wandb_internal():85] W&B internal server running at pid: 8812, started at: 2024-08-13 18:16:39.183790
+2024-08-13 18:16:39,185 DEBUG   HandlerThread:8812 [handler.py:handle_request():158] handle_request: status
+2024-08-13 18:16:39,189 INFO    WriterThread:8812 [datastore.py:open_for_write():87] open: D:\pycharm_projects\H_SEG\wandb\run-20240813_181639-4su75mrb\run-4su75mrb.wandb
+2024-08-13 18:16:39,190 DEBUG   SenderThread:8812 [sender.py:send():379] send: header
+2024-08-13 18:16:39,190 DEBUG   SenderThread:8812 [sender.py:send():379] send: run
+2024-08-13 18:16:39,679 INFO    SenderThread:8812 [dir_watcher.py:__init__():211] watching files in: D:\pycharm_projects\H_SEG\wandb\run-20240813_181639-4su75mrb\files
+2024-08-13 18:16:39,680 INFO    SenderThread:8812 [sender.py:_start_run_threads():1188] run started: 4su75mrb with start time 1723565799.185784
+2024-08-13 18:16:39,686 DEBUG   HandlerThread:8812 [handler.py:handle_request():158] handle_request: check_version
+2024-08-13 18:16:39,686 DEBUG   SenderThread:8812 [sender.py:send_request():406] send_request: check_version
+2024-08-13 18:16:39,945 DEBUG   HandlerThread:8812 [handler.py:handle_request():158] handle_request: run_start
+2024-08-13 18:16:39,959 DEBUG   HandlerThread:8812 [system_info.py:__init__():26] System info init
+2024-08-13 18:16:39,959 DEBUG   HandlerThread:8812 [system_info.py:__init__():41] System info init done
+2024-08-13 18:16:39,960 INFO    HandlerThread:8812 [system_monitor.py:start():194] Starting system monitor
+2024-08-13 18:16:39,960 INFO    SystemMonitor:8812 [system_monitor.py:_start():158] Starting system asset monitoring threads
+2024-08-13 18:16:39,960 INFO    HandlerThread:8812 [system_monitor.py:probe():214] Collecting system info
+2024-08-13 18:16:39,964 INFO    SystemMonitor:8812 [interfaces.py:start():188] Started cpu monitoring
+2024-08-13 18:16:39,967 DEBUG   HandlerThread:8812 [system_info.py:probe():152] Probing system
+2024-08-13 18:16:39,968 INFO    SystemMonitor:8812 [interfaces.py:start():188] Started disk monitoring
+2024-08-13 18:16:39,975 INFO    SystemMonitor:8812 [interfaces.py:start():188] Started memory monitoring
+2024-08-13 18:16:39,982 INFO    SystemMonitor:8812 [interfaces.py:start():188] Started network monitoring
+2024-08-13 18:16:39,988 DEBUG   HandlerThread:8812 [gitlib.py:_init_repo():56] git repository is invalid
+2024-08-13 18:16:39,988 DEBUG   HandlerThread:8812 [system_info.py:probe():200] Probing system done
+2024-08-13 18:16:39,989 DEBUG   HandlerThread:8812 [system_monitor.py:probe():223] {'os': 'Windows-10-10.0.19045-SP0', 'python': '3.12.2', 'heartbeatAt': '2024-08-13T16:16:39.968733', 'startedAt': '2024-08-13T16:16:39.161847', 'docker': None, 'cuda': None, 'args': (), 'state': 'running', 'program': 'D:\\pycharm_projects\\H_SEG\\main.py', 'codePathLocal': 'main.py', 'codePath': 'main.py', 'host': 'DESKTOP-JPUU276', 'username': 'Piotr', 'executable': 'D:\\pycharm_projects\\H_SEG\\.venv\\Scripts\\python.exe', 'cpu_count': 4, 'cpu_count_logical': 8, 'cpu_freq': {'current': 1600.0, 'min': 0.0, 'max': 1800.0}, 'cpu_freq_per_core': [{'current': 1600.0, 'min': 0.0, 'max': 1800.0}], 'disk': {'/': {'total': 931.5117149353027, 'used': 257.5689125061035}}, 'memory': {'total': 15.899627685546875}}
+2024-08-13 18:16:39,989 INFO    HandlerThread:8812 [system_monitor.py:probe():224] Finished collecting system info
+2024-08-13 18:16:39,989 INFO    HandlerThread:8812 [system_monitor.py:probe():227] Publishing system info
+2024-08-13 18:16:39,990 INFO    HandlerThread:8812 [system_monitor.py:probe():229] Finished publishing system info
+2024-08-13 18:16:40,018 DEBUG   SenderThread:8812 [sender.py:send():379] send: files
+2024-08-13 18:16:40,018 INFO    SenderThread:8812 [sender.py:_save_file():1454] saving file wandb-metadata.json with policy now
+2024-08-13 18:16:40,693 INFO    Thread-16 :8812 [dir_watcher.py:_on_file_created():271] file/dir created: D:\pycharm_projects\H_SEG\wandb\run-20240813_181639-4su75mrb\files\wandb-metadata.json
+2024-08-13 18:16:40,707 INFO    wandb-upload_0:8812 [upload_job.py:push():130] Uploaded file C:\Users\Piotr\AppData\Local\Temp\tmpzuuxvpzxwandb\phwo8yqk-wandb-metadata.json
+2024-08-13 18:16:40,844 DEBUG   HandlerThread:8812 [handler.py:handle_request():158] handle_request: python_packages
+2024-08-13 18:16:40,845 DEBUG   SenderThread:8812 [sender.py:send_request():406] send_request: python_packages
+2024-08-13 18:16:40,845 DEBUG   HandlerThread:8812 [handler.py:handle_request():158] handle_request: stop_status
+2024-08-13 18:16:40,846 DEBUG   SenderThread:8812 [sender.py:send_request():406] send_request: stop_status
+2024-08-13 18:16:40,848 DEBUG   HandlerThread:8812 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 18:16:41,059 DEBUG   SenderThread:8812 [sender.py:send():379] send: telemetry
+2024-08-13 18:16:41,059 DEBUG   SenderThread:8812 [sender.py:send():379] send: telemetry
+2024-08-13 18:16:41,059 DEBUG   SenderThread:8812 [sender.py:send():379] send: run
+2024-08-13 18:16:41,227 INFO    SenderThread:8812 [sender.py:send_run():1035] updated run: 4su75mrb
+2024-08-13 18:16:41,701 INFO    Thread-16 :8812 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\pycharm_projects\H_SEG\wandb\run-20240813_181639-4su75mrb\files\config.yaml
+2024-08-13 18:16:41,701 INFO    Thread-16 :8812 [dir_watcher.py:_on_file_created():271] file/dir created: D:\pycharm_projects\H_SEG\wandb\run-20240813_181639-4su75mrb\files\output.log
+2024-08-13 18:16:41,701 INFO    Thread-16 :8812 [dir_watcher.py:_on_file_created():271] file/dir created: D:\pycharm_projects\H_SEG\wandb\run-20240813_181639-4su75mrb\files\requirements.txt
+2024-08-13 18:16:41,857 DEBUG   HandlerThread:8812 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 18:16:42,859 DEBUG   HandlerThread:8812 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 18:16:43,717 INFO    Thread-16 :8812 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\pycharm_projects\H_SEG\wandb\run-20240813_181639-4su75mrb\files\output.log
+2024-08-13 18:16:43,860 DEBUG   HandlerThread:8812 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 18:16:44,273 DEBUG   HandlerThread:8812 [handler.py:handle_request():158] handle_request: status_report
+2024-08-13 18:16:44,862 DEBUG   HandlerThread:8812 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 18:16:45,875 DEBUG   HandlerThread:8812 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 18:16:46,876 DEBUG   HandlerThread:8812 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 18:16:47,888 DEBUG   HandlerThread:8812 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 18:16:48,904 DEBUG   HandlerThread:8812 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 18:16:49,870 DEBUG   HandlerThread:8812 [handler.py:handle_request():158] handle_request: status_report
+2024-08-13 18:16:49,918 DEBUG   HandlerThread:8812 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 18:16:50,922 DEBUG   HandlerThread:8812 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 18:16:51,924 DEBUG   HandlerThread:8812 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 18:16:52,935 DEBUG   HandlerThread:8812 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 18:16:53,948 DEBUG   HandlerThread:8812 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 18:16:54,898 DEBUG   HandlerThread:8812 [handler.py:handle_request():158] handle_request: status_report
+2024-08-13 18:16:54,962 DEBUG   HandlerThread:8812 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 18:16:55,853 DEBUG   HandlerThread:8812 [handler.py:handle_request():158] handle_request: stop_status
+2024-08-13 18:16:55,853 DEBUG   SenderThread:8812 [sender.py:send_request():406] send_request: stop_status
+2024-08-13 18:16:55,964 DEBUG   HandlerThread:8812 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 18:16:56,981 DEBUG   HandlerThread:8812 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 18:16:57,982 DEBUG   HandlerThread:8812 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 18:16:58,996 DEBUG   HandlerThread:8812 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 18:17:00,012 DEBUG   HandlerThread:8812 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 18:17:00,139 DEBUG   HandlerThread:8812 [handler.py:handle_request():158] handle_request: status_report
+2024-08-13 18:17:01,026 DEBUG   HandlerThread:8812 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 18:17:02,027 DEBUG   HandlerThread:8812 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 18:17:03,031 DEBUG   HandlerThread:8812 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 18:17:04,034 DEBUG   HandlerThread:8812 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 18:17:05,040 DEBUG   HandlerThread:8812 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 18:17:05,899 DEBUG   HandlerThread:8812 [handler.py:handle_request():158] handle_request: status_report
+2024-08-13 18:17:06,042 DEBUG   HandlerThread:8812 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 18:17:07,044 DEBUG   HandlerThread:8812 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 18:17:08,049 DEBUG   HandlerThread:8812 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 18:17:09,051 DEBUG   HandlerThread:8812 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 18:17:10,054 DEBUG   HandlerThread:8812 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 18:17:10,865 DEBUG   HandlerThread:8812 [handler.py:handle_request():158] handle_request: stop_status
+2024-08-13 18:17:10,865 DEBUG   SenderThread:8812 [sender.py:send_request():406] send_request: stop_status
+2024-08-13 18:17:11,056 DEBUG   HandlerThread:8812 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 18:17:11,109 DEBUG   HandlerThread:8812 [handler.py:handle_request():158] handle_request: status_report
+2024-08-13 18:17:11,898 INFO    Thread-16 :8812 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\pycharm_projects\H_SEG\wandb\run-20240813_181639-4su75mrb\files\config.yaml
+2024-08-13 18:17:12,073 DEBUG   HandlerThread:8812 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 18:17:13,074 DEBUG   HandlerThread:8812 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 18:17:14,084 DEBUG   HandlerThread:8812 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 18:17:15,094 DEBUG   HandlerThread:8812 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 18:17:16,096 DEBUG   HandlerThread:8812 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 18:17:16,907 DEBUG   HandlerThread:8812 [handler.py:handle_request():158] handle_request: status_report
+2024-08-13 18:17:17,098 DEBUG   HandlerThread:8812 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 18:17:18,111 DEBUG   HandlerThread:8812 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 18:17:19,113 DEBUG   HandlerThread:8812 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 18:17:20,122 DEBUG   HandlerThread:8812 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 18:17:21,138 DEBUG   HandlerThread:8812 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 18:17:21,917 DEBUG   HandlerThread:8812 [handler.py:handle_request():158] handle_request: status_report
+2024-08-13 18:17:22,140 DEBUG   HandlerThread:8812 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 18:17:23,141 DEBUG   HandlerThread:8812 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 18:17:24,143 DEBUG   HandlerThread:8812 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 18:17:25,157 DEBUG   HandlerThread:8812 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 18:17:25,874 DEBUG   HandlerThread:8812 [handler.py:handle_request():158] handle_request: stop_status
+2024-08-13 18:17:25,875 DEBUG   SenderThread:8812 [sender.py:send_request():406] send_request: stop_status
+2024-08-13 18:17:26,160 DEBUG   HandlerThread:8812 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 18:17:27,129 DEBUG   HandlerThread:8812 [handler.py:handle_request():158] handle_request: status_report
+2024-08-13 18:17:27,177 DEBUG   HandlerThread:8812 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 18:17:28,179 DEBUG   HandlerThread:8812 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 18:17:29,181 DEBUG   HandlerThread:8812 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 18:17:30,196 DEBUG   HandlerThread:8812 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 18:17:31,210 DEBUG   HandlerThread:8812 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 18:17:32,209 DEBUG   HandlerThread:8812 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 18:17:32,956 DEBUG   HandlerThread:8812 [handler.py:handle_request():158] handle_request: status_report
+2024-08-13 18:17:33,212 DEBUG   HandlerThread:8812 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 18:17:34,214 DEBUG   HandlerThread:8812 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 18:17:35,217 DEBUG   HandlerThread:8812 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 18:17:36,232 DEBUG   HandlerThread:8812 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 18:17:37,245 DEBUG   HandlerThread:8812 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 18:17:38,250 DEBUG   HandlerThread:8812 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 18:17:38,952 DEBUG   HandlerThread:8812 [handler.py:handle_request():158] handle_request: status_report
+2024-08-13 18:17:39,255 DEBUG   HandlerThread:8812 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 18:17:39,985 DEBUG   SystemMonitor:8812 [system_monitor.py:_start():172] Starting system metrics aggregation loop
+2024-08-13 18:17:39,985 DEBUG   SenderThread:8812 [sender.py:send():379] send: stats
+2024-08-13 18:17:40,257 DEBUG   HandlerThread:8812 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 18:17:40,877 DEBUG   HandlerThread:8812 [handler.py:handle_request():158] handle_request: stop_status
+2024-08-13 18:17:40,877 DEBUG   SenderThread:8812 [sender.py:send_request():406] send_request: stop_status
+2024-08-13 18:17:41,258 DEBUG   HandlerThread:8812 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 18:17:42,273 DEBUG   HandlerThread:8812 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 18:17:43,277 DEBUG   HandlerThread:8812 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 18:17:44,260 DEBUG   HandlerThread:8812 [handler.py:handle_request():158] handle_request: status_report
+2024-08-13 18:17:44,292 DEBUG   HandlerThread:8812 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 18:17:45,308 DEBUG   HandlerThread:8812 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 18:17:46,323 DEBUG   HandlerThread:8812 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 18:17:47,328 DEBUG   HandlerThread:8812 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 18:17:48,342 DEBUG   HandlerThread:8812 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 18:17:49,352 DEBUG   HandlerThread:8812 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 18:17:49,958 DEBUG   HandlerThread:8812 [handler.py:handle_request():158] handle_request: status_report
+2024-08-13 18:17:50,354 DEBUG   HandlerThread:8812 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 18:17:51,357 DEBUG   HandlerThread:8812 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 18:17:52,358 DEBUG   HandlerThread:8812 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 18:17:53,359 DEBUG   HandlerThread:8812 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 18:17:54,363 DEBUG   HandlerThread:8812 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 18:17:55,377 DEBUG   HandlerThread:8812 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 18:17:55,884 DEBUG   HandlerThread:8812 [handler.py:handle_request():158] handle_request: stop_status
+2024-08-13 18:17:55,884 DEBUG   SenderThread:8812 [sender.py:send_request():406] send_request: stop_status
+2024-08-13 18:17:56,136 DEBUG   HandlerThread:8812 [handler.py:handle_request():158] handle_request: status_report
+2024-08-13 18:17:56,378 DEBUG   HandlerThread:8812 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 18:17:57,382 DEBUG   HandlerThread:8812 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 18:17:58,380 DEBUG   HandlerThread:8812 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 18:17:59,382 DEBUG   HandlerThread:8812 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 18:18:00,240 INFO    Thread-16 :8812 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\pycharm_projects\H_SEG\wandb\run-20240813_181639-4su75mrb\files\output.log
+2024-08-13 18:18:00,382 DEBUG   HandlerThread:8812 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 18:18:01,384 DEBUG   HandlerThread:8812 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 18:18:01,959 DEBUG   HandlerThread:8812 [handler.py:handle_request():158] handle_request: status_report
+2024-08-13 18:18:02,389 DEBUG   HandlerThread:8812 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 18:18:03,390 DEBUG   HandlerThread:8812 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 18:18:04,395 DEBUG   HandlerThread:8812 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 18:18:05,400 DEBUG   HandlerThread:8812 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 18:18:06,402 DEBUG   HandlerThread:8812 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 18:18:07,415 DEBUG   HandlerThread:8812 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 18:18:07,958 DEBUG   HandlerThread:8812 [handler.py:handle_request():158] handle_request: status_report
+2024-08-13 18:18:08,430 DEBUG   HandlerThread:8812 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 18:18:09,433 DEBUG   HandlerThread:8812 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 18:18:09,992 DEBUG   SenderThread:8812 [sender.py:send():379] send: stats
+2024-08-13 18:18:10,438 DEBUG   HandlerThread:8812 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 18:18:10,899 DEBUG   HandlerThread:8812 [handler.py:handle_request():158] handle_request: stop_status
+2024-08-13 18:18:10,899 DEBUG   SenderThread:8812 [sender.py:send_request():406] send_request: stop_status
+2024-08-13 18:18:11,440 DEBUG   HandlerThread:8812 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 18:18:12,444 DEBUG   HandlerThread:8812 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 18:18:13,160 DEBUG   HandlerThread:8812 [handler.py:handle_request():158] handle_request: status_report
+2024-08-13 18:18:13,445 DEBUG   HandlerThread:8812 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 18:18:14,450 DEBUG   HandlerThread:8812 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 18:18:15,455 DEBUG   HandlerThread:8812 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 18:18:16,457 DEBUG   HandlerThread:8812 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 18:18:17,458 DEBUG   HandlerThread:8812 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 18:18:18,474 DEBUG   HandlerThread:8812 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 18:18:18,763 DEBUG   HandlerThread:8812 [handler.py:handle_request():158] handle_request: status_report
+2024-08-13 18:18:19,331 INFO    Thread-16 :8812 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\pycharm_projects\H_SEG\wandb\run-20240813_181639-4su75mrb\files\output.log
+2024-08-13 18:18:19,489 DEBUG   HandlerThread:8812 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 18:18:20,491 DEBUG   HandlerThread:8812 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 18:18:21,489 DEBUG   HandlerThread:8812 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 18:18:22,497 DEBUG   HandlerThread:8812 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 18:18:23,500 DEBUG   HandlerThread:8812 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 18:18:23,993 DEBUG   HandlerThread:8812 [handler.py:handle_request():158] handle_request: status_report
+2024-08-13 18:18:24,521 DEBUG   HandlerThread:8812 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 18:18:25,557 DEBUG   HandlerThread:8812 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 18:18:25,913 DEBUG   HandlerThread:8812 [handler.py:handle_request():158] handle_request: stop_status
+2024-08-13 18:18:25,913 DEBUG   SenderThread:8812 [sender.py:send_request():406] send_request: stop_status
+2024-08-13 18:18:26,570 DEBUG   HandlerThread:8812 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 18:18:27,551 DEBUG   HandlerThread:8812 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 18:18:28,564 DEBUG   HandlerThread:8812 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 18:18:29,189 DEBUG   HandlerThread:8812 [handler.py:handle_request():158] handle_request: status_report
+2024-08-13 18:18:29,663 DEBUG   HandlerThread:8812 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 18:18:30,890 DEBUG   HandlerThread:8812 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 18:18:31,896 DEBUG   HandlerThread:8812 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 18:18:32,911 DEBUG   HandlerThread:8812 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 18:18:33,912 DEBUG   HandlerThread:8812 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 18:18:34,916 DEBUG   HandlerThread:8812 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 18:18:35,028 DEBUG   HandlerThread:8812 [handler.py:handle_request():158] handle_request: status_report
+2024-08-13 18:18:35,918 DEBUG   HandlerThread:8812 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 18:18:36,924 DEBUG   HandlerThread:8812 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 18:18:37,930 DEBUG   HandlerThread:8812 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 18:18:39,002 DEBUG   HandlerThread:8812 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 18:18:39,968 DEBUG   HandlerThread:8812 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 18:18:39,999 DEBUG   SenderThread:8812 [sender.py:send():379] send: stats
+2024-08-13 18:18:41,001 DEBUG   HandlerThread:8812 [handler.py:handle_request():158] handle_request: status_report
+2024-08-13 18:18:41,076 DEBUG   HandlerThread:8812 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 18:18:41,076 DEBUG   HandlerThread:8812 [handler.py:handle_request():158] handle_request: stop_status
+2024-08-13 18:18:41,076 DEBUG   SenderThread:8812 [sender.py:send_request():406] send_request: stop_status
+2024-08-13 18:18:42,132 DEBUG   HandlerThread:8812 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 18:18:42,952 DEBUG   SenderThread:8812 [sender.py:send():379] send: exit
+2024-08-13 18:18:42,952 INFO    SenderThread:8812 [sender.py:send_exit():586] handling exit code: 1
+2024-08-13 18:18:42,952 INFO    SenderThread:8812 [sender.py:send_exit():588] handling runtime: 123
+2024-08-13 18:18:42,963 INFO    SenderThread:8812 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-08-13 18:18:42,964 INFO    SenderThread:8812 [sender.py:send_exit():594] send defer
+2024-08-13 18:18:42,964 DEBUG   HandlerThread:8812 [handler.py:handle_request():158] handle_request: defer
+2024-08-13 18:18:42,964 INFO    HandlerThread:8812 [handler.py:handle_request_defer():184] handle defer: 0
+2024-08-13 18:18:42,965 DEBUG   SenderThread:8812 [sender.py:send_request():406] send_request: defer
+2024-08-13 18:18:42,965 INFO    SenderThread:8812 [sender.py:send_request_defer():610] handle sender defer: 0
+2024-08-13 18:18:42,965 INFO    SenderThread:8812 [sender.py:transition_state():614] send defer: 1
+2024-08-13 18:18:42,965 DEBUG   HandlerThread:8812 [handler.py:handle_request():158] handle_request: defer
+2024-08-13 18:18:42,965 INFO    HandlerThread:8812 [handler.py:handle_request_defer():184] handle defer: 1
+2024-08-13 18:18:42,965 DEBUG   SenderThread:8812 [sender.py:send_request():406] send_request: defer
+2024-08-13 18:18:42,965 INFO    SenderThread:8812 [sender.py:send_request_defer():610] handle sender defer: 1
+2024-08-13 18:18:42,965 INFO    SenderThread:8812 [sender.py:transition_state():614] send defer: 2
+2024-08-13 18:18:42,966 DEBUG   HandlerThread:8812 [handler.py:handle_request():158] handle_request: defer
+2024-08-13 18:18:42,966 INFO    HandlerThread:8812 [handler.py:handle_request_defer():184] handle defer: 2
+2024-08-13 18:18:42,966 INFO    HandlerThread:8812 [system_monitor.py:finish():203] Stopping system monitor
+2024-08-13 18:18:42,966 DEBUG   SystemMonitor:8812 [system_monitor.py:_start():179] Finished system metrics aggregation loop
+2024-08-13 18:18:42,966 DEBUG   SystemMonitor:8812 [system_monitor.py:_start():183] Publishing last batch of metrics
+2024-08-13 18:18:42,967 INFO    HandlerThread:8812 [interfaces.py:finish():200] Joined cpu monitor
+2024-08-13 18:18:42,967 INFO    HandlerThread:8812 [interfaces.py:finish():200] Joined disk monitor
+2024-08-13 18:18:42,967 INFO    HandlerThread:8812 [interfaces.py:finish():200] Joined memory monitor
+2024-08-13 18:18:42,967 INFO    HandlerThread:8812 [interfaces.py:finish():200] Joined network monitor
+2024-08-13 18:18:42,967 DEBUG   SenderThread:8812 [sender.py:send_request():406] send_request: defer
+2024-08-13 18:18:42,968 INFO    SenderThread:8812 [sender.py:send_request_defer():610] handle sender defer: 2
+2024-08-13 18:18:42,968 INFO    SenderThread:8812 [sender.py:transition_state():614] send defer: 3
+2024-08-13 18:18:42,968 DEBUG   SenderThread:8812 [sender.py:send():379] send: stats
+2024-08-13 18:18:42,968 DEBUG   HandlerThread:8812 [handler.py:handle_request():158] handle_request: defer
+2024-08-13 18:18:42,968 INFO    HandlerThread:8812 [handler.py:handle_request_defer():184] handle defer: 3
+2024-08-13 18:18:42,968 DEBUG   SenderThread:8812 [sender.py:send_request():406] send_request: defer
+2024-08-13 18:18:42,969 INFO    SenderThread:8812 [sender.py:send_request_defer():610] handle sender defer: 3
+2024-08-13 18:18:42,969 INFO    SenderThread:8812 [sender.py:transition_state():614] send defer: 4
+2024-08-13 18:18:42,969 DEBUG   HandlerThread:8812 [handler.py:handle_request():158] handle_request: defer
+2024-08-13 18:18:42,969 INFO    HandlerThread:8812 [handler.py:handle_request_defer():184] handle defer: 4
+2024-08-13 18:18:42,969 DEBUG   SenderThread:8812 [sender.py:send_request():406] send_request: defer
+2024-08-13 18:18:42,969 INFO    SenderThread:8812 [sender.py:send_request_defer():610] handle sender defer: 4
+2024-08-13 18:18:42,969 INFO    SenderThread:8812 [sender.py:transition_state():614] send defer: 5
+2024-08-13 18:18:42,969 DEBUG   HandlerThread:8812 [handler.py:handle_request():158] handle_request: defer
+2024-08-13 18:18:42,970 INFO    HandlerThread:8812 [handler.py:handle_request_defer():184] handle defer: 5
+2024-08-13 18:18:42,970 DEBUG   SenderThread:8812 [sender.py:send():379] send: summary
+2024-08-13 18:18:42,971 INFO    SenderThread:8812 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-08-13 18:18:42,971 DEBUG   SenderThread:8812 [sender.py:send_request():406] send_request: defer
+2024-08-13 18:18:42,971 INFO    SenderThread:8812 [sender.py:send_request_defer():610] handle sender defer: 5
+2024-08-13 18:18:42,972 INFO    SenderThread:8812 [sender.py:transition_state():614] send defer: 6
+2024-08-13 18:18:42,972 DEBUG   HandlerThread:8812 [handler.py:handle_request():158] handle_request: defer
+2024-08-13 18:18:42,972 INFO    HandlerThread:8812 [handler.py:handle_request_defer():184] handle defer: 6
+2024-08-13 18:18:42,972 DEBUG   SenderThread:8812 [sender.py:send_request():406] send_request: defer
+2024-08-13 18:18:42,972 INFO    SenderThread:8812 [sender.py:send_request_defer():610] handle sender defer: 6
+2024-08-13 18:18:42,972 INFO    SenderThread:8812 [sender.py:transition_state():614] send defer: 7
+2024-08-13 18:18:42,972 DEBUG   HandlerThread:8812 [handler.py:handle_request():158] handle_request: status_report
+2024-08-13 18:18:42,972 DEBUG   HandlerThread:8812 [handler.py:handle_request():158] handle_request: defer
+2024-08-13 18:18:42,973 INFO    HandlerThread:8812 [handler.py:handle_request_defer():184] handle defer: 7
+2024-08-13 18:18:42,973 DEBUG   SenderThread:8812 [sender.py:send_request():406] send_request: defer
+2024-08-13 18:18:42,973 INFO    SenderThread:8812 [sender.py:send_request_defer():610] handle sender defer: 7
+2024-08-13 18:18:43,539 INFO    Thread-16 :8812 [dir_watcher.py:_on_file_created():271] file/dir created: D:\pycharm_projects\H_SEG\wandb\run-20240813_181639-4su75mrb\files\wandb-summary.json
+2024-08-13 18:18:43,964 DEBUG   HandlerThread:8812 [handler.py:handle_request():158] handle_request: poll_exit
+2024-08-13 18:18:44,799 INFO    SenderThread:8812 [sender.py:transition_state():614] send defer: 8
+2024-08-13 18:18:44,799 DEBUG   SenderThread:8812 [sender.py:send_request():406] send_request: poll_exit
+2024-08-13 18:18:44,807 DEBUG   HandlerThread:8812 [handler.py:handle_request():158] handle_request: defer
+2024-08-13 18:18:44,807 INFO    HandlerThread:8812 [handler.py:handle_request_defer():184] handle defer: 8
+2024-08-13 18:18:44,807 DEBUG   SenderThread:8812 [sender.py:send_request():406] send_request: defer
+2024-08-13 18:18:44,807 INFO    SenderThread:8812 [sender.py:send_request_defer():610] handle sender defer: 8
+2024-08-13 18:18:44,807 INFO    SenderThread:8812 [job_builder.py:build():440] Attempting to build job artifact
+2024-08-13 18:18:44,971 DEBUG   HandlerThread:8812 [handler.py:handle_request():158] handle_request: poll_exit
+2024-08-13 18:18:45,129 INFO    SenderThread:8812 [job_builder.py:_get_source_type():580] no source found
+2024-08-13 18:18:45,129 INFO    SenderThread:8812 [sender.py:transition_state():614] send defer: 9
+2024-08-13 18:18:45,129 DEBUG   SenderThread:8812 [sender.py:send_request():406] send_request: poll_exit
+2024-08-13 18:18:45,130 DEBUG   HandlerThread:8812 [handler.py:handle_request():158] handle_request: defer
+2024-08-13 18:18:45,131 INFO    HandlerThread:8812 [handler.py:handle_request_defer():184] handle defer: 9
+2024-08-13 18:18:45,131 DEBUG   SenderThread:8812 [sender.py:send_request():406] send_request: defer
+2024-08-13 18:18:45,131 INFO    SenderThread:8812 [sender.py:send_request_defer():610] handle sender defer: 9
+2024-08-13 18:18:45,131 INFO    SenderThread:8812 [dir_watcher.py:finish():358] shutting down directory watcher
+2024-08-13 18:18:45,557 INFO    SenderThread:8812 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\pycharm_projects\H_SEG\wandb\run-20240813_181639-4su75mrb\files\output.log
+2024-08-13 18:18:45,558 INFO    SenderThread:8812 [dir_watcher.py:finish():388] scan: D:\pycharm_projects\H_SEG\wandb\run-20240813_181639-4su75mrb\files
+2024-08-13 18:18:45,558 INFO    SenderThread:8812 [dir_watcher.py:finish():402] scan save: D:\pycharm_projects\H_SEG\wandb\run-20240813_181639-4su75mrb\files\config.yaml config.yaml
+2024-08-13 18:18:45,559 INFO    SenderThread:8812 [dir_watcher.py:finish():402] scan save: D:\pycharm_projects\H_SEG\wandb\run-20240813_181639-4su75mrb\files\output.log output.log
+2024-08-13 18:18:45,560 INFO    SenderThread:8812 [dir_watcher.py:finish():402] scan save: D:\pycharm_projects\H_SEG\wandb\run-20240813_181639-4su75mrb\files\requirements.txt requirements.txt
+2024-08-13 18:18:45,561 INFO    SenderThread:8812 [dir_watcher.py:finish():402] scan save: D:\pycharm_projects\H_SEG\wandb\run-20240813_181639-4su75mrb\files\wandb-metadata.json wandb-metadata.json
+2024-08-13 18:18:45,561 INFO    SenderThread:8812 [dir_watcher.py:finish():402] scan save: D:\pycharm_projects\H_SEG\wandb\run-20240813_181639-4su75mrb\files\wandb-summary.json wandb-summary.json
+2024-08-13 18:18:45,564 INFO    SenderThread:8812 [sender.py:transition_state():614] send defer: 10
+2024-08-13 18:18:45,564 DEBUG   HandlerThread:8812 [handler.py:handle_request():158] handle_request: defer
+2024-08-13 18:18:45,564 INFO    HandlerThread:8812 [handler.py:handle_request_defer():184] handle defer: 10
+2024-08-13 18:18:45,564 DEBUG   SenderThread:8812 [sender.py:send_request():406] send_request: defer
+2024-08-13 18:18:45,564 INFO    SenderThread:8812 [sender.py:send_request_defer():610] handle sender defer: 10
+2024-08-13 18:18:45,564 INFO    SenderThread:8812 [file_pusher.py:finish():169] shutting down file pusher
+2024-08-13 18:18:45,981 DEBUG   HandlerThread:8812 [handler.py:handle_request():158] handle_request: poll_exit
+2024-08-13 18:18:45,982 DEBUG   SenderThread:8812 [sender.py:send_request():406] send_request: poll_exit
+2024-08-13 18:18:46,018 INFO    wandb-upload_0:8812 [upload_job.py:push():130] Uploaded file D:\pycharm_projects\H_SEG\wandb\run-20240813_181639-4su75mrb\files\config.yaml
+2024-08-13 18:18:46,247 INFO    wandb-upload_1:8812 [upload_job.py:push():130] Uploaded file D:\pycharm_projects\H_SEG\wandb\run-20240813_181639-4su75mrb\files\output.log
+2024-08-13 18:18:46,247 INFO    wandb-upload_2:8812 [upload_job.py:push():130] Uploaded file D:\pycharm_projects\H_SEG\wandb\run-20240813_181639-4su75mrb\files\requirements.txt
+2024-08-13 18:18:46,265 INFO    wandb-upload_3:8812 [upload_job.py:push():130] Uploaded file D:\pycharm_projects\H_SEG\wandb\run-20240813_181639-4su75mrb\files\wandb-summary.json
+2024-08-13 18:18:46,471 INFO    Thread-15 (_thread_body):8812 [sender.py:transition_state():614] send defer: 11
+2024-08-13 18:18:46,471 DEBUG   HandlerThread:8812 [handler.py:handle_request():158] handle_request: defer
+2024-08-13 18:18:46,472 INFO    HandlerThread:8812 [handler.py:handle_request_defer():184] handle defer: 11
+2024-08-13 18:18:46,472 DEBUG   SenderThread:8812 [sender.py:send_request():406] send_request: defer
+2024-08-13 18:18:46,472 INFO    SenderThread:8812 [sender.py:send_request_defer():610] handle sender defer: 11
+2024-08-13 18:18:46,472 INFO    SenderThread:8812 [file_pusher.py:join():175] waiting for file pusher
+2024-08-13 18:18:46,473 INFO    SenderThread:8812 [sender.py:transition_state():614] send defer: 12
+2024-08-13 18:18:46,473 DEBUG   HandlerThread:8812 [handler.py:handle_request():158] handle_request: defer
+2024-08-13 18:18:46,473 INFO    HandlerThread:8812 [handler.py:handle_request_defer():184] handle defer: 12
+2024-08-13 18:18:46,473 DEBUG   SenderThread:8812 [sender.py:send_request():406] send_request: defer
+2024-08-13 18:18:46,473 INFO    SenderThread:8812 [sender.py:send_request_defer():610] handle sender defer: 12
+2024-08-13 18:18:46,474 INFO    SenderThread:8812 [file_stream.py:finish():601] file stream finish called
+2024-08-13 18:18:46,988 DEBUG   HandlerThread:8812 [handler.py:handle_request():158] handle_request: poll_exit
+2024-08-13 18:18:47,098 INFO    SenderThread:8812 [file_stream.py:finish():605] file stream finish is done
+2024-08-13 18:18:47,098 INFO    SenderThread:8812 [sender.py:transition_state():614] send defer: 13
+2024-08-13 18:18:47,098 DEBUG   SenderThread:8812 [sender.py:send_request():406] send_request: poll_exit
+2024-08-13 18:18:47,098 DEBUG   HandlerThread:8812 [handler.py:handle_request():158] handle_request: defer
+2024-08-13 18:18:47,099 INFO    HandlerThread:8812 [handler.py:handle_request_defer():184] handle defer: 13
+2024-08-13 18:18:47,099 DEBUG   SenderThread:8812 [sender.py:send_request():406] send_request: defer
+2024-08-13 18:18:47,099 INFO    SenderThread:8812 [sender.py:send_request_defer():610] handle sender defer: 13
+2024-08-13 18:18:47,099 INFO    SenderThread:8812 [sender.py:transition_state():614] send defer: 14
+2024-08-13 18:18:47,099 DEBUG   HandlerThread:8812 [handler.py:handle_request():158] handle_request: defer
+2024-08-13 18:18:47,099 INFO    HandlerThread:8812 [handler.py:handle_request_defer():184] handle defer: 14
+2024-08-13 18:18:47,100 DEBUG   SenderThread:8812 [sender.py:send():379] send: final
+2024-08-13 18:18:47,100 DEBUG   SenderThread:8812 [sender.py:send():379] send: footer
+2024-08-13 18:18:47,100 DEBUG   SenderThread:8812 [sender.py:send_request():406] send_request: defer
+2024-08-13 18:18:47,100 INFO    SenderThread:8812 [sender.py:send_request_defer():610] handle sender defer: 14
+2024-08-13 18:18:47,100 DEBUG   HandlerThread:8812 [handler.py:handle_request():158] handle_request: poll_exit
+2024-08-13 18:18:47,101 DEBUG   SenderThread:8812 [sender.py:send_request():406] send_request: poll_exit
+2024-08-13 18:18:47,101 DEBUG   HandlerThread:8812 [handler.py:handle_request():158] handle_request: server_info
+2024-08-13 18:18:47,101 DEBUG   HandlerThread:8812 [handler.py:handle_request():158] handle_request: poll_exit
+2024-08-13 18:18:47,101 DEBUG   HandlerThread:8812 [handler.py:handle_request():158] handle_request: get_summary
+2024-08-13 18:18:47,101 DEBUG   HandlerThread:8812 [handler.py:handle_request():158] handle_request: sampled_history
+2024-08-13 18:18:47,102 DEBUG   HandlerThread:8812 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 18:18:47,102 DEBUG   SenderThread:8812 [sender.py:send_request():406] send_request: server_info
+2024-08-13 18:18:47,250 DEBUG   SenderThread:8812 [sender.py:send_request():406] send_request: poll_exit
+2024-08-13 18:18:47,250 INFO    MainThread:8812 [wandb_run.py:_footer_history_summary_info():4016] rendering history
+2024-08-13 18:18:47,250 INFO    MainThread:8812 [wandb_run.py:_footer_history_summary_info():4048] rendering summary
+2024-08-13 18:18:47,251 INFO    MainThread:8812 [wandb_run.py:_footer_sync_info():3975] logging synced files
+2024-08-13 18:18:47,251 DEBUG   HandlerThread:8812 [handler.py:handle_request():158] handle_request: shutdown
+2024-08-13 18:18:47,251 INFO    HandlerThread:8812 [handler.py:finish():882] shutting down handler
+2024-08-13 18:18:48,107 INFO    WriterThread:8812 [datastore.py:close():296] close: D:\pycharm_projects\H_SEG\wandb\run-20240813_181639-4su75mrb\run-4su75mrb.wandb
+2024-08-13 18:18:48,250 INFO    SenderThread:8812 [sender.py:finish():1615] shutting down sender
+2024-08-13 18:18:48,250 INFO    SenderThread:8812 [file_pusher.py:finish():169] shutting down file pusher
+2024-08-13 18:18:48,250 INFO    SenderThread:8812 [file_pusher.py:join():175] waiting for file pusher

@@ -1,0 +1,39 @@
+{
+    "os": "Windows-10-10.0.19045-SP0",
+    "python": "3.12.2",
+    "heartbeatAt": "2024-08-26T10:32:56.680969",
+    "startedAt": "2024-08-26T10:32:55.265551",
+    "docker": null,
+    "cuda": null,
+    "args": [],
+    "state": "running",
+    "program": "D:\\pycharm_projects\\H_SEG\\main.py",
+    "codePathLocal": "main.py",
+    "codePath": "main.py",
+    "host": "DESKTOP-JPUU276",
+    "username": "Piotr",
+    "executable": "D:\\pycharm_projects\\H_SEG\\.venv\\Scripts\\python.exe",
+    "cpu_count": 4,
+    "cpu_count_logical": 8,
+    "cpu_freq": {
+        "current": 1600.0,
+        "min": 0.0,
+        "max": 1800.0
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 1600.0,
+            "min": 0.0,
+            "max": 1800.0
+        }
+    ],
+    "disk": {
+        "/": {
+            "total": 931.5117149353027,
+            "used": 266.0675277709961
+        }
+    },
+    "memory": {
+        "total": 15.899627685546875
+    }
+}

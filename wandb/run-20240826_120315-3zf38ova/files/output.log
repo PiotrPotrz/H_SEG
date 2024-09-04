@@ -1,0 +1,26 @@
+D:\SEGMENTACJA IBM\plemniki\SegSperm_part\SegSperm_part/train/GT1_mixed
+(432,)
+Traceback (most recent call last):
+  File "D:\pycharm_projects\H_SEG\main.py", line 115, in <module>
+    batch_maker = data.BatchMaker(batch_size=config["batch_size"], annotator=config["annotator"],
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\pycharm_projects\H_SEG\data.py", line 156, in __init__
+    x_train, y_train = self.process_data.prepare_dataset("train")
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\pycharm_projects\H_SEG\data.py", line 98, in prepare_dataset
+    mask_id = process_mask(mask, class_colors)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\pycharm_projects\H_SEG\data.py", line 35, in process_mask
+    plt.plot(index_mask)
+  File "D:\pycharm_projects\H_SEG\.venv\Lib\site-packages\matplotlib\pyplot.py", line 3794, in plot
+    return gca().plot(
+           ^^^^^^^^^^^
+  File "D:\pycharm_projects\H_SEG\.venv\Lib\site-packages\matplotlib\axes\_axes.py", line 1779, in plot
+    lines = [*self._get_lines(self, *args, data=data, **kwargs)]
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\pycharm_projects\H_SEG\.venv\Lib\site-packages\matplotlib\axes\_base.py", line 296, in __call__
+    yield from self._plot_args(
+               ^^^^^^^^^^^^^^^^
+  File "D:\pycharm_projects\H_SEG\.venv\Lib\site-packages\matplotlib\axes\_base.py", line 489, in _plot_args
+    raise ValueError(f"x and y can be no greater than 2D, but have "
+ValueError: x and y can be no greater than 2D, but have shapes (512,) and (512, 512, 4)

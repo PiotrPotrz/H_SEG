@@ -1,0 +1,29 @@
+D:\SEGMENTACJA IBM\plemniki\SegSperm_part\SegSperm_part/train/GT1_mixed
+(432,)
+X shape: (432, 512, 512, 3)
+y shape: (432, 512, 512, 4)
+D:\SEGMENTACJA IBM\plemniki\SegSperm_part\SegSperm_part/test/GT1_mixed
+(119,)
+X shape: (119, 512, 512, 3)
+y shape: (119, 512, 512, 4)
+D:\pycharm_projects\H_SEG\utils\metrics.py:37: RuntimeWarning: Mean of empty slice
+  iou = np.nanmean(iou_scores, axis=0)
+Traceback (most recent call last):
+  File "D:\pycharm_projects\H_SEG\main.py", line 127, in <module>
+    validation_iou_multiclass, validation_iou_oneclass, vimages, vlbls_multiclass, vlbls_oneclass, vpreds_multiclass, vpreds_oneclass, ap_score_oneclass, ap_score_head, ap_score_tail = validation.val(model, val_loader, loss_fn, epoch_number, scheduler, device)
+                                                                                                                                                                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\pycharm_projects\H_SEG\validation.py", line 142, in val
+    ap_score_oneclass = calculate_ap_for_segmentation(softmasks_oneclass_np[:, :, :, 1], ids2)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\pycharm_projects\H_SEG\utils\metrics.py", line 42, in calculate_ap_for_segmentation
+    ap = average_precision_score(predicted_probabilities.flatten(),
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\pycharm_projects\H_SEG\.venv\Lib\site-packages\sklearn\utils\_param_validation.py", line 213, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\pycharm_projects\H_SEG\.venv\Lib\site-packages\sklearn\metrics\_ranking.py", line 268, in average_precision_score
+    return _average_binary_score(
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\pycharm_projects\H_SEG\.venv\Lib\site-packages\sklearn\metrics\_base.py", line 73, in _average_binary_score
+    raise ValueError("{0} format is not supported".format(y_type))
+ValueError: continuous format is not supported

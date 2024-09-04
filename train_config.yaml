@@ -1,0 +1,13 @@
+annotator: 1
+aug_type: BetterAugmentation
+augmentation: false
+batch_size: 6
+epochs: 2
+k: 5
+loss: CrossEntropyLoss
+lr: 0.001
+mode: multiclass
+model: smpUNet++
+optimizer: Adam
+place: lab
+scheduler: CosineAnnealingLR

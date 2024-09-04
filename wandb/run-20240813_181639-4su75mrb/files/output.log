@@ -1,0 +1,22 @@
+D:\SEGMENTACJA IBM\plemniki\SegSperm_part\SegSperm_part/train/GT1_mixed
+(432,)
+X shape: (432, 512, 512, 3)
+y shape: (432, 512, 512, 4)
+D:\SEGMENTACJA IBM\plemniki\SegSperm_part\SegSperm_part/test/GT1_mixed
+(119,)
+X shape: (119, 512, 512, 3)
+y shape: (119, 512, 512, 4)
+Traceback (most recent call last):
+  File "D:\pycharm_projects\H_SEG\main.py", line 125, in <module>
+    train_loss, train_iou_multiclass, train_iou_oneclass = train.train(model, train_loader, optimizer, scheduler,
+                                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\pycharm_projects\H_SEG\train.py", line 116, in train
+    mean_iou, IoUs = calculate_iou(labels2.cpu().numpy(), preds2.cpu().numpy(), 3)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\pycharm_projects\H_SEG\utils\metrics.py", line 34, in calculate_iou
+    iou_scores.append(calculate_iou_per_class(mask1[i], mask2[i], num_classes))
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\pycharm_projects\H_SEG\utils\metrics.py", line 16, in calculate_iou_per_class
+    intersection = np.logical_and(mask1_class, mask2_class).sum()
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: operands could not be broadcast together with shapes (512,512) (2,512)
