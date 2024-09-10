@@ -68,14 +68,15 @@ def calculate_iou(mask1, mask2, num_classes):
     # sprawdzenie czy nie ma tylko jednej maski
     # mask1.shape[0] to ilość masek
     #
-    plt.subplots(1, 2)
-    plt.suptitle("THE FIRST ONES")
-    plt.subplot(1, 2, 1)
-    plt.title("mask1")
-    plt.imshow(mask1[0,:,:])
-    plt.subplot(1, 2, 2)
-    plt.title("mask2")
-    plt.imshow(mask2[0,:,:])
+    # if len(mask1.shape) != (2, 512, 512):
+    #     plt.subplots(1, 2)
+    #     plt.suptitle("THE FIRST ONES")
+    #     plt.subplot(1, 2, 1)
+    #     plt.title("mask1")
+    #     plt.imshow(mask1[0,:,:])
+    #     plt.subplot(1, 2, 2)
+    #     plt.title("mask2")
+    #     plt.imshow(mask2[0,:,:])
 
     if len(mask1.shape) == 2:
         mask1 = mask1[np.newaxis, :, :]
