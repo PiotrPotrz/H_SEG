@@ -1,174 +1,331 @@
-import os.path
-
-import matplotlib.pyplot as plt
-import skimage.transform
 import torch
-from torch.utils.data import DataLoader, TensorDataset
 import yaml
-import numpy as np
-import cv2
 import glob
+import cv2
+import numpy as np
+from torch.utils.data import TensorDataset, DataLoader
+from skimage.transform import resize
+import torch.nn.functional as F
+import random
 
-def process_mask(rgb_mask, class_colors):
-    """
-    Funkcja zamienia maskę rgb na maskę z numerami klas.
-    :param rgb_mask: Maska kolorowa
-    :param class_colors: Lista kolorów klas
-    :return: Nowa maska z numerami klas
-    """
-    # nowa pusta maska
-    index_mask = np.zeros(shape=(*rgb_mask.shape[:2],len(class_colors)), dtype=np.float32)
-    for class_idx, color in enumerate(class_colors):
-        idx = class_idx
-        if class_idx == 3:
-            idx = 1
-            # tworzona jest maska binarna
-            # dla koloru odpowiadającego color przypisywane jest 1 a dla innych zero
-            mask = (rgb_mask == color).all(axis=2).astype(np.float32)
-            index_mask[:, :, -1] = np.logical_or(index_mask[:, :, -1], mask)
-        else:
-            mask =(rgb_mask == color).all(axis=2).astype(np.float32)
-            index_mask[:, :, idx] = mask
+path_dict ={'laptop':'/home/nitro/Studia/Praca Dyplomowa/noisy_labels/Kod/config/config_laptop.yaml',
+            'lab':'/media/cal314-1/9E044F59044F3415/PiotrPotrzebowski/Projects/SEGMENTACJA PLEMNIKI/Class_spec_augm_sperm/Kod/config/config_lab.yaml',
+            'komputer':'/media/marcin/Dysk lokalny/Programowanie/Python/Magisterka/Praca Dyplomowa/noisy_labels/Kod/config/config.yaml'
+            }
 
-        if idx == 1 or idx == 2:
-            index_mask[:, :, -1] = np.logical_or(index_mask[:, :, -1], mask)
-    return index_mask
+path_config = {"place": "lab"
+               }
 
 
-class Data:
-    def __init__(self, path_config_path="path_config.yaml", mode='full', annotator=1):
-        self.mode = mode
-        self.annontator = annotator
-        with open(path_config_path, "r") as path_config_file:
-            path_config = yaml.safe_load(path_config_file)
-            self.dataset_path = path_config["dataset_path"]
-            self.image_width = path_config["image_width"]
-            self.image_height = path_config["image_height"]
 
-    def prepare_dataset(self, dataset_name):
-        class_colors = [[0, 0, 0], [0, 255, 0], [0, 0, 255],[0,255,255]]
-        # dataset_name may be train or test
-        match self.annontator:
-            case 1:
-                name = "GT1_"
-            case 2:
-                name = "GT2_"
-            case 3:
-                name = "GT3_"
-            case 4:
-                name = "GT4_"
-            case 5:
-                name = "GT5_"
+def rgb_to_class_id(mask_rgb, class_colors):
+        mask_id = np.zeros((*mask_rgb.shape[:2], len(class_colors)), dtype=np.float32)
+        for class_id, color in enumerate(class_colors):
+            idx = class_id
+            if class_id == 3:
+                idx = 1
+                mask = (mask_rgb == color).all(axis=2).astype(np.float32)
+                mask_id[:, :, -1] = np.logical_or(mask_id[:, :, -1], mask)
+            else:
+                mask = (mask_rgb == color).all(axis=2).astype(np.float32)
+                mask_id[:, :, idx] = mask
 
-        if dataset_name != "train" and dataset_name != "test" and dataset_name != "test_small":
-            raise ValueError("dataset_name must be train, test or test_small")
+            if idx == 1 or idx == 2:
+                mask_id[:, :, -1] = np.logical_or(mask_id[:, :, -1], mask)
 
-        path = self.dataset_path + "/" + dataset_name
+        return mask_id
 
-        images = sorted(glob.glob(f"{path}/images/*"))
 
-        if np.isin(self.mode, ['full', 'tail', 'head', 'mixed']):
-            mask_path = f"{path}/{name}{self.mode}"
-            print(mask_path)
-            masks = sorted(glob.glob(f"{mask_path}/*.png"))
-            print(np.shape(masks))
+def feeling_lucky(mask1, mask2):
+    # Get the dimensions of the masks
+    height, width, num_classes = mask1.shape
 
-            X = np.zeros(shape=(len(images), self.image_height, self.image_width, 3), dtype=np.float32)
-            y = np.zeros(shape=(len(masks), self.image_height, self.image_width, 4), dtype=np.float32)
+    # Randomly choose which annotator's mask to use for each pixel and class
+    random_indices = np.random.randint(2, size=(height, width, num_classes))
+    result_mask = np.zeros((height, width, num_classes), dtype=mask1.dtype)
 
-            for n, (image, mask_image) in enumerate(zip(images, masks)):
-                img = cv2.imread(image)
-                img = img.astype(np.float32)
-                # w oryginale użyto preserve_range = True, a potem normalizacje TODO
-                # są to operacja zbędne
+    for i in range(height):
+        for j in range(width):
+            for k in range(num_classes):
+                # Choose the mask based on the random index for the given pixel and class
+                chosen_mask_value = mask1[i, j, k] if random_indices[i, j, k] == 0 else mask2[i, j, k]
+                result_mask[i, j, k] = chosen_mask_value
 
-                img = skimage.transform.resize(img, (self.image_height, self.image_width, 3), mode='constant', preserve_range=False)
+    return result_mask
 
-                mask = cv2.imread(mask_image)
+
+class ProcessData:
+    def __init__(self, config_path=path_dict[path_config['place']], mode = 'full',annotator = 1):
+        with open(config_path, 'r') as config_file:
+            self.config = yaml.safe_load(config_file)
+            self.mode = mode
+            self.annotator = annotator
+
+
+    def process_dataset(self, dataset_name):
+        dataset_path = self.config['dataset_path']
+        dataset_path = dataset_path + dataset_name
+        print(dataset_path)
+
+
+
+        if self.annotator == 1:
+            name = '/GT1_'
+        elif self.annotator == 2:
+            name = '/GT2_'
+        if self.mode == 'full':
+            segment = 'full/'
+        elif self.mode == 'head':
+            segment = 'head/'
+        elif self.mode == 'tail':
+            segment = 'tail/'
+        elif self.mode == 'mixed':
+            segment = 'mixed/'    
+        
+        class_colors = [[0, 0, 0], [0, 255, 0], [0, 0, 255],[0,255,255]]  # tło, wić, główka
+
+        images = sorted(glob.glob(f"{dataset_path}/images/*"))
+
+        if self.mode == 'intersection_and_union' or self.mode == 'intersection' or self.mode == 'intersection_and_union_inference' or self.mode == 'intersection_inference' or self.mode == 'feeling_lucky' or self.mode == 'union':
+            gt_path1 = dataset_path + '/GT1_' + 'mixed/'
+            gt_path2 = dataset_path + '/GT2_' + 'mixed/' # TODO Tutaj jest błąd !!! W datasecie train/test nie ma GT2
+            masks = sorted(glob.glob(f"{gt_path1}*.png"))
+            print("1:",np.shape(masks))
+            masks2 = sorted(glob.glob(f"{gt_path2}*.png"))
+            print("2", np.shape(masks2))
+
+            X = np.zeros((len(images), self.config['image_height'], self.config['image_width'], 3), dtype=np.float32)
+            intersections = np.zeros((len(masks),  self.config['image_height'], self.config['image_width'],4), dtype=np.float32)
+            unions = np.zeros((len(masks),  self.config['image_height'], self.config['image_width'],4), dtype=np.float32)
+            feelings = np.zeros((len(masks),  self.config['image_height'], self.config['image_width'],4), dtype=np.float32)
+            y1 = np.zeros((len(masks),  self.config['image_height'], self.config['image_width'],4), dtype=np.float32)
+            y2 = np.zeros((len(masks),  self.config['image_height'], self.config['image_width'],4), dtype=np.float32)
+
+
+            for n, (img, mimg,mimg2) in enumerate(zip(images, masks, masks2)):
+                # Load images
+                img = cv2.imread(img)
+                x_img = img.astype(np.float32)
+                x_img = resize(x_img, (self.config['image_height'], self.config['image_width'], 3), mode='constant', preserve_range=True)
+                # Normalize images
+                min_val = np.min(x_img)
+                max_val = np.max(x_img)
+                x_img = (x_img - min_val) / (max_val - min_val)
+
+                # Load masks
+                mask = cv2.imread(mimg)
                 mask = mask.astype(np.float32)
-                mask = skimage.transform.resize(mask, (self.image_height, self.image_width, 3), mode='constant', preserve_range=True)
-                mask_id = process_mask(mask, class_colors)
+                mask = resize(mask, (self.config['image_height'], self.config['image_width'], 3), mode='constant', preserve_range=True)
+                mask_id = rgb_to_class_id(mask, class_colors)
 
-                # fig, ax = plt.subplots(1, 4, figsize=(20, 8))
-                # for i in range(4):
-                #     plt.subplot(1, 4, i + 1)
-                #     plt.imshow(mask_id[:, :, i])
-                # plt.show()
+                mask2 = cv2.imread(mimg2)
+                mask2 = mask2.astype(np.float32)
+                mask2 = resize(mask2, (512, 512, 3), mode='constant', preserve_range=True)
+                mask2_id = rgb_to_class_id(mask2, class_colors)
 
-                X[n] = img
+                intersection = cv2.bitwise_and(mask, mask2)
+
+                intersection_id = cv2.bitwise_and(mask_id, mask2_id)
+                union_id = cv2.bitwise_or(mask_id, mask2_id)
+                #feeling_id = feeling_lucky(mask_id, mask2_id)
+                feeling_id = np.zeros_like(mask_id)
+
+                # Normalize intersection
+                min_val = np.min(intersection)
+                max_val = np.max(intersection)
+
+                if (max_val - min_val) > 0:
+                    intersection = (intersection - min_val) / (max_val - min_val)
+                else:
+                    intersection = intersection / 255
+
+                if self.mode == 'intersection_and_union' or self.mode == 'intersection_and_union_inference':
+                    X[n] = intersection
+                else:
+                    X[n] = x_img
+                intersections[n] = intersection_id
+                unions[n] = union_id
+                feelings[n] = feeling_id
+                y1[n] = mask_id
+                y2[n] = mask2_id
+
+            
+            if self.mode == 'intersection_and_union_inference' or self.mode == 'intersection_inference':
+                return X, intersections, unions,feelings,y1, y2
+            elif self.mode == 'intersection_and_union' or self.mode == 'intersection':
+                return X, y2, intersections
+            elif self.mode == 'feeling_lucky':
+                return X, feelings, unions
+            elif self.mode == 'union':
+                return X, unions,intersections
+            
+
+        elif self.mode == 'both':
+
+            gt_path1 = dataset_path + '/GT1_' + 'mixed/'
+            gt_path2 = dataset_path + '/GT2_' + 'mixed/'
+            masks = sorted(glob.glob(f"{gt_path1}*.png"))
+            masks2 = sorted(glob.glob(f"{gt_path1}*.png"))
+
+            X = np.zeros((len(images), self.config['image_height'], self.config['image_width'], 3), dtype=np.float32)
+            y1 = np.zeros((len(masks),  self.config['image_height'], self.config['image_width'],4), dtype=np.float32)
+            y2 = np.zeros((len(masks),  self.config['image_height'], self.config['image_width'],4), dtype=np.float32)
+
+
+            for n, (img, mimg,mimg2) in enumerate(zip(images, masks, masks2)):
+                # Load images
+                img = cv2.imread(img)
+                x_img = img.astype(np.float32)
+                x_img = resize(x_img, (self.config['image_height'], self.config['image_width'], 3), mode='constant', preserve_range=True)
+                # Normalize images
+                min_val = np.min(x_img)
+                max_val = np.max(x_img)
+                x_img = (x_img - min_val) / (max_val - min_val)
+
+                # Load masks
+                mask = cv2.imread(mimg)
+                mask = mask.astype(np.float32)
+                mask = resize(mask, (self.config['image_height'], self.config['image_width'], 3), mode='constant', preserve_range=True)
+                mask_id = rgb_to_class_id(mask, class_colors)
+              
+                mask2 = cv2.imread(mimg2)
+                mask2 = mask2.astype(np.float32)
+                mask2 = resize(mask2, (self.config['image_height'], self.config['image_width'], 3), mode='constant', preserve_range=True)
+                mask2_id = rgb_to_class_id(mask2, class_colors)
+                # Save images and masks
+
+                X[n] = x_img
+                y1[n] = mask_id
+                y2[n] = mask2_id
+
+            return X, y1,y2
+        
+
+
+        else:
+            gt_path = dataset_path + name + segment
+            masks = sorted(glob.glob(f"{gt_path}*.png"))
+
+            X = np.zeros((len(images), self.config['image_height'], self.config['image_width'], 3), dtype=np.float32)
+            y = np.zeros((len(masks),  self.config['image_height'], self.config['image_width'],4), dtype=np.float32)
+            
+
+
+
+            for n, (img, mimg) in enumerate(zip(images, masks)):
+                # Load images
+                img = cv2.imread(img)
+                x_img = img.astype(np.float32)
+                x_img = resize(x_img, (self.config['image_height'], self.config['image_width'], 3), mode='constant', preserve_range=True)
+                # Normalize images
+                min_val = np.min(x_img)
+                max_val = np.max(x_img)
+                x_img = (x_img - min_val) / (max_val - min_val)
+
+                # Load masks
+                mask = cv2.imread(mimg)
+                mask = mask.astype(np.float32)
+                mask = resize(mask, (self.config['image_height'], self.config['image_width'], 3), mode='constant', preserve_range=True)
+                mask_id = rgb_to_class_id(mask, class_colors)
+                # Save images and masks
+
+                X[n] = x_img
                 y[n] = mask_id
 
-            print(f"X shape: {np.shape(X)}")
-            print(f"y shape: {np.shape(y)}")
             return X, y
 
-        elif np.isin(self.mode, ['intersection_and_union', 'intersection', 'intersection_and_union_inference', 'intersection_inference', 'feeling_lucky', 'union']):
-            gt_path1 = f"{path}/GT1_mixed"
-            gt_path2 = f"{path}/GT2_mixed" # ale przecież w TEST nie ma GT2 !!!!!!! TODO
+class BatchMaker:
+    def __init__(self, config_path=path_dict[path_config['place']], batch_size=6, mode = 'all',segment = 'full' ,annotator = 1):
+        
+    
+        self.process_data = ProcessData(config_path=config_path,mode = segment,annotator = annotator)
+        self.batch_size = batch_size
+        if segment == 'intersection_and_union' or segment == 'intersection' or segment == 'both' or segment == 'feeling_lucky' or segment == 'union':
+            if mode == 'all':
+                x_train, int_train,un_train = self.process_data.process_dataset('/train')
+                x_val, int_val,un_val = self.process_data.process_dataset('/test_small')
+                x_test, int_test,un_test = self.process_data.process_dataset('/test')
+                self.train_loader = self.create_loader2(x_train, int_train,un_train,shuffle=False)
+                self.val_loader = self.create_loader2(x_val, int_val,un_val, shuffle=False)
+                self.test_loader = self.create_loader2(x_test, int_test,un_test ,shuffle=False)
+            elif mode == 'train':
+                x_train, int_train,un_train = self.process_data.process_dataset('/train')
+                x_val, int_val,un_val = self.process_data.process_dataset('/test_small')
+                self.train_loader = self.create_loader2(x_train, int_train,un_train,shuffle=True)
+                self.val_loader = self.create_loader2(x_val, int_val,un_val, shuffle=True)
+            elif mode == 'test':
+                x_test, int_test,un_test = self.process_data.process_dataset('/test')
+                self.test_loader = self.create_loader2(x_test, int_test,un_test ,shuffle=False)
 
-            masks1 = sorted(glob.glob(f"{gt_path1}*.png"))
-            print(np.shape(masks1))
-            masks2 = sorted(glob.glob(f"{gt_path2}*.png"))
-            print(np.shape(masks2))
 
-            X = np.zeros(shape=(len(images), self.image_height, self.image_width, 3), dtype=np.float32)
-            y1 = np.zeros(shape=(len(masks1), self.image_height, self.image_width, 4), dtype=np.float32)
-            y2 = np.zeros(shape=(len(masks2), self.image_height, self.image_width, 4), dtype=np.float32)
-            intersections = np.zeros((len(masks1), self.image_height, self.image_width, 4), dtype=np.float32)
-            unions = np.zeros((len(masks1), self.image_height, self.image_width, 4), dtype=np.float32)
-            feelings = np.zeros((len(masks1), self.image_height, self.image_width, 4), dtype=np.float32)
+        elif segment == 'intersection_and_union_inference' or segment == 'intersection_inference':
+            if mode == 'all':
+                x_train, int_train,un_train,fl_train,y1_train,y2_train = self.process_data.process_dataset('/train')
+                x_val, int_val,un_val,y1_val,fl_val,y2_val = self.process_data.process_dataset('/test_small')
+                x_test, int_test,un_test,y1_test,fl_test,y2_test = self.process_data.process_dataset('/test')
+                self.train_loader = self.create_loader3(x_train, int_train,un_train,fl_train,y1_train,y2_train,shuffle=False)
+                self.val_loader = self.create_loader3(x_val, int_val,un_val,fl_val,y1_val,y2_val, shuffle=False)
+                self.test_loader = self.create_loader3(x_test, int_test,un_test,fl_test,y1_test,y2_test ,shuffle=False)
+            elif mode == 'train':
+                x_train, int_train,un_train,fl_train,y1_train,y2_train = self.process_data.process_dataset('/train')
+                x_test, int_test,un_test,y1_test,fl_test,y2_test = self.process_data.process_dataset('/test')
+                self.train_loader = self.create_loader3(x_train, int_train,un_train,fl_train,y1_train,y2_train,shuffle=True)
+                self.test_loader = self.create_loader3(x_test, int_test,un_test,fl_test,y1_test,y2_test ,shuffle=True)
+            elif mode == 'test':
+                x_test, int_test,un_test,fl_test,y1_test,y2_test = self.process_data.process_dataset('/test')
+                self.test_loader = self.create_loader3(x_test, int_test,un_test,fl_test,y1_test,y2_test ,shuffle=False)
 
-        elif self.mode == "IOU":
-            gt_path1 = f"{path}/GT1_mixed"
-            # nie mam pewności jak podzielić te zbiory, więc tworzę własną wersję zbiorów
-
-            masks = sorted(glob.glob(f"{gt_path1}*.png"))
-
-            masks1 = [mask for mask in masks if os.path.splitext(os.path.basename(mask))[0] % 2 == 0]
-            masks2 = [mask for mask in masks if os.path.splitext(os.path.basename(mask))[0] % 2 == 1]
-
-            X = np.zeros(shape=(len(images), self.image_height, self.image_width, 3), dtype=np.float32)
-            y1 = np.zeros(shape=(len(masks1), self.image_height, self.image_width, 4), dtype=np.float32)
-            y2 = np.zeros(shape=(len(masks2), self.image_height, self.image_width, 4), dtype=np.float32)
-            intersections = np.zeros((len(masks1), self.image_height, self.image_width, 4), dtype=np.float32)
-            unions = np.zeros((len(masks1), self.image_height, self.image_width, 4), dtype=np.float32)
-            feelings = np.zeros((len(masks1), self.image_height, self.image_width, 4), dtype=np.float32)
-
-            for n, (image, mask1, mask2) in enumerate(zip(images, masks1, masks2)):
-                pass
-            # pass # # # # # # # # # # # # #
 
         else:
-            raise NotImplementedError
+            if mode == 'all':
+                x_train, y_train = self.process_data.process_dataset('/train')
+                x_val, y_val = self.process_data.process_dataset('/test_small')
+                x_test, y_test = self.process_data.process_dataset('/test')
+                self.train_loader = self.create_loader(x_train, y_train,shuffle=False)
+                self.val_loader = self.create_loader(x_val, y_val, shuffle=False)
+                self.test_loader = self.create_loader(x_test, y_test ,shuffle=False)
+            elif mode == 'train':
+                x_train, y_train = self.process_data.process_dataset('/train')
+                x_test, y_test = self.process_data.process_dataset('/test')
+                self.train_loader = self.create_loader(x_train, y_train, shuffle=True)
+                self.test_loader = self.create_loader(x_test, y_test, shuffle=True)
+            elif mode == 'test':
+                x_test, y_test = self.process_data.process_dataset('/test')
+                self.test_loader = self.create_loader(x_test, y_test, shuffle=False)
+        
 
-
-class BatchMaker:
-    def __init__(self, path_config_path="path_config.yaml", mode='full', annotator=1, work_mode='train', batch_size = 6):
-        self.process_data = Data(path_config_path=path_config_path,
-                                 mode=mode,
-                                 annotator=annotator)
-        self.batch_size = batch_size
-
-        if np.isin(mode, ['full', 'tail', 'head', 'mixed']):
-            if work_mode == "train":
-                x_train, y_train = self.process_data.prepare_dataset("train")
-                x_test, y_test = self.process_data.prepare_dataset("test")
-                self.train_loader = self.basic_loader(x_train, y_train, shuffle=True)
-                self.test_loader = self.basic_loader(x_test, y_test, shuffle=True)
-
-            elif work_mode == "test":
-                x_test, y_test = self.process_data.prepare_dataset("test")
-                self.test_loader = self.basic_loader(x_test, y_test, shuffle=True)
-
-
-
-    def basic_loader(self, x, y, shuffle):
-        x = np.transpose(x, axes=(0, 3, 1, 2))
-        y = np.transpose(y, axes=(0, 3, 1, 2))
-
-        x = torch.from_numpy(x)
-        y = torch.from_numpy(y).type(torch.float64)
-        dataset = TensorDataset(x, y)
+    def create_loader(self, x, y, shuffle):
+        x = np.transpose(x, (0, 3, 1, 2))
+        y = np.transpose(y, (0, 3, 1, 2))
+        x_tensor = torch.from_numpy(x)
+        y_tensor = torch.from_numpy(y).type(torch.float64)
+        dataset = TensorDataset(x_tensor, y_tensor)
         return DataLoader(dataset, batch_size=self.batch_size, shuffle=shuffle)
+    
 
-
+    def create_loader2(self, x, intersection,union,shuffle):
+        x = np.transpose(x, (0, 3, 1, 2))
+        intersection = np.transpose(intersection, (0, 3, 1, 2))
+        union = np.transpose(union, (0, 3, 1, 2))
+        x_tensor = torch.from_numpy(x)
+        intersection_tensor = torch.from_numpy(intersection).type(torch.float64)
+        union_tensor = torch.from_numpy(union).type(torch.float64)
+        dataset = TensorDataset(x_tensor, intersection_tensor,union_tensor)
+        return DataLoader(dataset, batch_size=self.batch_size, shuffle=shuffle)
+    
+    def create_loader3(self,x,intersection,union,feeling,y1,y2,shuffle):
+        x = np.transpose(x,(0,3,1,2))
+        intersection = np.transpose(intersection, (0, 3, 1, 2))
+        union = np.transpose(union, (0, 3, 1, 2))
+        feeling = np.transpose(feeling, (0, 3, 1, 2))
+        y1 = np.transpose(y1, (0, 3, 1, 2))
+        y2 = np.transpose(y2, (0, 3, 1, 2))   
+        x_tensor = torch.from_numpy(x)
+        intersection_tensor = torch.from_numpy(intersection).type(torch.float64)
+        union_tensor = torch.from_numpy(union).type(torch.float64)
+        feeling_tensor = torch.from_numpy(feeling).type(torch.float64)
+        y1_tensor = torch.from_numpy(y1).type(torch.float64)
+        y2_tensor = torch.from_numpy(y2).type(torch.float64)
+        dataset = TensorDataset(x_tensor, intersection_tensor,union_tensor,feeling_tensor,y1_tensor,y2_tensor)
+        return DataLoader(dataset, batch_size=self.batch_size, shuffle=shuffle)
+        
