@@ -1,0 +1,64 @@
+2024-09-15 14:35:45,301 INFO    MainThread:17096 [wandb_setup.py:_flush():76] Current SDK version is 0.17.5
+2024-09-15 14:35:45,301 INFO    MainThread:17096 [wandb_setup.py:_flush():76] Configure stats pid to 17096
+2024-09-15 14:35:45,302 INFO    MainThread:17096 [wandb_setup.py:_flush():76] Loading settings from C:\Users\Piotr\.config\wandb\settings
+2024-09-15 14:35:45,302 INFO    MainThread:17096 [wandb_setup.py:_flush():76] Loading settings from D:\pycharm_projects\H_SEG\wandb\settings
+2024-09-15 14:35:45,302 INFO    MainThread:17096 [wandb_setup.py:_flush():76] Loading settings from environment variables: {}
+2024-09-15 14:35:45,302 INFO    MainThread:17096 [wandb_setup.py:_flush():76] Applying setup settings: {'_disable_service': False}
+2024-09-15 14:35:45,303 INFO    MainThread:17096 [wandb_setup.py:_flush():76] Inferring run settings from compute environment: {'program': '<python with no main file>'}
+2024-09-15 14:35:45,303 INFO    MainThread:17096 [wandb_setup.py:_flush():76] Applying login settings: {}
+2024-09-15 14:35:45,303 INFO    MainThread:17096 [wandb_init.py:_log_setup():529] Logging user logs to D:\pycharm_projects\H_SEG\wandb\run-20240915_143544-5bcx4cg4\logs\debug.log
+2024-09-15 14:35:45,303 INFO    MainThread:17096 [wandb_init.py:_log_setup():530] Logging internal logs to D:\pycharm_projects\H_SEG\wandb\run-20240915_143544-5bcx4cg4\logs\debug-internal.log
+2024-09-15 14:35:45,303 INFO    MainThread:17096 [wandb_init.py:_jupyter_setup():475] configuring jupyter hooks <wandb.sdk.wandb_init._WandbInit object at 0x0000028DDF8686B0>
+2024-09-15 14:35:45,304 INFO    MainThread:17096 [wandb_init.py:init():569] calling init triggers
+2024-09-15 14:35:45,304 INFO    MainThread:17096 [wandb_init.py:init():576] wandb.init called with sweep_config: {}
+config: {}
+2024-09-15 14:35:45,304 INFO    MainThread:17096 [wandb_init.py:init():619] starting backend
+2024-09-15 14:35:45,304 INFO    MainThread:17096 [wandb_init.py:init():623] setting up manager
+2024-09-15 14:35:45,311 INFO    MainThread:17096 [backend.py:_multiprocessing_setup():105] multiprocessing start_methods=spawn, using: spawn
+2024-09-15 14:35:45,358 INFO    MainThread:17096 [wandb_init.py:init():631] backend started and connected
+2024-09-15 14:35:45,376 INFO    MainThread:17096 [wandb_run.py:_label_probe_notebook():1334] probe notebook
+2024-09-15 14:35:45,379 INFO    MainThread:17096 [wandb_init.py:init():720] updated telemetry
+2024-09-15 14:35:45,456 INFO    MainThread:17096 [wandb_init.py:init():753] communicating run to backend with 90.0 second timeout
+2024-09-15 14:35:46,771 ERROR   MainThread:17096 [wandb_init.py:init():779] encountered error: It appears that you do not have permission to access the requested resource. Please reach out to the project owner to grant you access. If you have the correct permissions, verify that there are no issues with your networking setup.(Error 404: Not Found)
+2024-09-15 14:35:46,772 ERROR   MainThread:17096 [wandb_init.py:init():1191] error in wandb.init()
+Traceback (most recent call last):
+  File "D:\pycharm_projects\H_SEG\.venv\Lib\site-packages\wandb\sdk\wandb_init.py", line 1181, in init
+    return wi.init()
+           ^^^^^^^^^
+  File "D:\pycharm_projects\H_SEG\.venv\Lib\site-packages\wandb\sdk\wandb_init.py", line 785, in init
+    raise error
+wandb.errors.CommError: It appears that you do not have permission to access the requested resource. Please reach out to the project owner to grant you access. If you have the correct permissions, verify that there are no issues with your networking setup.(Error 404: Not Found)
+2024-09-15 14:36:52,959 INFO    MainThread:17096 [wandb_settings.py:_apply_login():1935] Applying login settings: {}
+2024-09-15 14:36:52,971 INFO    MainThread:17096 [wandb_setup.py:_flush():76] Current SDK version is 0.17.5
+2024-09-15 14:36:52,972 INFO    MainThread:17096 [wandb_setup.py:_flush():76] Configure stats pid to 17096
+2024-09-15 14:36:52,972 INFO    MainThread:17096 [wandb_setup.py:_flush():76] Loading settings from C:\Users\Piotr\.config\wandb\settings
+2024-09-15 14:36:52,972 INFO    MainThread:17096 [wandb_setup.py:_flush():76] Loading settings from D:\pycharm_projects\H_SEG\wandb\settings
+2024-09-15 14:36:52,972 INFO    MainThread:17096 [wandb_setup.py:_flush():76] Loading settings from environment variables: {}
+2024-09-15 14:36:52,972 INFO    MainThread:17096 [wandb_setup.py:_flush():76] Applying setup settings: {'_disable_service': False}
+2024-09-15 14:36:52,973 INFO    MainThread:17096 [wandb_setup.py:_flush():76] Inferring run settings from compute environment: {'program': '<python with no main file>'}
+2024-09-15 14:36:52,973 INFO    MainThread:17096 [wandb_setup.py:_flush():76] Applying login settings: {}
+2024-09-15 14:36:52,973 INFO    MainThread:17096 [wandb_init.py:_log_setup():529] Logging user logs to D:\pycharm_projects\H_SEG\wandb\run-20240915_143652-htxdi8jz\logs\debug.log
+2024-09-15 14:36:52,973 INFO    MainThread:17096 [wandb_init.py:_log_setup():530] Logging internal logs to D:\pycharm_projects\H_SEG\wandb\run-20240915_143652-htxdi8jz\logs\debug-internal.log
+2024-09-15 14:36:52,973 INFO    MainThread:17096 [wandb_init.py:init():569] calling init triggers
+2024-09-15 14:36:52,973 INFO    MainThread:17096 [wandb_init.py:init():576] wandb.init called with sweep_config: {}
+config: {}
+2024-09-15 14:36:52,973 INFO    MainThread:17096 [wandb_init.py:init():619] starting backend
+2024-09-15 14:36:52,974 INFO    MainThread:17096 [wandb_init.py:init():623] setting up manager
+2024-09-15 14:36:52,976 INFO    MainThread:17096 [backend.py:_multiprocessing_setup():105] multiprocessing start_methods=spawn, using: spawn
+2024-09-15 14:36:52,977 INFO    MainThread:17096 [wandb_init.py:init():631] backend started and connected
+2024-09-15 14:36:52,991 INFO    MainThread:17096 [wandb_run.py:_label_probe_notebook():1334] probe notebook
+2024-09-15 14:36:52,994 INFO    MainThread:17096 [wandb_init.py:init():720] updated telemetry
+2024-09-15 14:36:53,092 INFO    MainThread:17096 [wandb_init.py:init():753] communicating run to backend with 90.0 second timeout
+2024-09-15 14:38:24,078 ERROR   MainThread:17096 [wandb_init.py:init():779] encountered error: Run initialization has timed out after 90.0 sec. 
+Please refer to the documentation for additional information: https://docs.wandb.ai/guides/track/tracking-faq#initstarterror-error-communicating-with-wandb-process-
+2024-09-15 14:38:24,079 ERROR   MainThread:17096 [wandb_init.py:init():1191] error in wandb.init()
+Traceback (most recent call last):
+  File "D:\pycharm_projects\H_SEG\.venv\Lib\site-packages\wandb\sdk\wandb_init.py", line 1181, in init
+    return wi.init()
+           ^^^^^^^^^
+  File "D:\pycharm_projects\H_SEG\.venv\Lib\site-packages\wandb\sdk\wandb_init.py", line 785, in init
+    raise error
+wandb.errors.CommError: Run initialization has timed out after 90.0 sec. 
+Please refer to the documentation for additional information: https://docs.wandb.ai/guides/track/tracking-faq#initstarterror-error-communicating-with-wandb-process-
+2024-09-15 15:25:11,672 WARNING MsgRouterThr:17096 [router.py:message_loop():77] message_loop has been closed
+2024-09-15 15:25:11,673 WARNING MsgRouterThr:17096 [router.py:message_loop():77] message_loop has been closed

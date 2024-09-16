@@ -1,7 +1,7 @@
-dataset_path: D:\SEGMENTACJA\SegSperm_part\SegSperm_part
-save_model_path: D:\SEGMENTACJA\model
-save_inf_fig_path: D:\SEGMENTACJA\save_fig
-save_soft_mask_path: D:\SEGMENTACJA\save_soft_mask
+dataset_path: D:\SEGMENTACJA IBM\plemniki\SegSperm_part\SegSperm_part
+save_model_path: D:\SEGMENTACJA IBM\plemniki\save_model
+save_inf_fig_path: D:\SEGMENTACJA IBM\plemniki\save_fig
+save_soft_mask_path: D:\SEGMENTACJA IBM\plemniki\soft_masks
 
 image_width: 512
 image_height: 512
