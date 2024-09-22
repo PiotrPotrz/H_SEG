@@ -117,6 +117,48 @@ class Data:
             intersections = np.zeros((len(masks1), self.image_height, self.image_width, 4), dtype=np.float32)
             unions = np.zeros((len(masks1), self.image_height, self.image_width, 4), dtype=np.float32)
             feelings = np.zeros((len(masks1), self.image_height, self.image_width, 4), dtype=np.float32)
+        elif  self.mode == "both":
+
+            print("both")
+            gt_path1 = path + '/GT1_' + 'mixed'
+            # gt_path2 = dataset_path + '/GT2_' + 'mixed/'
+            masks = sorted(glob.glob(f"{gt_path1}*.png"))
+            masks2 = sorted(glob.glob(f"{gt_path1}*.png"))  # tutaj zmiana
+
+            X = np.zeros((len(images), self.image_height, self.image_width, 3), dtype=np.float32)
+            y1 = np.zeros((len(masks), self.image_height, self.image_width, 4), dtype=np.float32)
+            y2 = np.zeros((len(masks), self.image_height, self.image_width, 4), dtype=np.float32)
+
+            for n, (img, mimg, mimg2) in enumerate(zip(images, masks, masks2)):
+                # Load images
+                img = cv2.imread(img)
+                x_img = img.astype(np.float32)
+                x_img = skimage.transform.resize(x_img, (self.image_height, self.image_width, 3), mode='constant',
+                               preserve_range=True)
+                # Normalize images
+                min_val = np.min(x_img)
+                max_val = np.max(x_img)
+                x_img = (x_img - min_val) / (max_val - min_val)
+
+                # Load masks
+                mask = cv2.imread(mimg)
+                mask = mask.astype(np.float32)
+                mask = skimage.transform.resize(mask, (self.image_height, self.image_width, 3), mode='constant',
+                              preserve_range=True)
+                mask_id = process_mask(mask, class_colors)
+
+                mask2 = cv2.imread(mimg2)
+                mask2 = mask2.astype(np.float32)
+                mask2 = skimage.transform.resize(mask2, (self.image_height, self.image_width, 3), mode='constant',
+                               preserve_range=True)
+                mask2_id = process_mask(mask2, class_colors)
+                # Save images and masks
+
+                X[n] = x_img
+                y1[n] = mask_id
+                y2[n] = mask2_id
+
+            return X, y1, y2
 
         elif self.mode == "IOU":
             gt_path1 = f"{path}/GT1_mixed"
@@ -159,6 +201,23 @@ class BatchMaker:
             elif work_mode == "test":
                 x_test, y_test = self.process_data.prepare_dataset("test")
                 self.test_loader = self.basic_loader(x_test, y_test, shuffle=True)
+        elif mode == "both":
+            if mode == 'all':
+                x_train, int_train, un_train = self.process_data.prepare_dataset('/train')
+                x_val, int_val, un_val = self.process_data.prepare_dataset('/test_small')
+                x_test, int_test, un_test = self.process_data.prepare_dataset( '/test')
+                self.train_loader = self.create_loader2(x_train, int_train, un_train, shuffle=False)
+                self.val_loader = self.create_loader2(x_val, int_val, un_val, shuffle=False)
+                self.test_loader = self.create_loader2(x_test, int_test, un_test, shuffle=False)
+            elif mode == 'train':
+                x_train, int_train, un_train = self.process_data.prepare_dataset('/train')
+                x_val, int_val, un_val = self.process_data.prepare_dataset('/test_small')
+                self.train_loader = self.create_loader2(x_train, int_train, un_train, shuffle=True)
+                self.val_loader = self.create_loader2(x_val, int_val, un_val, shuffle=True)
+            elif mode == 'test':
+                x_test, int_test, un_test = self.process_data.prepare_dataset('/test')
+                self.test_loader = self.create_loader2(x_test, int_test, un_test, shuffle=False)
+
 
 
 
@@ -171,4 +230,13 @@ class BatchMaker:
         dataset = TensorDataset(x, y)
         return DataLoader(dataset, batch_size=self.batch_size, shuffle=shuffle)
 
+    def inference_loader(self, x, intersection,union,shuffle):
+        x = np.transpose(x, (0, 3, 1, 2))
+        intersection = np.transpose(intersection, (0, 3, 1, 2))
+        union = np.transpose(union, (0, 3, 1, 2))
+        x_tensor = torch.from_numpy(x)
+        intersection_tensor = torch.from_numpy(intersection).type(torch.float64)
+        union_tensor = torch.from_numpy(union).type(torch.float64)
+        dataset = TensorDataset(x_tensor, intersection_tensor,union_tensor)
+        return DataLoader(dataset, batch_size=self.batch_size, shuffle=shuffle)
 
