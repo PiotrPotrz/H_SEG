@@ -1,0 +1,42 @@
+2024-09-22 15:17:04,045 INFO    MainThread:11620 [wandb_setup.py:_flush():76] Current SDK version is 0.17.5
+2024-09-22 15:17:04,045 INFO    MainThread:11620 [wandb_setup.py:_flush():76] Configure stats pid to 11620
+2024-09-22 15:17:04,045 INFO    MainThread:11620 [wandb_setup.py:_flush():76] Loading settings from C:\Users\Piotr\.config\wandb\settings
+2024-09-22 15:17:04,045 INFO    MainThread:11620 [wandb_setup.py:_flush():76] Loading settings from D:\SEGMENTACJA\pythonProject\H_SEG\wandb\settings
+2024-09-22 15:17:04,045 INFO    MainThread:11620 [wandb_setup.py:_flush():76] Loading settings from environment variables: {}
+2024-09-22 15:17:04,046 INFO    MainThread:11620 [wandb_setup.py:_flush():76] Applying setup settings: {'_disable_service': False}
+2024-09-22 15:17:04,046 INFO    MainThread:11620 [wandb_setup.py:_flush():76] Inferring run settings from compute environment: {'program': '<python with no main file>'}
+2024-09-22 15:17:04,046 INFO    MainThread:11620 [wandb_setup.py:_flush():76] Applying login settings: {}
+2024-09-22 15:17:04,046 INFO    MainThread:11620 [wandb_init.py:_log_setup():529] Logging user logs to D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240922_151704-szpmpjm1\logs\debug.log
+2024-09-22 15:17:04,046 INFO    MainThread:11620 [wandb_init.py:_log_setup():530] Logging internal logs to D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240922_151704-szpmpjm1\logs\debug-internal.log
+2024-09-22 15:17:04,046 INFO    MainThread:11620 [wandb_init.py:init():569] calling init triggers
+2024-09-22 15:17:04,047 INFO    MainThread:11620 [wandb_init.py:init():576] wandb.init called with sweep_config: {}
+config: {'model': 'smpUNet++', 'batch_size': 1, 'annotator': 1}
+2024-09-22 15:17:04,047 INFO    MainThread:11620 [wandb_init.py:init():594] re-initializing run, found existing run on stack: uhhte8k0
+2024-09-22 15:17:04,048 INFO    MainThread:11620 [wandb_run.py:_finish():2107] finishing run piotrpotrzebowski730-politechnika-gda-ska/project/uhhte8k0
+2024-09-22 15:17:04,048 INFO    MainThread:11620 [jupyter.py:save_history():444] not saving jupyter history
+2024-09-22 15:17:04,048 INFO    MainThread:11620 [jupyter.py:save_ipynb():372] not saving jupyter notebook
+2024-09-22 15:17:04,049 INFO    MainThread:11620 [wandb_init.py:_jupyter_teardown():457] cleaning up jupyter logic
+2024-09-22 15:17:04,049 INFO    MainThread:11620 [wandb_run.py:_atexit_cleanup():2374] got exitcode: 0
+2024-09-22 15:17:04,049 INFO    MainThread:11620 [wandb_run.py:_restore():2352] restore
+2024-09-22 15:17:04,049 INFO    MainThread:11620 [wandb_run.py:_restore():2358] restore done
+2024-09-22 15:17:11,178 INFO    MainThread:11620 [wandb_run.py:_footer_history_summary_info():4016] rendering history
+2024-09-22 15:17:11,178 INFO    MainThread:11620 [wandb_run.py:_footer_history_summary_info():4048] rendering summary
+2024-09-22 15:17:11,187 INFO    MainThread:11620 [wandb_run.py:_footer_sync_info():3975] logging synced files
+2024-09-22 15:17:11,514 INFO    MainThread:11620 [wandb_init.py:init():619] starting backend
+2024-09-22 15:17:11,514 INFO    MainThread:11620 [wandb_init.py:init():623] setting up manager
+2024-09-22 15:17:11,517 INFO    MainThread:11620 [backend.py:_multiprocessing_setup():105] multiprocessing start_methods=spawn, using: spawn
+2024-09-22 15:17:11,518 INFO    MainThread:11620 [wandb_init.py:init():631] backend started and connected
+2024-09-22 15:17:11,526 INFO    MainThread:11620 [wandb_run.py:_label_probe_notebook():1334] probe notebook
+2024-09-22 15:17:11,526 INFO    MainThread:11620 [wandb_run.py:_label_probe_notebook():1344] Unable to probe notebook: 'NoneType' object has no attribute 'get'
+2024-09-22 15:17:11,526 INFO    MainThread:11620 [wandb_init.py:init():720] updated telemetry
+2024-09-22 15:17:11,583 INFO    MainThread:11620 [wandb_init.py:init():753] communicating run to backend with 90.0 second timeout
+2024-09-22 15:17:12,646 INFO    MainThread:11620 [wandb_run.py:_on_init():2435] communicating current version
+2024-09-22 15:17:12,852 INFO    MainThread:11620 [wandb_run.py:_on_init():2444] got version response upgrade_message: "wandb version 0.18.1 is available!  To upgrade, please run:\n $ pip install wandb --upgrade"
+
+2024-09-22 15:17:12,852 INFO    MainThread:11620 [wandb_init.py:init():804] starting run threads in backend
+2024-09-22 15:17:13,229 INFO    MainThread:11620 [wandb_run.py:_console_start():2413] atexit reg
+2024-09-22 15:17:13,229 INFO    MainThread:11620 [wandb_run.py:_redirect():2255] redirect: wrap_raw
+2024-09-22 15:17:13,230 INFO    MainThread:11620 [wandb_run.py:_redirect():2320] Wrapping output streams.
+2024-09-22 15:17:13,230 INFO    MainThread:11620 [wandb_run.py:_redirect():2345] Redirects installed.
+2024-09-22 15:17:13,230 INFO    MainThread:11620 [wandb_init.py:init():847] run started, returning control to user process
+2024-09-22 16:14:32,310 WARNING MsgRouterThr:11620 [router.py:message_loop():77] message_loop has been closed

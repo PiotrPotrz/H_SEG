@@ -82,7 +82,11 @@ class Data:
                 # w oryginale użyto preserve_range = True, a potem normalizacje TODO
                 # są to operacja zbędne
 
-                img = skimage.transform.resize(img, (self.image_height, self.image_width, 3), mode='constant', preserve_range=False)
+                img = skimage.transform.resize(img, (self.image_height, self.image_width, 3), mode='constant', preserve_range=True)
+
+                min_val = np.min(img)
+                max_val = np.max(img)
+                img = (img - min_val) / (max_val - min_val)
 
                 mask = cv2.imread(mask_image)
                 mask = mask.astype(np.float32)
