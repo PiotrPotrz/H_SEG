@@ -40,12 +40,13 @@ def train(model: torch.nn, train_loader, optimizer, scheduler, loss_fn, augmenta
     total_iou_multiclass = 0
 
     for i, data in enumerate(train_loader):
-        print(f"training {i}")
         if T_aug == True:
             raise NotImplementedError
 
         if len(data) == 2:
             inputs, labels = data
+            if (i+1) == 1 or (i+1) % (4 * inputs.size(0)) == 0:
+                print(f"training {(i+1)*inputs.size(0)} / {len(train_loader.dataset)}")
 
             if config["loss"] == "CrossEntropyLoss" or loss_fn == nn.CrossEntropyLoss:
                 labels = labels.type(torch.LongTensor)
@@ -65,6 +66,8 @@ def train(model: torch.nn, train_loader, optimizer, scheduler, loss_fn, augmenta
         labels2 = torch.from_numpy(labels2).type(torch.LongTensor).to(device)
 
         optimizer.zero_grad()
+
+        inputs = inputs.to(device)
 
         output = model(inputs)
         output1 = output[:, :3, :, :]

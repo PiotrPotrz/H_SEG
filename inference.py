@@ -400,11 +400,11 @@ wandb.init(project="project",
 
 config = wandb.config
 
-saved_model_name = 'One_segment_lossAnnotator_1_k=5_Model_smpUNet++_Augmentation_False_Modemulticlass_Optimizer_Adam_Scheduler_CosineAnnealingLR_Epochs_200_Batch_Size_6_S.001_Loss_CrossEntropyLoss_Timestamp_2024-08-06-12-23_best_model_iou_multiclass'
+saved_model_name = 'One_segment_lossAnnotator_1_k=5_Model_smpUNet++_Augmentation_True_Modemulticlass_Optimizer_Adam_Scheduler_CosineAnnealingLR_Epochs_200_Batch_Size_6_Start_lr_0.001_Loss_CrossEntropyLoss_Timestamp_2024-09-23-19-04_last_model'
 model_path = yaml_config['save_model_path'] + '/' + saved_model_name
 k = 1
 # name = (f'y2_Two_segment_loss alfa = {k}_Inference: Model_name: {saved_model_name}')
-name = "new inference test"
+name = "last model aug"
 
 wandb.run.name = name
 

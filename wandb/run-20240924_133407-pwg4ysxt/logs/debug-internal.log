@@ -1,0 +1,1002 @@
+2024-09-24 13:34:07,518 INFO    StreamThr :16668 [internal.py:wandb_internal():85] W&B internal server running at pid: 16668, started at: 2024-09-24 13:34:07.517237
+2024-09-24 13:34:07,519 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: status
+2024-09-24 13:34:07,523 INFO    WriterThread:16668 [datastore.py:open_for_write():87] open: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_133407-pwg4ysxt\run-pwg4ysxt.wandb
+2024-09-24 13:34:07,524 DEBUG   SenderThread:16668 [sender.py:send():379] send: header
+2024-09-24 13:34:07,571 DEBUG   SenderThread:16668 [sender.py:send():379] send: run
+2024-09-24 13:34:08,023 INFO    SenderThread:16668 [dir_watcher.py:__init__():211] watching files in: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_133407-pwg4ysxt\files
+2024-09-24 13:34:08,023 INFO    SenderThread:16668 [sender.py:_start_run_threads():1188] run started: pwg4ysxt with start time 1727177647.518205
+2024-09-24 13:34:08,034 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: check_version
+2024-09-24 13:34:08,035 DEBUG   SenderThread:16668 [sender.py:send_request():406] send_request: check_version
+2024-09-24 13:34:08,280 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: run_start
+2024-09-24 13:34:08,305 DEBUG   HandlerThread:16668 [system_info.py:__init__():26] System info init
+2024-09-24 13:34:08,305 DEBUG   HandlerThread:16668 [system_info.py:__init__():41] System info init done
+2024-09-24 13:34:08,305 INFO    HandlerThread:16668 [system_monitor.py:start():194] Starting system monitor
+2024-09-24 13:34:08,306 INFO    SystemMonitor:16668 [system_monitor.py:_start():158] Starting system asset monitoring threads
+2024-09-24 13:34:08,306 INFO    HandlerThread:16668 [system_monitor.py:probe():214] Collecting system info
+2024-09-24 13:34:08,308 INFO    SystemMonitor:16668 [interfaces.py:start():188] Started cpu monitoring
+2024-09-24 13:34:08,309 INFO    SystemMonitor:16668 [interfaces.py:start():188] Started disk monitoring
+2024-09-24 13:34:08,309 INFO    SystemMonitor:16668 [interfaces.py:start():188] Started gpu monitoring
+2024-09-24 13:34:08,313 INFO    SystemMonitor:16668 [interfaces.py:start():188] Started memory monitoring
+2024-09-24 13:34:08,318 INFO    SystemMonitor:16668 [interfaces.py:start():188] Started network monitoring
+2024-09-24 13:34:08,324 DEBUG   HandlerThread:16668 [system_info.py:probe():152] Probing system
+2024-09-24 13:34:08,325 DEBUG   HandlerThread:16668 [system_info.py:_probe_git():137] Probing git
+2024-09-24 13:34:08,410 DEBUG   HandlerThread:16668 [system_info.py:_probe_git():145] Probing git done
+2024-09-24 13:34:08,410 DEBUG   HandlerThread:16668 [system_info.py:probe():200] Probing system done
+2024-09-24 13:34:08,410 DEBUG   HandlerThread:16668 [system_monitor.py:probe():223] {'os': 'Windows-10-10.0.19045-SP0', 'python': '3.11.9', 'heartbeatAt': '2024-09-24T11:34:08.324811', 'startedAt': '2024-09-24T11:34:07.509230', 'docker': None, 'cuda': None, 'args': (), 'state': 'running', 'program': 'D:\\SEGMENTACJA\\pythonProject\\H_SEG\\inference.py', 'codePathLocal': 'inference.py', 'codePath': 'inference.py', 'git': {'remote': 'https://github.com/PiotrPotrz/H_SEG.git', 'commit': 'a5439a8bf37ee8ec4bb2173e13aba741b4ba96e3'}, 'email': 'piotr.potrzebowski@interia.pl', 'root': 'D:/SEGMENTACJA/pythonProject/H_SEG', 'host': 'DESKTOP-JQBABD4', 'username': 'Piotr', 'executable': 'D:\\anaconda\\envs\\pythonProject\\python.exe', 'cpu_count': 6, 'cpu_count_logical': 6, 'cpu_freq': {'current': 3696.0, 'min': 0.0, 'max': 3696.0}, 'cpu_freq_per_core': [{'current': 3696.0, 'min': 0.0, 'max': 3696.0}], 'disk': {'/': {'total': 753.3037071228027, 'used': 667.8134803771973}}, 'gpu': 'NVIDIA GeForce RTX 2060', 'gpu_count': 1, 'gpu_devices': [{'name': 'NVIDIA GeForce RTX 2060', 'memory_total': 6442450944}], 'memory': {'total': 15.912944793701172}}
+2024-09-24 13:34:08,410 INFO    HandlerThread:16668 [system_monitor.py:probe():224] Finished collecting system info
+2024-09-24 13:34:08,410 INFO    HandlerThread:16668 [system_monitor.py:probe():227] Publishing system info
+2024-09-24 13:34:08,411 DEBUG   HandlerThread:16668 [system_info.py:_save_conda():209] Saving list of conda packages installed into the current environment
+2024-09-24 13:34:08,413 ERROR   HandlerThread:16668 [system_info.py:_save_conda():223] Error saving conda packages: [WinError 2] Nie mo¿na odnaleŸæ okreœlonego pliku
+Traceback (most recent call last):
+  File "D:\anaconda\envs\pythonProject\Lib\site-packages\wandb\sdk\internal\system\system_info.py", line 216, in _save_conda
+    subprocess.call(
+  File "D:\anaconda\envs\pythonProject\Lib\subprocess.py", line 389, in call
+    with Popen(*popenargs, **kwargs) as p:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\anaconda\envs\pythonProject\Lib\subprocess.py", line 1026, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "D:\anaconda\envs\pythonProject\Lib\subprocess.py", line 1538, in _execute_child
+    hp, ht, pid, tid = _winapi.CreateProcess(executable, args,
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [WinError 2] Nie mo¿na odnaleŸæ okreœlonego pliku
+2024-09-24 13:34:08,415 DEBUG   HandlerThread:16668 [system_info.py:_save_conda():224] Saving conda packages done
+2024-09-24 13:34:08,416 INFO    HandlerThread:16668 [system_monitor.py:probe():229] Finished publishing system info
+2024-09-24 13:34:08,421 DEBUG   SenderThread:16668 [sender.py:send():379] send: files
+2024-09-24 13:34:08,421 INFO    SenderThread:16668 [sender.py:_save_file():1454] saving file wandb-metadata.json with policy now
+2024-09-24 13:34:08,570 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: python_packages
+2024-09-24 13:34:08,570 DEBUG   SenderThread:16668 [sender.py:send_request():406] send_request: python_packages
+2024-09-24 13:34:08,570 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: stop_status
+2024-09-24 13:34:08,571 DEBUG   SenderThread:16668 [sender.py:send_request():406] send_request: stop_status
+2024-09-24 13:34:08,572 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:34:08,868 DEBUG   SenderThread:16668 [sender.py:send():379] send: telemetry
+2024-09-24 13:34:08,868 DEBUG   SenderThread:16668 [sender.py:send():379] send: telemetry
+2024-09-24 13:34:08,868 DEBUG   SenderThread:16668 [sender.py:send():379] send: run
+2024-09-24 13:34:09,038 INFO    Thread-16 :16668 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_133407-pwg4ysxt\files\config.yaml
+2024-09-24 13:34:09,038 INFO    Thread-16 :16668 [dir_watcher.py:_on_file_created():271] file/dir created: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_133407-pwg4ysxt\files\requirements.txt
+2024-09-24 13:34:09,039 INFO    Thread-16 :16668 [dir_watcher.py:_on_file_created():271] file/dir created: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_133407-pwg4ysxt\files\conda-environment.yaml
+2024-09-24 13:34:09,039 INFO    Thread-16 :16668 [dir_watcher.py:_on_file_created():271] file/dir created: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_133407-pwg4ysxt\files\wandb-metadata.json
+2024-09-24 13:34:09,091 INFO    wandb-upload_0:16668 [upload_job.py:push():130] Uploaded file C:\Users\Piotr\AppData\Local\Temp\tmpz0oa5phxwandb\utumpueu-wandb-metadata.json
+2024-09-24 13:34:09,152 INFO    SenderThread:16668 [sender.py:send_run():1035] updated run: pwg4ysxt
+2024-09-24 13:34:10,588 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:34:11,055 INFO    Thread-16 :16668 [dir_watcher.py:_on_file_created():271] file/dir created: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_133407-pwg4ysxt\files\output.log
+2024-09-24 13:34:11,601 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:34:12,615 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:34:12,693 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: status_report
+2024-09-24 13:34:13,069 INFO    Thread-16 :16668 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_133407-pwg4ysxt\files\output.log
+2024-09-24 13:34:13,617 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:34:14,631 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:34:15,632 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:34:16,647 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:34:17,661 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:34:18,600 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: status_report
+2024-09-24 13:34:18,663 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:34:19,678 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:34:20,678 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:34:21,693 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:34:22,708 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:34:23,584 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: stop_status
+2024-09-24 13:34:23,584 DEBUG   SenderThread:16668 [sender.py:send_request():406] send_request: stop_status
+2024-09-24 13:34:23,711 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:34:23,805 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: status_report
+2024-09-24 13:34:24,720 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:34:25,727 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:34:26,740 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:34:27,752 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:34:28,767 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:34:29,210 INFO    Thread-16 :16668 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_133407-pwg4ysxt\files\output.log
+2024-09-24 13:34:29,632 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: status_report
+2024-09-24 13:34:29,773 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:34:30,783 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:34:31,787 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:34:32,802 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:34:33,803 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:34:34,647 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: status_report
+2024-09-24 13:34:34,819 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:34:35,834 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:34:36,835 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:34:37,836 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:34:38,588 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: stop_status
+2024-09-24 13:34:38,588 DEBUG   SenderThread:16668 [sender.py:send_request():406] send_request: stop_status
+2024-09-24 13:34:38,850 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:34:39,836 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: status_report
+2024-09-24 13:34:39,865 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:34:40,289 INFO    Thread-16 :16668 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_133407-pwg4ysxt\files\config.yaml
+2024-09-24 13:34:40,868 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:34:41,881 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:34:42,896 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:34:43,321 INFO    Thread-16 :16668 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_133407-pwg4ysxt\files\output.log
+2024-09-24 13:34:43,896 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:34:44,913 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:34:45,632 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: status_report
+2024-09-24 13:34:45,928 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:34:46,929 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:34:47,954 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:34:48,943 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:34:49,948 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:34:50,960 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:34:51,406 INFO    Thread-16 :16668 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_133407-pwg4ysxt\files\output.log
+2024-09-24 13:34:51,501 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: status_report
+2024-09-24 13:34:51,975 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:34:52,990 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:34:53,413 INFO    Thread-16 :16668 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_133407-pwg4ysxt\files\output.log
+2024-09-24 13:34:53,584 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: stop_status
+2024-09-24 13:34:53,584 DEBUG   SenderThread:16668 [sender.py:send_request():406] send_request: stop_status
+2024-09-24 13:34:53,991 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:34:55,006 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:34:55,443 INFO    Thread-16 :16668 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_133407-pwg4ysxt\files\output.log
+2024-09-24 13:34:56,007 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:34:57,020 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:34:57,052 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: status_report
+2024-09-24 13:34:57,460 INFO    Thread-16 :16668 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_133407-pwg4ysxt\files\output.log
+2024-09-24 13:34:58,022 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:34:59,037 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:34:59,476 INFO    Thread-16 :16668 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_133407-pwg4ysxt\files\output.log
+2024-09-24 13:35:00,052 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:35:01,054 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:35:01,476 INFO    Thread-16 :16668 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_133407-pwg4ysxt\files\output.log
+2024-09-24 13:35:02,069 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:35:02,569 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: status_report
+2024-09-24 13:35:03,069 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:35:03,492 INFO    Thread-16 :16668 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_133407-pwg4ysxt\files\output.log
+2024-09-24 13:35:04,086 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:35:05,099 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:35:05,523 INFO    Thread-16 :16668 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_133407-pwg4ysxt\files\output.log
+2024-09-24 13:35:06,100 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:35:07,115 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:35:07,541 INFO    Thread-16 :16668 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_133407-pwg4ysxt\files\output.log
+2024-09-24 13:35:08,131 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:35:08,178 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: status_report
+2024-09-24 13:35:08,333 DEBUG   SystemMonitor:16668 [system_monitor.py:_start():172] Starting system metrics aggregation loop
+2024-09-24 13:35:08,333 DEBUG   SenderThread:16668 [sender.py:send():379] send: stats
+2024-09-24 13:35:08,599 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: stop_status
+2024-09-24 13:35:08,599 DEBUG   SenderThread:16668 [sender.py:send_request():406] send_request: stop_status
+2024-09-24 13:35:09,155 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:35:09,558 INFO    Thread-16 :16668 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_133407-pwg4ysxt\files\output.log
+2024-09-24 13:35:10,161 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:35:11,163 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:35:11,584 INFO    Thread-16 :16668 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_133407-pwg4ysxt\files\output.log
+2024-09-24 13:35:12,167 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:35:13,187 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:35:13,576 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: status_report
+2024-09-24 13:35:13,611 INFO    Thread-16 :16668 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_133407-pwg4ysxt\files\output.log
+2024-09-24 13:35:14,194 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:35:15,208 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:35:15,631 INFO    Thread-16 :16668 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_133407-pwg4ysxt\files\output.log
+2024-09-24 13:35:16,209 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:35:17,224 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:35:17,647 INFO    Thread-16 :16668 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_133407-pwg4ysxt\files\output.log
+2024-09-24 13:35:18,240 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:35:18,733 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: status_report
+2024-09-24 13:35:19,240 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:35:19,718 INFO    Thread-16 :16668 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_133407-pwg4ysxt\files\output.log
+2024-09-24 13:35:20,275 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:35:20,720 INFO    Thread-16 :16668 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_133407-pwg4ysxt\files\output.log
+2024-09-24 13:35:21,256 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:35:22,270 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:35:22,741 INFO    Thread-16 :16668 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_133407-pwg4ysxt\files\output.log
+2024-09-24 13:35:23,286 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:35:23,599 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: stop_status
+2024-09-24 13:35:23,599 DEBUG   SenderThread:16668 [sender.py:send_request():406] send_request: stop_status
+2024-09-24 13:35:23,845 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: status_report
+2024-09-24 13:35:24,287 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:35:24,759 INFO    Thread-16 :16668 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_133407-pwg4ysxt\files\output.log
+2024-09-24 13:35:25,289 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:35:26,303 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:35:26,772 INFO    Thread-16 :16668 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_133407-pwg4ysxt\files\output.log
+2024-09-24 13:35:27,318 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:35:28,333 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:35:28,787 INFO    Thread-16 :16668 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_133407-pwg4ysxt\files\output.log
+2024-09-24 13:35:29,333 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:35:29,621 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: status_report
+2024-09-24 13:35:30,338 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:35:30,799 INFO    Thread-16 :16668 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_133407-pwg4ysxt\files\output.log
+2024-09-24 13:35:31,372 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:35:32,380 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:35:32,820 INFO    Thread-16 :16668 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_133407-pwg4ysxt\files\output.log
+2024-09-24 13:35:33,396 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:35:34,409 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:35:34,850 INFO    Thread-16 :16668 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_133407-pwg4ysxt\files\output.log
+2024-09-24 13:35:34,962 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: status_report
+2024-09-24 13:35:35,412 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:35:36,414 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:35:36,867 INFO    Thread-16 :16668 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_133407-pwg4ysxt\files\output.log
+2024-09-24 13:35:37,427 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:35:38,335 DEBUG   SenderThread:16668 [sender.py:send():379] send: stats
+2024-09-24 13:35:38,428 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:35:38,602 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: stop_status
+2024-09-24 13:35:38,602 DEBUG   SenderThread:16668 [sender.py:send_request():406] send_request: stop_status
+2024-09-24 13:35:38,883 INFO    Thread-16 :16668 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_133407-pwg4ysxt\files\output.log
+2024-09-24 13:35:39,442 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:35:40,444 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:35:40,631 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: status_report
+2024-09-24 13:35:40,898 INFO    Thread-16 :16668 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_133407-pwg4ysxt\files\output.log
+2024-09-24 13:35:41,478 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:35:42,488 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:35:42,927 INFO    Thread-16 :16668 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_133407-pwg4ysxt\files\output.log
+2024-09-24 13:35:43,492 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:35:44,507 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:35:44,945 INFO    Thread-16 :16668 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_133407-pwg4ysxt\files\output.log
+2024-09-24 13:35:45,522 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:35:46,303 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: status_report
+2024-09-24 13:35:46,538 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:35:46,958 INFO    Thread-16 :16668 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_133407-pwg4ysxt\files\output.log
+2024-09-24 13:35:47,553 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:35:48,600 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:35:48,975 INFO    Thread-16 :16668 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_133407-pwg4ysxt\files\output.log
+2024-09-24 13:35:49,615 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:35:50,617 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:35:50,991 INFO    Thread-16 :16668 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_133407-pwg4ysxt\files\output.log
+2024-09-24 13:35:51,630 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:35:51,929 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: status_report
+2024-09-24 13:35:52,630 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:35:53,007 INFO    Thread-16 :16668 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_133407-pwg4ysxt\files\output.log
+2024-09-24 13:35:53,616 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: stop_status
+2024-09-24 13:35:53,616 DEBUG   SenderThread:16668 [sender.py:send_request():406] send_request: stop_status
+2024-09-24 13:35:53,647 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:35:54,662 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:35:55,037 INFO    Thread-16 :16668 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_133407-pwg4ysxt\files\output.log
+2024-09-24 13:35:55,664 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:35:56,678 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:35:57,053 INFO    Thread-16 :16668 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_133407-pwg4ysxt\files\output.log
+2024-09-24 13:35:57,459 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: status_report
+2024-09-24 13:35:57,679 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:35:58,695 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:35:59,070 INFO    Thread-16 :16668 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_133407-pwg4ysxt\files\output.log
+2024-09-24 13:35:59,709 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:36:00,724 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:36:01,085 INFO    Thread-16 :16668 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_133407-pwg4ysxt\files\output.log
+2024-09-24 13:36:01,725 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:36:02,725 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:36:03,037 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: status_report
+2024-09-24 13:36:03,115 INFO    Thread-16 :16668 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_133407-pwg4ysxt\files\output.log
+2024-09-24 13:36:03,740 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:36:04,740 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:36:05,133 INFO    Thread-16 :16668 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_133407-pwg4ysxt\files\output.log
+2024-09-24 13:36:05,756 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:36:06,770 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:36:07,163 INFO    Thread-16 :16668 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_133407-pwg4ysxt\files\output.log
+2024-09-24 13:36:07,771 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:36:08,349 DEBUG   SenderThread:16668 [sender.py:send():379] send: stats
+2024-09-24 13:36:08,349 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: status_report
+2024-09-24 13:36:08,616 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: stop_status
+2024-09-24 13:36:08,616 DEBUG   SenderThread:16668 [sender.py:send_request():406] send_request: stop_status
+2024-09-24 13:36:08,786 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:36:09,179 INFO    Thread-16 :16668 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_133407-pwg4ysxt\files\output.log
+2024-09-24 13:36:09,787 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:36:10,820 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:36:11,196 INFO    Thread-16 :16668 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_133407-pwg4ysxt\files\output.log
+2024-09-24 13:36:11,834 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:36:12,835 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:36:13,224 INFO    Thread-16 :16668 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_133407-pwg4ysxt\files\output.log
+2024-09-24 13:36:13,818 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: status_report
+2024-09-24 13:36:13,850 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:36:14,866 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:36:15,242 INFO    Thread-16 :16668 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_133407-pwg4ysxt\files\output.log
+2024-09-24 13:36:15,881 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:36:16,881 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:36:17,256 INFO    Thread-16 :16668 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_133407-pwg4ysxt\files\output.log
+2024-09-24 13:36:17,895 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:36:18,819 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: status_report
+2024-09-24 13:36:18,897 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:36:19,273 INFO    Thread-16 :16668 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_133407-pwg4ysxt\files\output.log
+2024-09-24 13:36:19,913 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:36:20,913 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:36:21,307 INFO    Thread-16 :16668 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_133407-pwg4ysxt\files\output.log
+2024-09-24 13:36:21,929 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:36:22,942 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:36:23,337 INFO    Thread-16 :16668 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_133407-pwg4ysxt\files\output.log
+2024-09-24 13:36:23,615 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: stop_status
+2024-09-24 13:36:23,615 DEBUG   SenderThread:16668 [sender.py:send_request():406] send_request: stop_status
+2024-09-24 13:36:23,835 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: status_report
+2024-09-24 13:36:23,945 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:36:24,968 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:36:25,354 INFO    Thread-16 :16668 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_133407-pwg4ysxt\files\output.log
+2024-09-24 13:36:25,974 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:36:26,975 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:36:27,373 INFO    Thread-16 :16668 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_133407-pwg4ysxt\files\output.log
+2024-09-24 13:36:27,990 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:36:28,850 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: status_report
+2024-09-24 13:36:28,990 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:36:29,381 INFO    Thread-16 :16668 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_133407-pwg4ysxt\files\output.log
+2024-09-24 13:36:30,006 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:36:31,021 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:36:31,396 INFO    Thread-16 :16668 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_133407-pwg4ysxt\files\output.log
+2024-09-24 13:36:32,037 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:36:33,054 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:36:33,413 INFO    Thread-16 :16668 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_133407-pwg4ysxt\files\output.log
+2024-09-24 13:36:33,866 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: status_report
+2024-09-24 13:36:34,055 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:36:35,073 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:36:35,429 INFO    Thread-16 :16668 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_133407-pwg4ysxt\files\output.log
+2024-09-24 13:36:36,086 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:36:37,099 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:36:37,445 INFO    Thread-16 :16668 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_133407-pwg4ysxt\files\output.log
+2024-09-24 13:36:38,125 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:36:38,350 DEBUG   SenderThread:16668 [sender.py:send():379] send: stats
+2024-09-24 13:36:38,615 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: stop_status
+2024-09-24 13:36:38,615 DEBUG   SenderThread:16668 [sender.py:send_request():406] send_request: stop_status
+2024-09-24 13:36:38,880 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: status_report
+2024-09-24 13:36:39,132 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:36:39,460 INFO    Thread-16 :16668 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_133407-pwg4ysxt\files\output.log
+2024-09-24 13:36:40,193 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:36:41,208 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:36:41,490 INFO    Thread-16 :16668 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_133407-pwg4ysxt\files\output.log
+2024-09-24 13:36:42,208 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:36:43,211 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:36:43,507 INFO    Thread-16 :16668 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_133407-pwg4ysxt\files\output.log
+2024-09-24 13:36:43,883 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: status_report
+2024-09-24 13:36:44,224 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:36:45,239 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:36:45,523 INFO    Thread-16 :16668 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_133407-pwg4ysxt\files\output.log
+2024-09-24 13:36:46,241 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:36:47,260 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:36:47,538 INFO    Thread-16 :16668 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_133407-pwg4ysxt\files\output.log
+2024-09-24 13:36:48,271 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:36:48,896 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: status_report
+2024-09-24 13:36:49,273 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:36:49,555 INFO    Thread-16 :16668 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_133407-pwg4ysxt\files\output.log
+2024-09-24 13:36:50,288 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:36:51,303 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:36:51,569 INFO    Thread-16 :16668 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_133407-pwg4ysxt\files\output.log
+2024-09-24 13:36:52,317 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:36:53,319 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:36:53,585 INFO    Thread-16 :16668 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_133407-pwg4ysxt\files\output.log
+2024-09-24 13:36:53,615 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: stop_status
+2024-09-24 13:36:53,615 DEBUG   SenderThread:16668 [sender.py:send_request():406] send_request: stop_status
+2024-09-24 13:36:53,910 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: status_report
+2024-09-24 13:36:54,333 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:36:55,348 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:36:55,614 INFO    Thread-16 :16668 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_133407-pwg4ysxt\files\output.log
+2024-09-24 13:36:56,350 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:36:57,365 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:36:57,616 INFO    Thread-16 :16668 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_133407-pwg4ysxt\files\output.log
+2024-09-24 13:36:58,388 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:36:58,913 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: status_report
+2024-09-24 13:36:59,398 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:36:59,633 INFO    Thread-16 :16668 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_133407-pwg4ysxt\files\output.log
+2024-09-24 13:37:00,413 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:37:01,428 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:37:01,663 INFO    Thread-16 :16668 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_133407-pwg4ysxt\files\output.log
+2024-09-24 13:37:02,428 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:37:03,444 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:37:03,679 INFO    Thread-16 :16668 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_133407-pwg4ysxt\files\output.log
+2024-09-24 13:37:03,914 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: status_report
+2024-09-24 13:37:04,459 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:37:05,459 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:37:05,709 INFO    Thread-16 :16668 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_133407-pwg4ysxt\files\output.log
+2024-09-24 13:37:06,474 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:37:07,475 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:37:07,711 INFO    Thread-16 :16668 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_133407-pwg4ysxt\files\output.log
+2024-09-24 13:37:08,351 DEBUG   SenderThread:16668 [sender.py:send():379] send: stats
+2024-09-24 13:37:08,490 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:37:08,616 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: stop_status
+2024-09-24 13:37:08,616 DEBUG   SenderThread:16668 [sender.py:send_request():406] send_request: stop_status
+2024-09-24 13:37:08,929 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: status_report
+2024-09-24 13:37:09,491 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:37:09,744 INFO    Thread-16 :16668 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_133407-pwg4ysxt\files\output.log
+2024-09-24 13:37:10,506 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:37:10,758 INFO    Thread-16 :16668 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_133407-pwg4ysxt\files\output.log
+2024-09-24 13:37:11,522 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:37:12,536 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:37:12,789 INFO    Thread-16 :16668 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_133407-pwg4ysxt\files\output.log
+2024-09-24 13:37:13,539 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:37:13,943 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: status_report
+2024-09-24 13:37:14,556 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:37:14,804 INFO    Thread-16 :16668 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_133407-pwg4ysxt\files\output.log
+2024-09-24 13:37:15,569 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:37:16,602 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:37:16,834 INFO    Thread-16 :16668 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_133407-pwg4ysxt\files\output.log
+2024-09-24 13:37:17,617 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:37:18,632 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:37:18,851 INFO    Thread-16 :16668 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_133407-pwg4ysxt\files\output.log
+2024-09-24 13:37:18,959 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: status_report
+2024-09-24 13:37:19,647 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:37:20,661 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:37:20,866 INFO    Thread-16 :16668 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_133407-pwg4ysxt\files\output.log
+2024-09-24 13:37:21,663 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:37:22,677 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:37:22,883 INFO    Thread-16 :16668 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_133407-pwg4ysxt\files\output.log
+2024-09-24 13:37:23,632 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: stop_status
+2024-09-24 13:37:23,632 DEBUG   SenderThread:16668 [sender.py:send_request():406] send_request: stop_status
+2024-09-24 13:37:23,678 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:37:23,973 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: status_report
+2024-09-24 13:37:24,694 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:37:24,898 INFO    Thread-16 :16668 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_133407-pwg4ysxt\files\output.log
+2024-09-24 13:37:25,709 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:37:26,724 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:37:26,913 INFO    Thread-16 :16668 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_133407-pwg4ysxt\files\output.log
+2024-09-24 13:37:27,740 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:37:28,741 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:37:28,928 INFO    Thread-16 :16668 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_133407-pwg4ysxt\files\output.log
+2024-09-24 13:37:28,974 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: status_report
+2024-09-24 13:37:29,744 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:37:30,755 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:37:30,942 INFO    Thread-16 :16668 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_133407-pwg4ysxt\files\output.log
+2024-09-24 13:37:31,796 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:37:32,804 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:37:32,945 INFO    Thread-16 :16668 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_133407-pwg4ysxt\files\output.log
+2024-09-24 13:37:33,820 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:37:33,989 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: status_report
+2024-09-24 13:37:34,835 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:37:34,961 INFO    Thread-16 :16668 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_133407-pwg4ysxt\files\output.log
+2024-09-24 13:37:35,852 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:37:36,879 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:37:36,992 INFO    Thread-16 :16668 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_133407-pwg4ysxt\files\output.log
+2024-09-24 13:37:37,884 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:37:38,365 DEBUG   SenderThread:16668 [sender.py:send():379] send: stats
+2024-09-24 13:37:38,631 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: stop_status
+2024-09-24 13:37:38,631 DEBUG   SenderThread:16668 [sender.py:send_request():406] send_request: stop_status
+2024-09-24 13:37:38,896 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:37:38,991 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: status_report
+2024-09-24 13:37:39,008 INFO    Thread-16 :16668 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_133407-pwg4ysxt\files\output.log
+2024-09-24 13:37:39,900 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:37:40,914 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:37:41,024 INFO    Thread-16 :16668 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_133407-pwg4ysxt\files\output.log
+2024-09-24 13:37:41,917 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:37:42,945 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:37:43,045 INFO    Thread-16 :16668 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_133407-pwg4ysxt\files\output.log
+2024-09-24 13:37:43,959 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:37:44,005 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: status_report
+2024-09-24 13:37:44,975 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:37:45,068 INFO    Thread-16 :16668 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_133407-pwg4ysxt\files\output.log
+2024-09-24 13:37:45,976 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:37:46,990 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:37:47,100 INFO    Thread-16 :16668 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_133407-pwg4ysxt\files\output.log
+2024-09-24 13:37:48,007 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:37:49,007 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: status_report
+2024-09-24 13:37:49,021 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:37:49,116 INFO    Thread-16 :16668 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_133407-pwg4ysxt\files\output.log
+2024-09-24 13:37:50,022 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:37:51,024 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:37:51,132 INFO    Thread-16 :16668 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_133407-pwg4ysxt\files\output.log
+2024-09-24 13:37:52,038 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:37:53,052 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:37:53,149 INFO    Thread-16 :16668 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_133407-pwg4ysxt\files\output.log
+2024-09-24 13:37:53,662 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: stop_status
+2024-09-24 13:37:53,662 DEBUG   SenderThread:16668 [sender.py:send_request():406] send_request: stop_status
+2024-09-24 13:37:54,021 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: status_report
+2024-09-24 13:37:54,053 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:37:55,069 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:37:55,178 INFO    Thread-16 :16668 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_133407-pwg4ysxt\files\output.log
+2024-09-24 13:37:56,084 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:37:57,099 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:37:57,209 INFO    Thread-16 :16668 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_133407-pwg4ysxt\files\output.log
+2024-09-24 13:37:58,103 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:37:59,023 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: status_report
+2024-09-24 13:37:59,116 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:37:59,227 INFO    Thread-16 :16668 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_133407-pwg4ysxt\files\output.log
+2024-09-24 13:38:00,131 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:38:01,146 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:38:01,240 INFO    Thread-16 :16668 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_133407-pwg4ysxt\files\output.log
+2024-09-24 13:38:02,162 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:38:03,163 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:38:03,256 INFO    Thread-16 :16668 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_133407-pwg4ysxt\files\output.log
+2024-09-24 13:38:04,038 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: status_report
+2024-09-24 13:38:04,178 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:38:05,194 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:38:05,271 INFO    Thread-16 :16668 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_133407-pwg4ysxt\files\output.log
+2024-09-24 13:38:06,209 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:38:07,224 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:38:07,288 INFO    Thread-16 :16668 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_133407-pwg4ysxt\files\output.log
+2024-09-24 13:38:08,226 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:38:08,380 DEBUG   SenderThread:16668 [sender.py:send():379] send: stats
+2024-09-24 13:38:08,662 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: stop_status
+2024-09-24 13:38:08,662 DEBUG   SenderThread:16668 [sender.py:send_request():406] send_request: stop_status
+2024-09-24 13:38:09,053 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: status_report
+2024-09-24 13:38:09,241 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:38:09,304 INFO    Thread-16 :16668 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_133407-pwg4ysxt\files\output.log
+2024-09-24 13:38:10,256 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:38:11,271 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:38:11,319 INFO    Thread-16 :16668 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_133407-pwg4ysxt\files\output.log
+2024-09-24 13:38:12,273 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:38:13,274 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:38:13,351 INFO    Thread-16 :16668 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_133407-pwg4ysxt\files\output.log
+2024-09-24 13:38:14,068 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: status_report
+2024-09-24 13:38:14,287 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:38:15,303 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:38:15,381 INFO    Thread-16 :16668 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_133407-pwg4ysxt\files\output.log
+2024-09-24 13:38:16,318 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:38:17,319 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:38:17,397 INFO    Thread-16 :16668 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_133407-pwg4ysxt\files\output.log
+2024-09-24 13:38:18,334 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:38:19,086 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: status_report
+2024-09-24 13:38:19,335 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:38:19,428 INFO    Thread-16 :16668 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_133407-pwg4ysxt\files\output.log
+2024-09-24 13:38:20,349 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:38:21,364 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:38:21,445 INFO    Thread-16 :16668 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_133407-pwg4ysxt\files\output.log
+2024-09-24 13:38:22,366 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:38:23,381 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:38:23,460 INFO    Thread-16 :16668 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_133407-pwg4ysxt\files\output.log
+2024-09-24 13:38:23,680 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: stop_status
+2024-09-24 13:38:23,680 DEBUG   SenderThread:16668 [sender.py:send_request():406] send_request: stop_status
+2024-09-24 13:38:24,099 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: status_report
+2024-09-24 13:38:24,396 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:38:25,412 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:38:25,475 INFO    Thread-16 :16668 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_133407-pwg4ysxt\files\output.log
+2024-09-24 13:38:26,413 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:38:27,427 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:38:27,506 INFO    Thread-16 :16668 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_133407-pwg4ysxt\files\output.log
+2024-09-24 13:38:28,429 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:38:29,101 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: status_report
+2024-09-24 13:38:29,432 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:38:29,513 INFO    Thread-16 :16668 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_133407-pwg4ysxt\files\output.log
+2024-09-24 13:38:30,446 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:38:31,460 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:38:31,537 INFO    Thread-16 :16668 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_133407-pwg4ysxt\files\output.log
+2024-09-24 13:38:32,475 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:38:33,491 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:38:33,540 INFO    Thread-16 :16668 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_133407-pwg4ysxt\files\output.log
+2024-09-24 13:38:34,114 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: status_report
+2024-09-24 13:38:34,506 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:38:35,522 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:38:35,569 INFO    Thread-16 :16668 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_133407-pwg4ysxt\files\output.log
+2024-09-24 13:38:36,523 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:38:37,538 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:38:37,587 INFO    Thread-16 :16668 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_133407-pwg4ysxt\files\output.log
+2024-09-24 13:38:38,395 DEBUG   SenderThread:16668 [sender.py:send():379] send: stats
+2024-09-24 13:38:38,553 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:38:38,679 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: stop_status
+2024-09-24 13:38:38,679 DEBUG   SenderThread:16668 [sender.py:send_request():406] send_request: stop_status
+2024-09-24 13:38:39,116 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: status_report
+2024-09-24 13:38:39,567 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:38:39,616 INFO    Thread-16 :16668 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_133407-pwg4ysxt\files\output.log
+2024-09-24 13:38:40,570 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:38:41,583 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:38:41,632 INFO    Thread-16 :16668 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_133407-pwg4ysxt\files\output.log
+2024-09-24 13:38:42,584 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:38:43,585 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:38:43,662 INFO    Thread-16 :16668 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_133407-pwg4ysxt\files\output.log
+2024-09-24 13:38:44,131 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: status_report
+2024-09-24 13:38:44,585 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:38:45,601 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:38:45,678 INFO    Thread-16 :16668 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_133407-pwg4ysxt\files\output.log
+2024-09-24 13:38:46,627 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:38:47,631 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:38:47,709 INFO    Thread-16 :16668 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_133407-pwg4ysxt\files\output.log
+2024-09-24 13:38:48,632 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:38:49,131 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: status_report
+2024-09-24 13:38:49,646 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:38:49,740 INFO    Thread-16 :16668 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_133407-pwg4ysxt\files\output.log
+2024-09-24 13:38:50,646 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:38:51,662 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:38:51,742 INFO    Thread-16 :16668 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_133407-pwg4ysxt\files\output.log
+2024-09-24 13:38:52,677 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:38:53,677 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: stop_status
+2024-09-24 13:38:53,677 DEBUG   SenderThread:16668 [sender.py:send_request():406] send_request: stop_status
+2024-09-24 13:38:53,679 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:38:53,757 INFO    Thread-16 :16668 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_133407-pwg4ysxt\files\output.log
+2024-09-24 13:38:54,147 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: status_report
+2024-09-24 13:38:54,679 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:38:55,693 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:38:55,771 INFO    Thread-16 :16668 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_133407-pwg4ysxt\files\output.log
+2024-09-24 13:38:56,693 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:38:57,709 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:38:57,788 INFO    Thread-16 :16668 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_133407-pwg4ysxt\files\output.log
+2024-09-24 13:38:58,723 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:38:58,803 INFO    Thread-16 :16668 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_133407-pwg4ysxt\files\output.log
+2024-09-24 13:38:59,163 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: status_report
+2024-09-24 13:38:59,724 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:39:00,725 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:39:00,820 INFO    Thread-16 :16668 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_133407-pwg4ysxt\files\output.log
+2024-09-24 13:39:01,740 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:39:02,741 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:39:02,836 INFO    Thread-16 :16668 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_133407-pwg4ysxt\files\output.log
+2024-09-24 13:39:03,755 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:39:04,178 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: status_report
+2024-09-24 13:39:04,755 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:39:04,865 INFO    Thread-16 :16668 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_133407-pwg4ysxt\files\output.log
+2024-09-24 13:39:05,772 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:39:06,774 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:39:06,868 INFO    Thread-16 :16668 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_133407-pwg4ysxt\files\output.log
+2024-09-24 13:39:07,787 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:39:08,398 DEBUG   SenderThread:16668 [sender.py:send():379] send: stats
+2024-09-24 13:39:08,678 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: stop_status
+2024-09-24 13:39:08,678 DEBUG   SenderThread:16668 [sender.py:send_request():406] send_request: stop_status
+2024-09-24 13:39:08,788 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:39:08,883 INFO    Thread-16 :16668 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_133407-pwg4ysxt\files\output.log
+2024-09-24 13:39:09,194 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: status_report
+2024-09-24 13:39:09,789 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:39:10,802 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:39:10,897 INFO    Thread-16 :16668 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_133407-pwg4ysxt\files\output.log
+2024-09-24 13:39:11,804 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:39:12,819 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:39:12,913 INFO    Thread-16 :16668 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_133407-pwg4ysxt\files\output.log
+2024-09-24 13:39:13,832 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:39:14,209 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: status_report
+2024-09-24 13:39:14,833 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:39:14,928 INFO    Thread-16 :16668 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_133407-pwg4ysxt\files\output.log
+2024-09-24 13:39:15,835 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:39:16,850 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:39:16,945 INFO    Thread-16 :16668 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_133407-pwg4ysxt\files\output.log
+2024-09-24 13:39:17,865 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:39:18,866 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:39:18,961 INFO    Thread-16 :16668 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_133407-pwg4ysxt\files\output.log
+2024-09-24 13:39:19,212 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: status_report
+2024-09-24 13:39:19,880 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:39:20,881 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:39:20,975 INFO    Thread-16 :16668 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_133407-pwg4ysxt\files\output.log
+2024-09-24 13:39:21,895 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:39:22,896 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:39:22,993 INFO    Thread-16 :16668 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_133407-pwg4ysxt\files\output.log
+2024-09-24 13:39:23,694 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: stop_status
+2024-09-24 13:39:23,694 DEBUG   SenderThread:16668 [sender.py:send_request():406] send_request: stop_status
+2024-09-24 13:39:23,899 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:39:24,225 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: status_report
+2024-09-24 13:39:24,913 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:39:25,006 INFO    Thread-16 :16668 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_133407-pwg4ysxt\files\output.log
+2024-09-24 13:39:25,914 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:39:26,928 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:39:27,023 INFO    Thread-16 :16668 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_133407-pwg4ysxt\files\output.log
+2024-09-24 13:39:27,941 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:39:28,943 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:39:29,052 INFO    Thread-16 :16668 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_133407-pwg4ysxt\files\output.log
+2024-09-24 13:39:29,240 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: status_report
+2024-09-24 13:39:29,944 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:39:30,959 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:39:31,069 INFO    Thread-16 :16668 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_133407-pwg4ysxt\files\output.log
+2024-09-24 13:39:31,982 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:39:32,991 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:39:33,085 INFO    Thread-16 :16668 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_133407-pwg4ysxt\files\output.log
+2024-09-24 13:39:34,008 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:39:34,282 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: status_report
+2024-09-24 13:39:35,022 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:39:35,116 INFO    Thread-16 :16668 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_133407-pwg4ysxt\files\output.log
+2024-09-24 13:39:36,025 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:39:37,037 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:39:37,131 INFO    Thread-16 :16668 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_133407-pwg4ysxt\files\output.log
+2024-09-24 13:39:38,038 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:39:38,410 DEBUG   SenderThread:16668 [sender.py:send():379] send: stats
+2024-09-24 13:39:38,692 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: stop_status
+2024-09-24 13:39:38,692 DEBUG   SenderThread:16668 [sender.py:send_request():406] send_request: stop_status
+2024-09-24 13:39:39,053 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:39:39,146 INFO    Thread-16 :16668 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_133407-pwg4ysxt\files\output.log
+2024-09-24 13:39:39,287 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: status_report
+2024-09-24 13:39:40,053 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:39:41,067 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:39:41,162 INFO    Thread-16 :16668 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_133407-pwg4ysxt\files\output.log
+2024-09-24 13:39:42,068 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:39:43,083 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:39:43,177 INFO    Thread-16 :16668 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_133407-pwg4ysxt\files\output.log
+2024-09-24 13:39:44,096 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:39:44,300 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: status_report
+2024-09-24 13:39:45,098 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:39:45,193 INFO    Thread-16 :16668 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_133407-pwg4ysxt\files\output.log
+2024-09-24 13:39:46,101 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:39:47,108 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:39:47,204 INFO    Thread-16 :16668 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_133407-pwg4ysxt\files\output.log
+2024-09-24 13:39:48,116 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:39:49,130 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:39:49,210 INFO    Thread-16 :16668 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_133407-pwg4ysxt\files\output.log
+2024-09-24 13:39:49,303 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: status_report
+2024-09-24 13:39:50,130 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:39:51,145 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:39:51,225 INFO    Thread-16 :16668 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_133407-pwg4ysxt\files\output.log
+2024-09-24 13:39:52,147 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:39:53,162 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:39:53,240 INFO    Thread-16 :16668 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_133407-pwg4ysxt\files\output.log
+2024-09-24 13:39:53,695 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: stop_status
+2024-09-24 13:39:53,695 DEBUG   SenderThread:16668 [sender.py:send_request():406] send_request: stop_status
+2024-09-24 13:39:54,175 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:39:54,318 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: status_report
+2024-09-24 13:39:55,177 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:39:55,255 INFO    Thread-16 :16668 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_133407-pwg4ysxt\files\output.log
+2024-09-24 13:39:56,186 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:39:57,189 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:39:57,269 INFO    Thread-16 :16668 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_133407-pwg4ysxt\files\output.log
+2024-09-24 13:39:58,213 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:39:59,224 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:39:59,271 INFO    Thread-16 :16668 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_133407-pwg4ysxt\files\output.log
+2024-09-24 13:39:59,334 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: status_report
+2024-09-24 13:40:00,224 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:40:01,256 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:40:01,289 INFO    Thread-16 :16668 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_133407-pwg4ysxt\files\output.log
+2024-09-24 13:40:02,272 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:40:03,273 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:40:03,304 INFO    Thread-16 :16668 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_133407-pwg4ysxt\files\output.log
+2024-09-24 13:40:04,289 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:40:04,342 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: status_report
+2024-09-24 13:40:05,287 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:40:05,350 INFO    Thread-16 :16668 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_133407-pwg4ysxt\files\output.log
+2024-09-24 13:40:06,302 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:40:07,304 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:40:07,365 INFO    Thread-16 :16668 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_133407-pwg4ysxt\files\output.log
+2024-09-24 13:40:08,317 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:40:08,412 DEBUG   SenderThread:16668 [sender.py:send():379] send: stats
+2024-09-24 13:40:08,694 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: stop_status
+2024-09-24 13:40:08,695 DEBUG   SenderThread:16668 [sender.py:send_request():406] send_request: stop_status
+2024-09-24 13:40:09,319 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:40:09,351 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: status_report
+2024-09-24 13:40:09,367 INFO    Thread-16 :16668 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_133407-pwg4ysxt\files\output.log
+2024-09-24 13:40:10,333 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:40:11,348 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:40:11,397 INFO    Thread-16 :16668 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_133407-pwg4ysxt\files\output.log
+2024-09-24 13:40:12,349 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:40:13,372 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:40:13,426 INFO    Thread-16 :16668 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_133407-pwg4ysxt\files\output.log
+2024-09-24 13:40:14,364 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: status_report
+2024-09-24 13:40:14,380 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:40:15,382 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:40:15,429 INFO    Thread-16 :16668 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_133407-pwg4ysxt\files\output.log
+2024-09-24 13:40:16,397 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:40:17,412 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:40:17,445 INFO    Thread-16 :16668 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_133407-pwg4ysxt\files\output.log
+2024-09-24 13:40:18,413 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:40:19,381 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: status_report
+2024-09-24 13:40:19,427 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:40:19,475 INFO    Thread-16 :16668 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_133407-pwg4ysxt\files\output.log
+2024-09-24 13:40:20,432 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:40:21,445 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:40:21,492 INFO    Thread-16 :16668 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_133407-pwg4ysxt\files\output.log
+2024-09-24 13:40:22,461 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:40:23,474 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:40:23,521 INFO    Thread-16 :16668 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_133407-pwg4ysxt\files\output.log
+2024-09-24 13:40:23,694 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: stop_status
+2024-09-24 13:40:23,694 DEBUG   SenderThread:16668 [sender.py:send_request():406] send_request: stop_status
+2024-09-24 13:40:24,397 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: status_report
+2024-09-24 13:40:24,474 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:40:25,490 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:40:25,523 INFO    Thread-16 :16668 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_133407-pwg4ysxt\files\output.log
+2024-09-24 13:40:26,506 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:40:27,521 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:40:27,553 INFO    Thread-16 :16668 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_133407-pwg4ysxt\files\output.log
+2024-09-24 13:40:28,534 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:40:29,412 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: status_report
+2024-09-24 13:40:29,538 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:40:29,571 INFO    Thread-16 :16668 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_133407-pwg4ysxt\files\output.log
+2024-09-24 13:40:30,553 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:40:31,556 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:40:31,587 INFO    Thread-16 :16668 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_133407-pwg4ysxt\files\output.log
+2024-09-24 13:40:32,568 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:40:33,570 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:40:33,601 INFO    Thread-16 :16668 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_133407-pwg4ysxt\files\output.log
+2024-09-24 13:40:34,413 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: status_report
+2024-09-24 13:40:34,583 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:40:35,585 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:40:35,615 INFO    Thread-16 :16668 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_133407-pwg4ysxt\files\output.log
+2024-09-24 13:40:36,601 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:40:37,616 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:40:37,631 INFO    Thread-16 :16668 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_133407-pwg4ysxt\files\output.log
+2024-09-24 13:40:38,427 DEBUG   SenderThread:16668 [sender.py:send():379] send: stats
+2024-09-24 13:40:38,631 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:40:38,693 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: stop_status
+2024-09-24 13:40:38,693 DEBUG   SenderThread:16668 [sender.py:send_request():406] send_request: stop_status
+2024-09-24 13:40:39,428 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: status_report
+2024-09-24 13:40:39,648 INFO    Thread-16 :16668 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_133407-pwg4ysxt\files\output.log
+2024-09-24 13:40:39,649 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:40:40,662 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:40:41,664 INFO    Thread-16 :16668 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_133407-pwg4ysxt\files\output.log
+2024-09-24 13:40:41,681 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:40:42,692 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:40:43,678 INFO    Thread-16 :16668 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_133407-pwg4ysxt\files\output.log
+2024-09-24 13:40:43,694 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:40:44,444 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: status_report
+2024-09-24 13:40:44,694 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:40:45,694 INFO    Thread-16 :16668 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_133407-pwg4ysxt\files\output.log
+2024-09-24 13:40:45,710 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:40:46,724 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:40:47,720 INFO    Thread-16 :16668 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_133407-pwg4ysxt\files\output.log
+2024-09-24 13:40:47,741 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:40:48,756 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:40:49,460 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: status_report
+2024-09-24 13:40:49,727 INFO    Thread-16 :16668 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_133407-pwg4ysxt\files\output.log
+2024-09-24 13:40:49,772 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:40:50,787 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:40:51,741 INFO    Thread-16 :16668 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_133407-pwg4ysxt\files\output.log
+2024-09-24 13:40:51,802 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:40:52,803 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:40:53,695 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: stop_status
+2024-09-24 13:40:53,695 DEBUG   SenderThread:16668 [sender.py:send_request():406] send_request: stop_status
+2024-09-24 13:40:53,757 INFO    Thread-16 :16668 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_133407-pwg4ysxt\files\output.log
+2024-09-24 13:40:53,819 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:40:54,475 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: status_report
+2024-09-24 13:40:54,834 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:40:55,775 INFO    Thread-16 :16668 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_133407-pwg4ysxt\files\output.log
+2024-09-24 13:40:55,834 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:40:56,851 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:40:57,803 INFO    Thread-16 :16668 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_133407-pwg4ysxt\files\output.log
+2024-09-24 13:40:57,865 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:40:58,868 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:40:59,502 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: status_report
+2024-09-24 13:40:59,818 INFO    Thread-16 :16668 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_133407-pwg4ysxt\files\output.log
+2024-09-24 13:40:59,881 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:41:00,883 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:41:01,896 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:41:02,897 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:41:03,912 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:41:04,505 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: status_report
+2024-09-24 13:41:04,928 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:41:05,943 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:41:06,949 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:41:07,942 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:41:08,428 DEBUG   SenderThread:16668 [sender.py:send():379] send: stats
+2024-09-24 13:41:08,694 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: stop_status
+2024-09-24 13:41:08,694 DEBUG   SenderThread:16668 [sender.py:send_request():406] send_request: stop_status
+2024-09-24 13:41:08,881 INFO    Thread-16 :16668 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_133407-pwg4ysxt\files\output.log
+2024-09-24 13:41:08,956 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:41:09,527 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: status_report
+2024-09-24 13:41:09,959 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:41:10,906 INFO    Thread-16 :16668 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_133407-pwg4ysxt\files\output.log
+2024-09-24 13:41:10,966 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:41:11,972 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:41:12,978 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:41:13,982 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:41:14,990 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:41:15,533 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: status_report
+2024-09-24 13:41:15,996 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:41:17,003 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:41:18,009 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:41:19,019 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:41:20,026 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:41:20,535 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: status_report
+2024-09-24 13:41:21,034 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:41:22,042 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:41:23,049 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:41:23,713 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: stop_status
+2024-09-24 13:41:23,713 DEBUG   SenderThread:16668 [sender.py:send_request():406] send_request: stop_status
+2024-09-24 13:41:24,054 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:41:25,064 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:41:25,545 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: status_report
+2024-09-24 13:41:26,074 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:41:27,083 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:41:28,096 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:41:29,102 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:41:30,113 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:41:30,564 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: status_report
+2024-09-24 13:41:31,125 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:41:32,140 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:41:33,141 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:41:34,153 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:41:35,165 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:41:35,568 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: status_report
+2024-09-24 13:41:36,171 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:41:37,181 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:41:38,194 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:41:38,440 DEBUG   SenderThread:16668 [sender.py:send():379] send: stats
+2024-09-24 13:41:38,719 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: stop_status
+2024-09-24 13:41:38,719 DEBUG   SenderThread:16668 [sender.py:send_request():406] send_request: stop_status
+2024-09-24 13:41:39,202 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:41:40,211 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:41:40,571 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: status_report
+2024-09-24 13:41:41,226 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:41:41,367 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: partial_history
+2024-09-24 13:41:41,369 DEBUG   SenderThread:16668 [sender.py:send():379] send: history
+2024-09-24 13:41:41,370 DEBUG   SenderThread:16668 [sender.py:send_request():406] send_request: summary_record
+2024-09-24 13:41:41,371 INFO    SenderThread:16668 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-09-24 13:41:41,556 DEBUG   SenderThread:16668 [sender.py:send():379] send: telemetry
+2024-09-24 13:41:41,558 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: server_info
+2024-09-24 13:41:41,558 DEBUG   SenderThread:16668 [sender.py:send_request():406] send_request: server_info
+2024-09-24 13:41:41,728 DEBUG   SenderThread:16668 [sender.py:send():379] send: exit
+2024-09-24 13:41:41,728 INFO    SenderThread:16668 [sender.py:send_exit():586] handling exit code: 0
+2024-09-24 13:41:41,731 INFO    SenderThread:16668 [sender.py:send_exit():588] handling runtime: 453
+2024-09-24 13:41:41,731 INFO    SenderThread:16668 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-09-24 13:41:41,732 INFO    SenderThread:16668 [sender.py:send_exit():594] send defer
+2024-09-24 13:41:41,732 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: defer
+2024-09-24 13:41:41,732 INFO    HandlerThread:16668 [handler.py:handle_request_defer():184] handle defer: 0
+2024-09-24 13:41:41,732 DEBUG   SenderThread:16668 [sender.py:send_request():406] send_request: defer
+2024-09-24 13:41:41,732 INFO    SenderThread:16668 [sender.py:send_request_defer():610] handle sender defer: 0
+2024-09-24 13:41:41,732 INFO    SenderThread:16668 [sender.py:transition_state():614] send defer: 1
+2024-09-24 13:41:41,733 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: defer
+2024-09-24 13:41:41,733 INFO    HandlerThread:16668 [handler.py:handle_request_defer():184] handle defer: 1
+2024-09-24 13:41:41,733 DEBUG   SenderThread:16668 [sender.py:send_request():406] send_request: defer
+2024-09-24 13:41:41,733 INFO    SenderThread:16668 [sender.py:send_request_defer():610] handle sender defer: 1
+2024-09-24 13:41:41,733 INFO    SenderThread:16668 [sender.py:transition_state():614] send defer: 2
+2024-09-24 13:41:41,733 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: defer
+2024-09-24 13:41:41,733 INFO    HandlerThread:16668 [handler.py:handle_request_defer():184] handle defer: 2
+2024-09-24 13:41:41,733 INFO    HandlerThread:16668 [system_monitor.py:finish():203] Stopping system monitor
+2024-09-24 13:41:41,733 DEBUG   SystemMonitor:16668 [system_monitor.py:_start():179] Finished system metrics aggregation loop
+2024-09-24 13:41:41,733 DEBUG   SystemMonitor:16668 [system_monitor.py:_start():183] Publishing last batch of metrics
+2024-09-24 13:41:41,734 INFO    HandlerThread:16668 [interfaces.py:finish():200] Joined cpu monitor
+2024-09-24 13:41:41,734 INFO    HandlerThread:16668 [interfaces.py:finish():200] Joined disk monitor
+2024-09-24 13:41:41,773 INFO    HandlerThread:16668 [interfaces.py:finish():200] Joined gpu monitor
+2024-09-24 13:41:41,773 INFO    HandlerThread:16668 [interfaces.py:finish():200] Joined memory monitor
+2024-09-24 13:41:41,773 INFO    HandlerThread:16668 [interfaces.py:finish():200] Joined network monitor
+2024-09-24 13:41:41,774 DEBUG   SenderThread:16668 [sender.py:send_request():406] send_request: defer
+2024-09-24 13:41:41,774 INFO    SenderThread:16668 [sender.py:send_request_defer():610] handle sender defer: 2
+2024-09-24 13:41:41,774 INFO    SenderThread:16668 [sender.py:transition_state():614] send defer: 3
+2024-09-24 13:41:41,774 DEBUG   SenderThread:16668 [sender.py:send():379] send: stats
+2024-09-24 13:41:41,774 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: defer
+2024-09-24 13:41:41,774 INFO    HandlerThread:16668 [handler.py:handle_request_defer():184] handle defer: 3
+2024-09-24 13:41:41,774 DEBUG   SenderThread:16668 [sender.py:send_request():406] send_request: defer
+2024-09-24 13:41:41,774 INFO    SenderThread:16668 [sender.py:send_request_defer():610] handle sender defer: 3
+2024-09-24 13:41:41,774 INFO    SenderThread:16668 [sender.py:transition_state():614] send defer: 4
+2024-09-24 13:41:41,775 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: defer
+2024-09-24 13:41:41,775 INFO    HandlerThread:16668 [handler.py:handle_request_defer():184] handle defer: 4
+2024-09-24 13:41:41,775 DEBUG   SenderThread:16668 [sender.py:send_request():406] send_request: defer
+2024-09-24 13:41:41,775 INFO    SenderThread:16668 [sender.py:send_request_defer():610] handle sender defer: 4
+2024-09-24 13:41:41,775 INFO    SenderThread:16668 [sender.py:transition_state():614] send defer: 5
+2024-09-24 13:41:41,775 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: defer
+2024-09-24 13:41:41,775 INFO    HandlerThread:16668 [handler.py:handle_request_defer():184] handle defer: 5
+2024-09-24 13:41:41,777 DEBUG   SenderThread:16668 [sender.py:send():379] send: summary
+2024-09-24 13:41:41,777 INFO    SenderThread:16668 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-09-24 13:41:41,778 DEBUG   SenderThread:16668 [sender.py:send_request():406] send_request: defer
+2024-09-24 13:41:41,778 INFO    SenderThread:16668 [sender.py:send_request_defer():610] handle sender defer: 5
+2024-09-24 13:41:41,778 INFO    SenderThread:16668 [sender.py:transition_state():614] send defer: 6
+2024-09-24 13:41:41,778 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: defer
+2024-09-24 13:41:41,778 INFO    HandlerThread:16668 [handler.py:handle_request_defer():184] handle defer: 6
+2024-09-24 13:41:41,778 DEBUG   SenderThread:16668 [sender.py:send_request():406] send_request: defer
+2024-09-24 13:41:41,778 INFO    SenderThread:16668 [sender.py:send_request_defer():610] handle sender defer: 6
+2024-09-24 13:41:41,781 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: status_report
+2024-09-24 13:41:41,957 INFO    SenderThread:16668 [sender.py:transition_state():614] send defer: 7
+2024-09-24 13:41:41,958 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: defer
+2024-09-24 13:41:41,958 INFO    HandlerThread:16668 [handler.py:handle_request_defer():184] handle defer: 7
+2024-09-24 13:41:41,958 DEBUG   SenderThread:16668 [sender.py:send_request():406] send_request: defer
+2024-09-24 13:41:41,958 INFO    SenderThread:16668 [sender.py:send_request_defer():610] handle sender defer: 7
+2024-09-24 13:41:42,163 INFO    Thread-16 :16668 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_133407-pwg4ysxt\files\config.yaml
+2024-09-24 13:41:42,163 INFO    Thread-16 :16668 [dir_watcher.py:_on_file_created():271] file/dir created: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_133407-pwg4ysxt\files\wandb-summary.json
+2024-09-24 13:41:42,804 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: poll_exit
+2024-09-24 13:41:44,826 INFO    SenderThread:16668 [sender.py:transition_state():614] send defer: 8
+2024-09-24 13:41:44,826 DEBUG   SenderThread:16668 [sender.py:send_request():406] send_request: poll_exit
+2024-09-24 13:41:44,826 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: defer
+2024-09-24 13:41:44,827 INFO    HandlerThread:16668 [handler.py:handle_request_defer():184] handle defer: 8
+2024-09-24 13:41:44,827 DEBUG   SenderThread:16668 [sender.py:send_request():406] send_request: defer
+2024-09-24 13:41:44,827 INFO    SenderThread:16668 [sender.py:send_request_defer():610] handle sender defer: 8
+2024-09-24 13:41:44,827 INFO    SenderThread:16668 [job_builder.py:build():440] Attempting to build job artifact
+2024-09-24 13:41:44,829 INFO    SenderThread:16668 [job_builder.py:_get_source_type():569] is repo sourced job
+2024-09-24 13:41:44,878 INFO    SenderThread:16668 [job_builder.py:build():545] adding wandb-job metadata file
+2024-09-24 13:41:44,886 INFO    SenderThread:16668 [sender.py:transition_state():614] send defer: 9
+2024-09-24 13:41:44,886 DEBUG   SenderThread:16668 [sender.py:send():379] send: artifact
+2024-09-24 13:41:44,886 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: defer
+2024-09-24 13:41:44,888 INFO    HandlerThread:16668 [handler.py:handle_request_defer():184] handle defer: 9
+2024-09-24 13:41:44,899 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: poll_exit
+2024-09-24 13:41:45,179 INFO    Thread-16 :16668 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_133407-pwg4ysxt\files\output.log
+2024-09-24 13:41:45,704 INFO    SenderThread:16668 [sender.py:send_artifact():1537] sent artifact job-https___github.com_PiotrPotrz_H_SEG.git_inference.py - {'id': 'QXJ0aWZhY3Q6MTI0NDA4MzMwMw==', 'state': 'COMMITTED', 'artifactSequence': {'id': 'QXJ0aWZhY3RDb2xsZWN0aW9uOjQ2MDMyMTQ5MQ==', 'latestArtifact': {'id': 'QXJ0aWZhY3Q6MTI0NDA4MzMwMw==', 'versionIndex': 1}}}
+2024-09-24 13:41:45,704 DEBUG   SenderThread:16668 [sender.py:send_request():406] send_request: defer
+2024-09-24 13:41:45,704 INFO    SenderThread:16668 [sender.py:send_request_defer():610] handle sender defer: 9
+2024-09-24 13:41:45,704 INFO    SenderThread:16668 [dir_watcher.py:finish():358] shutting down directory watcher
+2024-09-24 13:41:46,193 INFO    SenderThread:16668 [dir_watcher.py:finish():388] scan: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_133407-pwg4ysxt\files
+2024-09-24 13:41:46,194 INFO    SenderThread:16668 [dir_watcher.py:finish():402] scan save: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_133407-pwg4ysxt\files\conda-environment.yaml conda-environment.yaml
+2024-09-24 13:41:46,194 INFO    SenderThread:16668 [dir_watcher.py:finish():402] scan save: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_133407-pwg4ysxt\files\config.yaml config.yaml
+2024-09-24 13:41:46,195 INFO    SenderThread:16668 [dir_watcher.py:finish():402] scan save: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_133407-pwg4ysxt\files\output.log output.log
+2024-09-24 13:41:46,196 INFO    SenderThread:16668 [dir_watcher.py:finish():402] scan save: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_133407-pwg4ysxt\files\requirements.txt requirements.txt
+2024-09-24 13:41:46,198 INFO    SenderThread:16668 [dir_watcher.py:finish():402] scan save: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_133407-pwg4ysxt\files\wandb-metadata.json wandb-metadata.json
+2024-09-24 13:41:46,198 INFO    SenderThread:16668 [dir_watcher.py:finish():402] scan save: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_133407-pwg4ysxt\files\wandb-summary.json wandb-summary.json
+2024-09-24 13:41:46,200 INFO    SenderThread:16668 [sender.py:transition_state():614] send defer: 10
+2024-09-24 13:41:46,200 DEBUG   SenderThread:16668 [sender.py:send_request():406] send_request: poll_exit
+2024-09-24 13:41:46,201 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: defer
+2024-09-24 13:41:46,201 INFO    HandlerThread:16668 [handler.py:handle_request_defer():184] handle defer: 10
+2024-09-24 13:41:46,201 DEBUG   SenderThread:16668 [sender.py:send_request():406] send_request: defer
+2024-09-24 13:41:46,201 INFO    SenderThread:16668 [sender.py:send_request_defer():610] handle sender defer: 10
+2024-09-24 13:41:46,201 INFO    SenderThread:16668 [file_pusher.py:finish():169] shutting down file pusher
+2024-09-24 13:41:46,736 INFO    wandb-upload_0:16668 [upload_job.py:push():130] Uploaded file D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_133407-pwg4ysxt\files\config.yaml
+2024-09-24 13:41:46,766 INFO    wandb-upload_1:16668 [upload_job.py:push():130] Uploaded file D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_133407-pwg4ysxt\files\output.log
+2024-09-24 13:41:46,853 INFO    wandb-upload_3:16668 [upload_job.py:push():130] Uploaded file D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_133407-pwg4ysxt\files\wandb-summary.json
+2024-09-24 13:41:46,872 INFO    wandb-upload_2:16668 [upload_job.py:push():130] Uploaded file D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_133407-pwg4ysxt\files\requirements.txt
+2024-09-24 13:41:46,923 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: poll_exit
+2024-09-24 13:41:46,923 DEBUG   SenderThread:16668 [sender.py:send_request():406] send_request: poll_exit
+2024-09-24 13:41:47,079 INFO    Thread-15 (_thread_body):16668 [sender.py:transition_state():614] send defer: 11
+2024-09-24 13:41:47,079 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: defer
+2024-09-24 13:41:47,079 INFO    HandlerThread:16668 [handler.py:handle_request_defer():184] handle defer: 11
+2024-09-24 13:41:47,079 DEBUG   SenderThread:16668 [sender.py:send_request():406] send_request: defer
+2024-09-24 13:41:47,079 INFO    SenderThread:16668 [sender.py:send_request_defer():610] handle sender defer: 11
+2024-09-24 13:41:47,080 INFO    SenderThread:16668 [file_pusher.py:join():175] waiting for file pusher
+2024-09-24 13:41:47,080 INFO    SenderThread:16668 [sender.py:transition_state():614] send defer: 12
+2024-09-24 13:41:47,080 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: defer
+2024-09-24 13:41:47,080 INFO    HandlerThread:16668 [handler.py:handle_request_defer():184] handle defer: 12
+2024-09-24 13:41:47,081 DEBUG   SenderThread:16668 [sender.py:send_request():406] send_request: defer
+2024-09-24 13:41:47,081 INFO    SenderThread:16668 [sender.py:send_request_defer():610] handle sender defer: 12
+2024-09-24 13:41:47,081 INFO    SenderThread:16668 [file_stream.py:finish():601] file stream finish called
+2024-09-24 13:41:47,597 INFO    SenderThread:16668 [file_stream.py:finish():605] file stream finish is done
+2024-09-24 13:41:47,598 INFO    SenderThread:16668 [sender.py:transition_state():614] send defer: 13
+2024-09-24 13:41:47,598 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: defer
+2024-09-24 13:41:47,598 INFO    HandlerThread:16668 [handler.py:handle_request_defer():184] handle defer: 13
+2024-09-24 13:41:47,598 DEBUG   SenderThread:16668 [sender.py:send_request():406] send_request: defer
+2024-09-24 13:41:47,598 INFO    SenderThread:16668 [sender.py:send_request_defer():610] handle sender defer: 13
+2024-09-24 13:41:47,598 INFO    SenderThread:16668 [sender.py:transition_state():614] send defer: 14
+2024-09-24 13:41:47,598 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: defer
+2024-09-24 13:41:47,598 INFO    HandlerThread:16668 [handler.py:handle_request_defer():184] handle defer: 14
+2024-09-24 13:41:47,599 DEBUG   SenderThread:16668 [sender.py:send():379] send: final
+2024-09-24 13:41:47,599 DEBUG   SenderThread:16668 [sender.py:send():379] send: footer
+2024-09-24 13:41:47,599 DEBUG   SenderThread:16668 [sender.py:send_request():406] send_request: defer
+2024-09-24 13:41:47,599 INFO    SenderThread:16668 [sender.py:send_request_defer():610] handle sender defer: 14
+2024-09-24 13:41:47,599 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: poll_exit
+2024-09-24 13:41:47,599 DEBUG   SenderThread:16668 [sender.py:send_request():406] send_request: poll_exit
+2024-09-24 13:41:47,600 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:41:47,601 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: get_summary
+2024-09-24 13:41:47,601 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: sampled_history
+2024-09-24 13:41:47,602 DEBUG   HandlerThread:16668 [handler.py:handle_request():158] handle_request: shutdown
+2024-09-24 13:41:47,602 INFO    HandlerThread:16668 [handler.py:finish():882] shutting down handler
+2024-09-24 13:41:48,609 INFO    SenderThread:16668 [sender.py:finish():1615] shutting down sender
+2024-09-24 13:41:48,609 INFO    SenderThread:16668 [file_pusher.py:finish():169] shutting down file pusher
+2024-09-24 13:41:48,609 INFO    WriterThread:16668 [datastore.py:close():296] close: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_133407-pwg4ysxt\run-pwg4ysxt.wandb
+2024-09-24 13:41:48,609 INFO    SenderThread:16668 [file_pusher.py:join():175] waiting for file pusher

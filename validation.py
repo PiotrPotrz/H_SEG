@@ -83,6 +83,8 @@ def val(model: torch.nn, validation_loader, loss_fn, epoch_number, scheduler, de
             if len(val_data) == 2:
                 inputs, labels = val_data
                 labels_y1 = labels.type(torch.FloatTensor).to(device)
+                if (i + 1) == 1 or (i + 1) % (4 * inputs.size(0)) == 0:
+                    print(f"validation {(i + 1) * inputs.size(0)} / {len(validation_loader.dataset)}")
             elif len(val_data) == 6:
                 raise NotImplementedError
             
@@ -113,6 +115,7 @@ def val(model: torch.nn, validation_loader, loss_fn, epoch_number, scheduler, de
                 labels_numpy1 = labels1.detach().cpu().numpy() # dlaczego przenosimy to do cpu ?
                 labels_numpy2 = labels2.detach().cpu().numpy()
 
+                inputs = inputs.to(device)
                 outputs = model(inputs)
                 output1 = outputs[:, :3, :, :]
                 output2 = outputs[:, [0, 1], :, :]

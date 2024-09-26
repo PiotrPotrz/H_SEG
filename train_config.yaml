@@ -1,6 +1,6 @@
 annotator: 1
 aug_type: BetterAugmentation
-augmentation: false
+augmentation: true
 batch_size: 6
 epochs: 2
 k: 5

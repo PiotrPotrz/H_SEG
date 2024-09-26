@@ -28,7 +28,7 @@ config = {"epochs": 2,
             "lr": 1e-3,
             "annotator": 1,
             "model": 'smpUNet++',
-            "augmentation": False,
+            "augmentation": True,
             "loss": "CrossEntropyLoss",
             "optimizer": "Adam",
             "scheduler": "CosineAnnealingLR",
@@ -92,8 +92,7 @@ scheduler = scheduler_dict[config["scheduler"]]
 timestamp = datetime.datetime.now().strftime("%d-%m-%Y-%H-%M")
 
 
-wandb.init(project="project",
-           config=config)
+wandb.init(project="project", config=config)
 
 name = (f'A={config["annotator"]} k={config["k"]} M={config["model"]} aug={config["augmentation"]} mode={config["mode"]} Opt={config["optimizer"]} Sch={config["scheduler"]} E={config["epochs"]} B_size={config["batch_size"]} lr={config["lr"]} Loss={config["loss"]} date={timestamp}')
 

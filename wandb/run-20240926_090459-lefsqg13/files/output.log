@@ -1,0 +1,56 @@
+D:\SEGMENTACJA\SegSperm_part\SegSperm_part/train/GT1_mixed
+(432,)
+X shape: (432, 512, 512, 3)
+y shape: (432, 512, 512, 4)
+D:\SEGMENTACJA\SegSperm_part\SegSperm_part/test/GT1_mixed
+(119,)
+X shape: (119, 512, 512, 3)
+y shape: (119, 512, 512, 4)
+training 0
+Traceback (most recent call last):
+  File "D:\SEGMENTACJA\pythonProject\H_SEG\main.py", line 124, in <module>
+    train_loss, train_iou_multiclass, train_iou_oneclass = train.train(model, train_loader, optimizer, scheduler,
+                                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\SEGMENTACJA\pythonProject\H_SEG\train.py", line 69, in train
+    output = model(inputs)
+             ^^^^^^^^^^^^^
+  File "D:\anaconda\envs\pythonProject\Lib\site-packages\torch\nn\modules\module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\anaconda\envs\pythonProject\Lib\site-packages\torch\nn\modules\module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\anaconda\envs\pythonProject\Lib\site-packages\segmentation_models_pytorch\base\model.py", line 29, in forward
+    features = self.encoder(x)
+               ^^^^^^^^^^^^^^^
+  File "D:\anaconda\envs\pythonProject\Lib\site-packages\torch\nn\modules\module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\anaconda\envs\pythonProject\Lib\site-packages\torch\nn\modules\module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\anaconda\envs\pythonProject\Lib\site-packages\segmentation_models_pytorch\encoders\resnet.py", line 62, in forward
+    x = stages[i](x)
+        ^^^^^^^^^^^^
+  File "D:\anaconda\envs\pythonProject\Lib\site-packages\torch\nn\modules\module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\anaconda\envs\pythonProject\Lib\site-packages\torch\nn\modules\module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\anaconda\envs\pythonProject\Lib\site-packages\torch\nn\modules\container.py", line 219, in forward
+    input = module(input)
+            ^^^^^^^^^^^^^
+  File "D:\anaconda\envs\pythonProject\Lib\site-packages\torch\nn\modules\module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\anaconda\envs\pythonProject\Lib\site-packages\torch\nn\modules\module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\anaconda\envs\pythonProject\Lib\site-packages\torch\nn\modules\conv.py", line 458, in forward
+    return self._conv_forward(input, self.weight, self.bias)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\anaconda\envs\pythonProject\Lib\site-packages\torch\nn\modules\conv.py", line 454, in _conv_forward
+    return F.conv2d(input, weight, bias, self.stride,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: Input type (torch.FloatTensor) and weight type (torch.cuda.FloatTensor) should be the same or input should be a MKLDNN tensor and weight is a dense tensor

@@ -1,0 +1,1049 @@
+2024-09-24 13:44:40,325 INFO    StreamThr :7276 [internal.py:wandb_internal():85] W&B internal server running at pid: 7276, started at: 2024-09-24 13:44:40.324805
+2024-09-24 13:44:40,326 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: status
+2024-09-24 13:44:40,332 INFO    WriterThread:7276 [datastore.py:open_for_write():87] open: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_134440-a03jas5j\run-a03jas5j.wandb
+2024-09-24 13:44:40,332 DEBUG   SenderThread:7276 [sender.py:send():379] send: header
+2024-09-24 13:44:40,375 DEBUG   SenderThread:7276 [sender.py:send():379] send: run
+2024-09-24 13:44:40,853 INFO    SenderThread:7276 [dir_watcher.py:__init__():211] watching files in: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_134440-a03jas5j\files
+2024-09-24 13:44:40,854 INFO    SenderThread:7276 [sender.py:_start_run_threads():1188] run started: a03jas5j with start time 1727178280.328794
+2024-09-24 13:44:40,865 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: check_version
+2024-09-24 13:44:40,865 DEBUG   SenderThread:7276 [sender.py:send_request():406] send_request: check_version
+2024-09-24 13:44:41,068 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: run_start
+2024-09-24 13:44:41,085 DEBUG   HandlerThread:7276 [system_info.py:__init__():26] System info init
+2024-09-24 13:44:41,085 DEBUG   HandlerThread:7276 [system_info.py:__init__():41] System info init done
+2024-09-24 13:44:41,085 INFO    HandlerThread:7276 [system_monitor.py:start():194] Starting system monitor
+2024-09-24 13:44:41,085 INFO    SystemMonitor:7276 [system_monitor.py:_start():158] Starting system asset monitoring threads
+2024-09-24 13:44:41,086 INFO    HandlerThread:7276 [system_monitor.py:probe():214] Collecting system info
+2024-09-24 13:44:41,088 INFO    SystemMonitor:7276 [interfaces.py:start():188] Started cpu monitoring
+2024-09-24 13:44:41,089 INFO    SystemMonitor:7276 [interfaces.py:start():188] Started disk monitoring
+2024-09-24 13:44:41,089 INFO    SystemMonitor:7276 [interfaces.py:start():188] Started gpu monitoring
+2024-09-24 13:44:41,093 INFO    SystemMonitor:7276 [interfaces.py:start():188] Started memory monitoring
+2024-09-24 13:44:41,099 INFO    SystemMonitor:7276 [interfaces.py:start():188] Started network monitoring
+2024-09-24 13:44:41,101 DEBUG   HandlerThread:7276 [system_info.py:probe():152] Probing system
+2024-09-24 13:44:41,102 DEBUG   HandlerThread:7276 [system_info.py:_probe_git():137] Probing git
+2024-09-24 13:44:41,183 DEBUG   HandlerThread:7276 [system_info.py:_probe_git():145] Probing git done
+2024-09-24 13:44:41,183 DEBUG   HandlerThread:7276 [system_info.py:probe():200] Probing system done
+2024-09-24 13:44:41,183 DEBUG   HandlerThread:7276 [system_monitor.py:probe():223] {'os': 'Windows-10-10.0.19045-SP0', 'python': '3.11.9', 'heartbeatAt': '2024-09-24T11:44:41.101258', 'startedAt': '2024-09-24T11:44:40.317822', 'docker': None, 'cuda': None, 'args': (), 'state': 'running', 'program': 'D:\\SEGMENTACJA\\pythonProject\\H_SEG\\inference.py', 'codePathLocal': 'inference.py', 'codePath': 'inference.py', 'git': {'remote': 'https://github.com/PiotrPotrz/H_SEG.git', 'commit': 'a5439a8bf37ee8ec4bb2173e13aba741b4ba96e3'}, 'email': 'piotr.potrzebowski@interia.pl', 'root': 'D:/SEGMENTACJA/pythonProject/H_SEG', 'host': 'DESKTOP-JQBABD4', 'username': 'Piotr', 'executable': 'D:\\anaconda\\envs\\pythonProject\\python.exe', 'cpu_count': 6, 'cpu_count_logical': 6, 'cpu_freq': {'current': 3696.0, 'min': 0.0, 'max': 3696.0}, 'cpu_freq_per_core': [{'current': 3696.0, 'min': 0.0, 'max': 3696.0}], 'disk': {'/': {'total': 753.3037071228027, 'used': 667.8137016296387}}, 'gpu': 'NVIDIA GeForce RTX 2060', 'gpu_count': 1, 'gpu_devices': [{'name': 'NVIDIA GeForce RTX 2060', 'memory_total': 6442450944}], 'memory': {'total': 15.912944793701172}}
+2024-09-24 13:44:41,183 INFO    HandlerThread:7276 [system_monitor.py:probe():224] Finished collecting system info
+2024-09-24 13:44:41,183 INFO    HandlerThread:7276 [system_monitor.py:probe():227] Publishing system info
+2024-09-24 13:44:41,183 DEBUG   HandlerThread:7276 [system_info.py:_save_conda():209] Saving list of conda packages installed into the current environment
+2024-09-24 13:44:41,186 ERROR   HandlerThread:7276 [system_info.py:_save_conda():223] Error saving conda packages: [WinError 2] Nie mo¿na odnaleŸæ okreœlonego pliku
+Traceback (most recent call last):
+  File "D:\anaconda\envs\pythonProject\Lib\site-packages\wandb\sdk\internal\system\system_info.py", line 216, in _save_conda
+    subprocess.call(
+  File "D:\anaconda\envs\pythonProject\Lib\subprocess.py", line 389, in call
+    with Popen(*popenargs, **kwargs) as p:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\anaconda\envs\pythonProject\Lib\subprocess.py", line 1026, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "D:\anaconda\envs\pythonProject\Lib\subprocess.py", line 1538, in _execute_child
+    hp, ht, pid, tid = _winapi.CreateProcess(executable, args,
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [WinError 2] Nie mo¿na odnaleŸæ okreœlonego pliku
+2024-09-24 13:44:41,188 DEBUG   HandlerThread:7276 [system_info.py:_save_conda():224] Saving conda packages done
+2024-09-24 13:44:41,189 INFO    HandlerThread:7276 [system_monitor.py:probe():229] Finished publishing system info
+2024-09-24 13:44:41,195 DEBUG   SenderThread:7276 [sender.py:send():379] send: files
+2024-09-24 13:44:41,195 INFO    SenderThread:7276 [sender.py:_save_file():1454] saving file wandb-metadata.json with policy now
+2024-09-24 13:44:41,411 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: python_packages
+2024-09-24 13:44:41,411 DEBUG   SenderThread:7276 [sender.py:send_request():406] send_request: python_packages
+2024-09-24 13:44:41,411 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: stop_status
+2024-09-24 13:44:41,412 DEBUG   SenderThread:7276 [sender.py:send_request():406] send_request: stop_status
+2024-09-24 13:44:41,413 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:44:41,728 DEBUG   SenderThread:7276 [sender.py:send():379] send: telemetry
+2024-09-24 13:44:41,728 DEBUG   SenderThread:7276 [sender.py:send():379] send: telemetry
+2024-09-24 13:44:41,728 DEBUG   SenderThread:7276 [sender.py:send():379] send: run
+2024-09-24 13:44:41,865 INFO    Thread-16 :7276 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_134440-a03jas5j\files\config.yaml
+2024-09-24 13:44:41,866 INFO    Thread-16 :7276 [dir_watcher.py:_on_file_created():271] file/dir created: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_134440-a03jas5j\files\conda-environment.yaml
+2024-09-24 13:44:41,866 INFO    Thread-16 :7276 [dir_watcher.py:_on_file_created():271] file/dir created: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_134440-a03jas5j\files\wandb-metadata.json
+2024-09-24 13:44:41,866 INFO    Thread-16 :7276 [dir_watcher.py:_on_file_created():271] file/dir created: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_134440-a03jas5j\files\requirements.txt
+2024-09-24 13:44:41,873 INFO    wandb-upload_0:7276 [upload_job.py:push():130] Uploaded file C:\Users\Piotr\AppData\Local\Temp\tmp6hohjft9wandb\3kl1n00d-wandb-metadata.json
+2024-09-24 13:44:41,899 INFO    SenderThread:7276 [sender.py:send_run():1035] updated run: a03jas5j
+2024-09-24 13:44:43,413 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:44:43,882 INFO    Thread-16 :7276 [dir_watcher.py:_on_file_created():271] file/dir created: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_134440-a03jas5j\files\output.log
+2024-09-24 13:44:44,427 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:44:45,428 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:44:45,474 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: status_report
+2024-09-24 13:44:45,898 INFO    Thread-16 :7276 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_134440-a03jas5j\files\output.log
+2024-09-24 13:44:46,443 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:44:47,457 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:44:48,458 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:44:49,473 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:44:50,476 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:44:51,429 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: status_report
+2024-09-24 13:44:51,491 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:44:52,505 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:44:53,505 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:44:54,506 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:44:55,507 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:44:56,427 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: stop_status
+2024-09-24 13:44:56,427 DEBUG   SenderThread:7276 [sender.py:send_request():406] send_request: stop_status
+2024-09-24 13:44:56,521 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:44:56,682 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: status_report
+2024-09-24 13:44:57,522 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:44:58,536 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:44:59,541 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:45:00,044 INFO    Thread-16 :7276 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_134440-a03jas5j\files\output.log
+2024-09-24 13:45:00,551 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:45:01,556 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:45:02,471 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: status_report
+2024-09-24 13:45:02,567 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:45:03,569 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:45:04,569 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:45:05,583 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:45:06,585 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:45:07,491 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: status_report
+2024-09-24 13:45:07,599 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:45:08,600 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:45:09,602 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:45:10,615 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:45:11,441 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: stop_status
+2024-09-24 13:45:11,441 DEBUG   SenderThread:7276 [sender.py:send_request():406] send_request: stop_status
+2024-09-24 13:45:11,628 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:45:12,148 INFO    Thread-16 :7276 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_134440-a03jas5j\files\output.log
+2024-09-24 13:45:12,631 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:45:12,726 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: status_report
+2024-09-24 13:45:13,647 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:45:14,648 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:45:15,166 INFO    Thread-16 :7276 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_134440-a03jas5j\files\config.yaml
+2024-09-24 13:45:15,663 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:45:16,677 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:45:17,692 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:45:18,195 INFO    Thread-16 :7276 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_134440-a03jas5j\files\output.log
+2024-09-24 13:45:18,695 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:45:19,712 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:45:20,225 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: status_report
+2024-09-24 13:45:20,725 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:45:21,741 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:45:22,239 INFO    Thread-16 :7276 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_134440-a03jas5j\files\output.log
+2024-09-24 13:45:22,746 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:45:23,756 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:45:24,245 INFO    Thread-16 :7276 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_134440-a03jas5j\files\output.log
+2024-09-24 13:45:24,770 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:45:25,244 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: status_report
+2024-09-24 13:45:25,773 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:45:26,272 INFO    Thread-16 :7276 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_134440-a03jas5j\files\output.log
+2024-09-24 13:45:26,459 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: stop_status
+2024-09-24 13:45:26,459 DEBUG   SenderThread:7276 [sender.py:send_request():406] send_request: stop_status
+2024-09-24 13:45:26,787 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:45:27,802 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:45:28,288 INFO    Thread-16 :7276 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_134440-a03jas5j\files\output.log
+2024-09-24 13:45:28,813 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:45:29,818 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:45:30,290 INFO    Thread-16 :7276 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_134440-a03jas5j\files\output.log
+2024-09-24 13:45:30,724 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: status_report
+2024-09-24 13:45:30,819 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:45:31,834 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:45:32,319 INFO    Thread-16 :7276 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_134440-a03jas5j\files\output.log
+2024-09-24 13:45:32,835 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:45:33,849 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:45:34,321 INFO    Thread-16 :7276 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_134440-a03jas5j\files\output.log
+2024-09-24 13:45:34,849 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:45:35,850 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:45:36,349 INFO    Thread-16 :7276 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_134440-a03jas5j\files\output.log
+2024-09-24 13:45:36,490 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: status_report
+2024-09-24 13:45:36,865 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:45:37,880 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:45:38,366 INFO    Thread-16 :7276 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_134440-a03jas5j\files\output.log
+2024-09-24 13:45:38,898 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:45:39,913 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:45:40,382 INFO    Thread-16 :7276 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_134440-a03jas5j\files\output.log
+2024-09-24 13:45:40,916 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:45:41,100 DEBUG   SystemMonitor:7276 [system_monitor.py:_start():172] Starting system metrics aggregation loop
+2024-09-24 13:45:41,101 DEBUG   SenderThread:7276 [sender.py:send():379] send: stats
+2024-09-24 13:45:41,474 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: stop_status
+2024-09-24 13:45:41,474 DEBUG   SenderThread:7276 [sender.py:send_request():406] send_request: stop_status
+2024-09-24 13:45:41,676 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: status_report
+2024-09-24 13:45:41,927 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:45:42,397 INFO    Thread-16 :7276 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_134440-a03jas5j\files\output.log
+2024-09-24 13:45:42,930 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:45:43,944 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:45:44,414 INFO    Thread-16 :7276 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_134440-a03jas5j\files\output.log
+2024-09-24 13:45:44,959 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:45:45,993 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:45:46,429 INFO    Thread-16 :7276 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_134440-a03jas5j\files\output.log
+2024-09-24 13:45:46,935 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: status_report
+2024-09-24 13:45:47,006 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:45:48,021 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:45:48,446 INFO    Thread-16 :7276 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_134440-a03jas5j\files\output.log
+2024-09-24 13:45:49,024 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:45:50,037 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:45:50,459 INFO    Thread-16 :7276 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_134440-a03jas5j\files\output.log
+2024-09-24 13:45:51,053 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:45:51,461 INFO    Thread-16 :7276 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_134440-a03jas5j\files\output.log
+2024-09-24 13:45:52,054 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:45:52,571 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: status_report
+2024-09-24 13:45:53,069 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:45:53,477 INFO    Thread-16 :7276 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_134440-a03jas5j\files\output.log
+2024-09-24 13:45:54,071 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:45:55,084 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:45:55,493 INFO    Thread-16 :7276 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_134440-a03jas5j\files\output.log
+2024-09-24 13:45:56,084 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:45:56,490 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: stop_status
+2024-09-24 13:45:56,490 DEBUG   SenderThread:7276 [sender.py:send_request():406] send_request: stop_status
+2024-09-24 13:45:57,100 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:45:57,521 INFO    Thread-16 :7276 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_134440-a03jas5j\files\output.log
+2024-09-24 13:45:57,974 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: status_report
+2024-09-24 13:45:58,116 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:45:59,116 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:45:59,538 INFO    Thread-16 :7276 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_134440-a03jas5j\files\output.log
+2024-09-24 13:46:00,130 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:46:01,132 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:46:01,570 INFO    Thread-16 :7276 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_134440-a03jas5j\files\output.log
+2024-09-24 13:46:02,147 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:46:03,161 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:46:03,597 INFO    Thread-16 :7276 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_134440-a03jas5j\files\output.log
+2024-09-24 13:46:03,746 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: status_report
+2024-09-24 13:46:04,163 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:46:05,163 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:46:05,602 INFO    Thread-16 :7276 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_134440-a03jas5j\files\output.log
+2024-09-24 13:46:06,178 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:46:07,180 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:46:07,631 INFO    Thread-16 :7276 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_134440-a03jas5j\files\output.log
+2024-09-24 13:46:08,195 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:46:09,210 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:46:09,537 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: status_report
+2024-09-24 13:46:09,647 INFO    Thread-16 :7276 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_134440-a03jas5j\files\output.log
+2024-09-24 13:46:10,211 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:46:11,116 DEBUG   SenderThread:7276 [sender.py:send():379] send: stats
+2024-09-24 13:46:11,226 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:46:11,492 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: stop_status
+2024-09-24 13:46:11,492 DEBUG   SenderThread:7276 [sender.py:send_request():406] send_request: stop_status
+2024-09-24 13:46:11,663 INFO    Thread-16 :7276 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_134440-a03jas5j\files\output.log
+2024-09-24 13:46:12,240 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:46:13,241 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:46:13,678 INFO    Thread-16 :7276 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_134440-a03jas5j\files\output.log
+2024-09-24 13:46:14,257 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:46:15,164 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: status_report
+2024-09-24 13:46:15,257 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:46:15,695 INFO    Thread-16 :7276 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_134440-a03jas5j\files\output.log
+2024-09-24 13:46:16,273 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:46:17,288 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:46:17,725 INFO    Thread-16 :7276 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_134440-a03jas5j\files\output.log
+2024-09-24 13:46:18,304 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:46:19,319 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:46:19,757 INFO    Thread-16 :7276 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_134440-a03jas5j\files\output.log
+2024-09-24 13:46:20,332 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:46:20,724 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: status_report
+2024-09-24 13:46:21,334 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:46:21,774 INFO    Thread-16 :7276 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_134440-a03jas5j\files\output.log
+2024-09-24 13:46:22,335 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:46:23,338 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:46:23,801 INFO    Thread-16 :7276 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_134440-a03jas5j\files\output.log
+2024-09-24 13:46:24,350 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:46:25,350 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:46:25,819 INFO    Thread-16 :7276 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_134440-a03jas5j\files\output.log
+2024-09-24 13:46:26,332 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: status_report
+2024-09-24 13:46:26,364 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:46:26,490 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: stop_status
+2024-09-24 13:46:26,490 DEBUG   SenderThread:7276 [sender.py:send_request():406] send_request: stop_status
+2024-09-24 13:46:27,366 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:46:27,834 INFO    Thread-16 :7276 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_134440-a03jas5j\files\output.log
+2024-09-24 13:46:28,397 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:46:29,413 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:46:29,849 INFO    Thread-16 :7276 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_134440-a03jas5j\files\output.log
+2024-09-24 13:46:30,429 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:46:31,444 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:46:31,662 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: status_report
+2024-09-24 13:46:31,866 INFO    Thread-16 :7276 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_134440-a03jas5j\files\output.log
+2024-09-24 13:46:32,459 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:46:33,474 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:46:33,881 INFO    Thread-16 :7276 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_134440-a03jas5j\files\output.log
+2024-09-24 13:46:34,476 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:46:35,489 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:46:35,912 INFO    Thread-16 :7276 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_134440-a03jas5j\files\output.log
+2024-09-24 13:46:36,490 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:46:36,665 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: status_report
+2024-09-24 13:46:37,492 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:46:37,928 INFO    Thread-16 :7276 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_134440-a03jas5j\files\output.log
+2024-09-24 13:46:38,507 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:46:39,510 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:46:39,944 INFO    Thread-16 :7276 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_134440-a03jas5j\files\output.log
+2024-09-24 13:46:40,522 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:46:41,131 DEBUG   SenderThread:7276 [sender.py:send():379] send: stats
+2024-09-24 13:46:41,505 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: stop_status
+2024-09-24 13:46:41,505 DEBUG   SenderThread:7276 [sender.py:send_request():406] send_request: stop_status
+2024-09-24 13:46:41,537 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:46:41,790 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: status_report
+2024-09-24 13:46:41,960 INFO    Thread-16 :7276 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_134440-a03jas5j\files\output.log
+2024-09-24 13:46:42,552 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:46:43,553 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:46:43,975 INFO    Thread-16 :7276 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_134440-a03jas5j\files\output.log
+2024-09-24 13:46:44,569 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:46:45,584 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:46:45,978 INFO    Thread-16 :7276 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_134440-a03jas5j\files\output.log
+2024-09-24 13:46:46,599 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:46:47,601 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:46:47,632 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: status_report
+2024-09-24 13:46:48,008 INFO    Thread-16 :7276 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_134440-a03jas5j\files\output.log
+2024-09-24 13:46:48,614 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:46:49,615 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:46:50,040 INFO    Thread-16 :7276 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_134440-a03jas5j\files\output.log
+2024-09-24 13:46:50,617 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:46:51,632 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:46:52,057 INFO    Thread-16 :7276 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_134440-a03jas5j\files\output.log
+2024-09-24 13:46:52,647 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:46:52,849 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: status_report
+2024-09-24 13:46:53,662 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:46:54,083 INFO    Thread-16 :7276 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_134440-a03jas5j\files\output.log
+2024-09-24 13:46:54,664 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:46:55,665 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:46:56,100 INFO    Thread-16 :7276 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_134440-a03jas5j\files\output.log
+2024-09-24 13:46:56,533 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: stop_status
+2024-09-24 13:46:56,534 DEBUG   SenderThread:7276 [sender.py:send_request():406] send_request: stop_status
+2024-09-24 13:46:56,679 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:46:57,693 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:46:58,116 INFO    Thread-16 :7276 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_134440-a03jas5j\files\output.log
+2024-09-24 13:46:58,475 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: status_report
+2024-09-24 13:46:58,736 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:46:59,740 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:47:00,136 INFO    Thread-16 :7276 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_134440-a03jas5j\files\output.log
+2024-09-24 13:47:00,741 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:47:01,757 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:47:02,166 INFO    Thread-16 :7276 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_134440-a03jas5j\files\output.log
+2024-09-24 13:47:02,771 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:47:03,771 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:47:04,195 INFO    Thread-16 :7276 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_134440-a03jas5j\files\output.log
+2024-09-24 13:47:04,241 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: status_report
+2024-09-24 13:47:04,787 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:47:05,788 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:47:06,225 INFO    Thread-16 :7276 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_134440-a03jas5j\files\output.log
+2024-09-24 13:47:06,803 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:47:07,816 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:47:08,240 INFO    Thread-16 :7276 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_134440-a03jas5j\files\output.log
+2024-09-24 13:47:08,820 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:47:09,833 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: status_report
+2024-09-24 13:47:09,833 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:47:10,256 INFO    Thread-16 :7276 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_134440-a03jas5j\files\output.log
+2024-09-24 13:47:10,848 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:47:11,132 DEBUG   SenderThread:7276 [sender.py:send():379] send: stats
+2024-09-24 13:47:11,546 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: stop_status
+2024-09-24 13:47:11,547 DEBUG   SenderThread:7276 [sender.py:send_request():406] send_request: stop_status
+2024-09-24 13:47:11,850 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:47:12,272 INFO    Thread-16 :7276 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_134440-a03jas5j\files\output.log
+2024-09-24 13:47:12,852 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:47:13,863 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:47:14,304 INFO    Thread-16 :7276 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_134440-a03jas5j\files\output.log
+2024-09-24 13:47:14,866 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:47:15,492 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: status_report
+2024-09-24 13:47:15,867 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:47:16,321 INFO    Thread-16 :7276 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_134440-a03jas5j\files\output.log
+2024-09-24 13:47:16,882 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:47:17,897 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:47:18,349 INFO    Thread-16 :7276 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_134440-a03jas5j\files\output.log
+2024-09-24 13:47:18,911 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:47:19,912 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:47:20,352 INFO    Thread-16 :7276 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_134440-a03jas5j\files\output.log
+2024-09-24 13:47:20,913 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:47:21,083 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: status_report
+2024-09-24 13:47:21,956 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:47:22,366 INFO    Thread-16 :7276 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_134440-a03jas5j\files\output.log
+2024-09-24 13:47:22,965 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:47:23,973 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:47:24,380 INFO    Thread-16 :7276 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_134440-a03jas5j\files\output.log
+2024-09-24 13:47:24,975 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:47:25,990 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:47:26,397 INFO    Thread-16 :7276 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_134440-a03jas5j\files\output.log
+2024-09-24 13:47:26,554 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: stop_status
+2024-09-24 13:47:26,554 DEBUG   SenderThread:7276 [sender.py:send_request():406] send_request: stop_status
+2024-09-24 13:47:26,771 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: status_report
+2024-09-24 13:47:26,991 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:47:28,006 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:47:28,427 INFO    Thread-16 :7276 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_134440-a03jas5j\files\output.log
+2024-09-24 13:47:29,022 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:47:30,023 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:47:30,444 INFO    Thread-16 :7276 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_134440-a03jas5j\files\output.log
+2024-09-24 13:47:31,036 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:47:31,788 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: status_report
+2024-09-24 13:47:32,038 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:47:32,460 INFO    Thread-16 :7276 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_134440-a03jas5j\files\output.log
+2024-09-24 13:47:33,053 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:47:34,054 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:47:34,475 INFO    Thread-16 :7276 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_134440-a03jas5j\files\output.log
+2024-09-24 13:47:35,068 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:47:36,069 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:47:36,491 INFO    Thread-16 :7276 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_134440-a03jas5j\files\output.log
+2024-09-24 13:47:36,805 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: status_report
+2024-09-24 13:47:37,070 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:47:38,084 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:47:38,506 INFO    Thread-16 :7276 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_134440-a03jas5j\files\output.log
+2024-09-24 13:47:39,099 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:47:39,522 INFO    Thread-16 :7276 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_134440-a03jas5j\files\output.log
+2024-09-24 13:47:40,118 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:47:41,131 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:47:41,146 DEBUG   SenderThread:7276 [sender.py:send():379] send: stats
+2024-09-24 13:47:41,552 INFO    Thread-16 :7276 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_134440-a03jas5j\files\output.log
+2024-09-24 13:47:41,568 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: stop_status
+2024-09-24 13:47:41,568 DEBUG   SenderThread:7276 [sender.py:send_request():406] send_request: stop_status
+2024-09-24 13:47:41,830 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: status_report
+2024-09-24 13:47:42,147 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:47:43,162 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:47:43,570 INFO    Thread-16 :7276 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_134440-a03jas5j\files\output.log
+2024-09-24 13:47:44,177 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:47:45,179 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:47:45,600 INFO    Thread-16 :7276 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_134440-a03jas5j\files\output.log
+2024-09-24 13:47:46,179 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:47:47,195 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:47:47,617 INFO    Thread-16 :7276 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_134440-a03jas5j\files\output.log
+2024-09-24 13:47:47,818 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: status_report
+2024-09-24 13:47:48,208 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:47:49,224 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:47:49,648 INFO    Thread-16 :7276 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_134440-a03jas5j\files\output.log
+2024-09-24 13:47:50,225 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:47:51,226 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:47:51,663 INFO    Thread-16 :7276 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_134440-a03jas5j\files\output.log
+2024-09-24 13:47:52,239 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:47:53,239 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:47:53,255 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: status_report
+2024-09-24 13:47:53,682 INFO    Thread-16 :7276 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_134440-a03jas5j\files\output.log
+2024-09-24 13:47:54,240 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:47:55,241 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:47:55,708 INFO    Thread-16 :7276 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_134440-a03jas5j\files\output.log
+2024-09-24 13:47:56,257 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:47:56,568 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: stop_status
+2024-09-24 13:47:56,568 DEBUG   SenderThread:7276 [sender.py:send_request():406] send_request: stop_status
+2024-09-24 13:47:57,271 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:47:57,712 INFO    Thread-16 :7276 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_134440-a03jas5j\files\output.log
+2024-09-24 13:47:58,298 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:47:58,850 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: status_report
+2024-09-24 13:47:59,303 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:47:59,727 INFO    Thread-16 :7276 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_134440-a03jas5j\files\output.log
+2024-09-24 13:48:00,316 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:48:01,319 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:48:01,756 INFO    Thread-16 :7276 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_134440-a03jas5j\files\output.log
+2024-09-24 13:48:02,335 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:48:03,372 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:48:03,773 INFO    Thread-16 :7276 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_134440-a03jas5j\files\output.log
+2024-09-24 13:48:04,381 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:48:04,523 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: status_report
+2024-09-24 13:48:05,396 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:48:05,787 INFO    Thread-16 :7276 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_134440-a03jas5j\files\output.log
+2024-09-24 13:48:06,412 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:48:07,427 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:48:07,803 INFO    Thread-16 :7276 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_134440-a03jas5j\files\output.log
+2024-09-24 13:48:08,428 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:48:09,444 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:48:09,805 INFO    Thread-16 :7276 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_134440-a03jas5j\files\output.log
+2024-09-24 13:48:10,116 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: status_report
+2024-09-24 13:48:10,459 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:48:11,161 DEBUG   SenderThread:7276 [sender.py:send():379] send: stats
+2024-09-24 13:48:11,474 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:48:11,584 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: stop_status
+2024-09-24 13:48:11,584 DEBUG   SenderThread:7276 [sender.py:send_request():406] send_request: stop_status
+2024-09-24 13:48:11,833 INFO    Thread-16 :7276 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_134440-a03jas5j\files\output.log
+2024-09-24 13:48:12,475 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:48:13,491 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:48:13,850 INFO    Thread-16 :7276 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_134440-a03jas5j\files\output.log
+2024-09-24 13:48:14,506 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:48:15,520 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:48:15,756 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: status_report
+2024-09-24 13:48:15,865 INFO    Thread-16 :7276 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_134440-a03jas5j\files\output.log
+2024-09-24 13:48:16,522 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:48:17,537 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:48:17,883 INFO    Thread-16 :7276 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_134440-a03jas5j\files\output.log
+2024-09-24 13:48:18,538 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:48:19,554 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:48:19,911 INFO    Thread-16 :7276 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_134440-a03jas5j\files\output.log
+2024-09-24 13:48:20,565 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:48:21,367 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: status_report
+2024-09-24 13:48:21,596 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:48:21,928 INFO    Thread-16 :7276 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_134440-a03jas5j\files\output.log
+2024-09-24 13:48:22,601 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:48:23,618 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:48:23,944 INFO    Thread-16 :7276 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_134440-a03jas5j\files\output.log
+2024-09-24 13:48:24,631 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:48:25,645 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:48:25,946 INFO    Thread-16 :7276 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_134440-a03jas5j\files\output.log
+2024-09-24 13:48:26,585 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: stop_status
+2024-09-24 13:48:26,585 DEBUG   SenderThread:7276 [sender.py:send_request():406] send_request: stop_status
+2024-09-24 13:48:26,647 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:48:26,853 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: status_report
+2024-09-24 13:48:27,661 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:48:27,959 INFO    Thread-16 :7276 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_134440-a03jas5j\files\output.log
+2024-09-24 13:48:28,675 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:48:29,677 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:48:29,975 INFO    Thread-16 :7276 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_134440-a03jas5j\files\output.log
+2024-09-24 13:48:30,692 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:48:31,693 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:48:31,881 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: status_report
+2024-09-24 13:48:31,991 INFO    Thread-16 :7276 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_134440-a03jas5j\files\output.log
+2024-09-24 13:48:32,695 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:48:33,735 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:48:34,007 INFO    Thread-16 :7276 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_134440-a03jas5j\files\output.log
+2024-09-24 13:48:34,743 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:48:35,756 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:48:36,022 INFO    Thread-16 :7276 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_134440-a03jas5j\files\output.log
+2024-09-24 13:48:36,772 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:48:36,881 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: status_report
+2024-09-24 13:48:37,772 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:48:38,039 INFO    Thread-16 :7276 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_134440-a03jas5j\files\output.log
+2024-09-24 13:48:38,786 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:48:39,790 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:48:40,056 INFO    Thread-16 :7276 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_134440-a03jas5j\files\output.log
+2024-09-24 13:48:40,803 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:48:41,162 DEBUG   SenderThread:7276 [sender.py:send():379] send: stats
+2024-09-24 13:48:41,601 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: stop_status
+2024-09-24 13:48:41,601 DEBUG   SenderThread:7276 [sender.py:send_request():406] send_request: stop_status
+2024-09-24 13:48:41,818 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:48:41,896 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: status_report
+2024-09-24 13:48:42,084 INFO    Thread-16 :7276 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_134440-a03jas5j\files\output.log
+2024-09-24 13:48:42,833 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:48:43,835 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:48:44,100 INFO    Thread-16 :7276 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_134440-a03jas5j\files\output.log
+2024-09-24 13:48:44,850 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:48:45,851 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:48:46,117 INFO    Thread-16 :7276 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_134440-a03jas5j\files\output.log
+2024-09-24 13:48:46,867 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:48:46,898 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: status_report
+2024-09-24 13:48:47,883 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:48:48,132 INFO    Thread-16 :7276 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_134440-a03jas5j\files\output.log
+2024-09-24 13:48:48,897 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:48:49,912 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:48:50,149 INFO    Thread-16 :7276 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_134440-a03jas5j\files\output.log
+2024-09-24 13:48:50,928 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:48:51,925 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: status_report
+2024-09-24 13:48:51,943 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:48:52,177 INFO    Thread-16 :7276 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_134440-a03jas5j\files\output.log
+2024-09-24 13:48:52,943 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:48:53,959 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:48:54,180 INFO    Thread-16 :7276 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_134440-a03jas5j\files\output.log
+2024-09-24 13:48:54,959 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:48:55,993 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:48:56,208 INFO    Thread-16 :7276 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_134440-a03jas5j\files\output.log
+2024-09-24 13:48:56,613 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: stop_status
+2024-09-24 13:48:56,613 DEBUG   SenderThread:7276 [sender.py:send_request():406] send_request: stop_status
+2024-09-24 13:48:56,928 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: status_report
+2024-09-24 13:48:57,006 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:48:58,046 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:48:58,225 INFO    Thread-16 :7276 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_134440-a03jas5j\files\output.log
+2024-09-24 13:48:59,052 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:49:00,053 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:49:00,241 INFO    Thread-16 :7276 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_134440-a03jas5j\files\output.log
+2024-09-24 13:49:01,070 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:49:01,944 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: status_report
+2024-09-24 13:49:02,084 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:49:02,256 INFO    Thread-16 :7276 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_134440-a03jas5j\files\output.log
+2024-09-24 13:49:03,085 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:49:04,101 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:49:04,272 INFO    Thread-16 :7276 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_134440-a03jas5j\files\output.log
+2024-09-24 13:49:05,102 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:49:06,117 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:49:06,303 INFO    Thread-16 :7276 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_134440-a03jas5j\files\output.log
+2024-09-24 13:49:06,959 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: status_report
+2024-09-24 13:49:07,136 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:49:08,137 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:49:08,317 INFO    Thread-16 :7276 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_134440-a03jas5j\files\output.log
+2024-09-24 13:49:09,131 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:49:10,132 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:49:10,335 INFO    Thread-16 :7276 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_134440-a03jas5j\files\output.log
+2024-09-24 13:49:11,146 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:49:11,177 DEBUG   SenderThread:7276 [sender.py:send():379] send: stats
+2024-09-24 13:49:11,616 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: stop_status
+2024-09-24 13:49:11,616 DEBUG   SenderThread:7276 [sender.py:send_request():406] send_request: stop_status
+2024-09-24 13:49:11,973 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: status_report
+2024-09-24 13:49:12,161 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:49:12,349 INFO    Thread-16 :7276 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_134440-a03jas5j\files\output.log
+2024-09-24 13:49:13,163 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:49:14,176 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:49:14,365 INFO    Thread-16 :7276 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_134440-a03jas5j\files\output.log
+2024-09-24 13:49:15,192 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:49:16,193 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:49:16,380 INFO    Thread-16 :7276 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_134440-a03jas5j\files\output.log
+2024-09-24 13:49:16,989 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: status_report
+2024-09-24 13:49:17,208 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:49:18,220 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:49:18,394 INFO    Thread-16 :7276 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_134440-a03jas5j\files\output.log
+2024-09-24 13:49:19,263 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:49:20,264 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:49:20,422 INFO    Thread-16 :7276 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_134440-a03jas5j\files\output.log
+2024-09-24 13:49:21,266 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:49:22,006 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: status_report
+2024-09-24 13:49:22,270 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:49:22,430 INFO    Thread-16 :7276 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_134440-a03jas5j\files\output.log
+2024-09-24 13:49:23,285 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:49:24,288 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:49:24,444 INFO    Thread-16 :7276 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_134440-a03jas5j\files\output.log
+2024-09-24 13:49:25,323 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:49:26,331 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:49:26,460 INFO    Thread-16 :7276 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_134440-a03jas5j\files\output.log
+2024-09-24 13:49:26,617 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: stop_status
+2024-09-24 13:49:26,617 DEBUG   SenderThread:7276 [sender.py:send_request():406] send_request: stop_status
+2024-09-24 13:49:27,021 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: status_report
+2024-09-24 13:49:27,333 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:49:28,349 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:49:28,475 INFO    Thread-16 :7276 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_134440-a03jas5j\files\output.log
+2024-09-24 13:49:29,354 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:49:30,365 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:49:30,510 INFO    Thread-16 :7276 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_134440-a03jas5j\files\output.log
+2024-09-24 13:49:31,381 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:49:32,038 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: status_report
+2024-09-24 13:49:32,384 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:49:32,523 INFO    Thread-16 :7276 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_134440-a03jas5j\files\output.log
+2024-09-24 13:49:33,396 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:49:34,406 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:49:34,547 INFO    Thread-16 :7276 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_134440-a03jas5j\files\output.log
+2024-09-24 13:49:35,420 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:49:36,425 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:49:36,550 INFO    Thread-16 :7276 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_134440-a03jas5j\files\output.log
+2024-09-24 13:49:37,053 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: status_report
+2024-09-24 13:49:37,427 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:49:37,554 INFO    Thread-16 :7276 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_134440-a03jas5j\files\output.log
+2024-09-24 13:49:38,428 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:49:39,443 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:49:39,568 INFO    Thread-16 :7276 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_134440-a03jas5j\files\output.log
+2024-09-24 13:49:40,458 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:49:41,178 DEBUG   SenderThread:7276 [sender.py:send():379] send: stats
+2024-09-24 13:49:41,460 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:49:41,599 INFO    Thread-16 :7276 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_134440-a03jas5j\files\output.log
+2024-09-24 13:49:41,615 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: stop_status
+2024-09-24 13:49:41,615 DEBUG   SenderThread:7276 [sender.py:send_request():406] send_request: stop_status
+2024-09-24 13:49:42,068 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: status_report
+2024-09-24 13:49:42,476 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:49:43,490 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:49:43,616 INFO    Thread-16 :7276 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_134440-a03jas5j\files\output.log
+2024-09-24 13:49:44,495 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:49:45,504 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:49:45,628 INFO    Thread-16 :7276 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_134440-a03jas5j\files\output.log
+2024-09-24 13:49:46,505 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:49:47,083 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: status_report
+2024-09-24 13:49:47,520 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:49:47,646 INFO    Thread-16 :7276 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_134440-a03jas5j\files\output.log
+2024-09-24 13:49:48,534 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:49:49,538 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:49:49,662 INFO    Thread-16 :7276 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_134440-a03jas5j\files\output.log
+2024-09-24 13:49:50,538 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:49:51,553 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:49:51,664 INFO    Thread-16 :7276 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_134440-a03jas5j\files\output.log
+2024-09-24 13:49:52,102 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: status_report
+2024-09-24 13:49:52,599 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:49:53,687 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:49:53,687 INFO    Thread-16 :7276 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_134440-a03jas5j\files\output.log
+2024-09-24 13:49:54,677 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:49:55,695 INFO    Thread-16 :7276 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_134440-a03jas5j\files\output.log
+2024-09-24 13:49:55,717 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:49:56,632 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: stop_status
+2024-09-24 13:49:56,632 DEBUG   SenderThread:7276 [sender.py:send_request():406] send_request: stop_status
+2024-09-24 13:49:56,724 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:49:57,115 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: status_report
+2024-09-24 13:49:57,708 INFO    Thread-16 :7276 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_134440-a03jas5j\files\output.log
+2024-09-24 13:49:57,740 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:49:58,755 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:49:59,725 INFO    Thread-16 :7276 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_134440-a03jas5j\files\output.log
+2024-09-24 13:49:59,756 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:50:00,772 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:50:01,742 INFO    Thread-16 :7276 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_134440-a03jas5j\files\output.log
+2024-09-24 13:50:01,786 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:50:02,132 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: status_report
+2024-09-24 13:50:02,788 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:50:03,773 INFO    Thread-16 :7276 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_134440-a03jas5j\files\output.log
+2024-09-24 13:50:03,802 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:50:04,803 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:50:05,786 INFO    Thread-16 :7276 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_134440-a03jas5j\files\output.log
+2024-09-24 13:50:05,817 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:50:06,823 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:50:07,134 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: status_report
+2024-09-24 13:50:07,804 INFO    Thread-16 :7276 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_134440-a03jas5j\files\output.log
+2024-09-24 13:50:07,835 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:50:08,850 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:50:09,819 INFO    Thread-16 :7276 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_134440-a03jas5j\files\output.log
+2024-09-24 13:50:09,851 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:50:10,865 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:50:11,192 DEBUG   SenderThread:7276 [sender.py:send():379] send: stats
+2024-09-24 13:50:11,647 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: stop_status
+2024-09-24 13:50:11,647 DEBUG   SenderThread:7276 [sender.py:send_request():406] send_request: stop_status
+2024-09-24 13:50:11,836 INFO    Thread-16 :7276 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_134440-a03jas5j\files\output.log
+2024-09-24 13:50:11,866 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:50:12,146 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: status_report
+2024-09-24 13:50:12,866 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:50:13,852 INFO    Thread-16 :7276 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_134440-a03jas5j\files\output.log
+2024-09-24 13:50:13,883 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:50:14,896 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:50:15,866 INFO    Thread-16 :7276 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_134440-a03jas5j\files\output.log
+2024-09-24 13:50:15,903 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:50:16,911 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:50:17,148 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: status_report
+2024-09-24 13:50:17,897 INFO    Thread-16 :7276 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_134440-a03jas5j\files\output.log
+2024-09-24 13:50:17,912 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:50:18,913 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:50:19,899 INFO    Thread-16 :7276 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_134440-a03jas5j\files\output.log
+2024-09-24 13:50:19,914 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:50:20,926 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:50:21,913 INFO    Thread-16 :7276 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_134440-a03jas5j\files\output.log
+2024-09-24 13:50:21,929 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:50:22,164 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: status_report
+2024-09-24 13:50:22,949 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:50:23,942 INFO    Thread-16 :7276 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_134440-a03jas5j\files\output.log
+2024-09-24 13:50:23,958 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:50:24,959 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:50:25,958 INFO    Thread-16 :7276 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_134440-a03jas5j\files\output.log
+2024-09-24 13:50:25,974 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:50:26,661 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: stop_status
+2024-09-24 13:50:26,661 DEBUG   SenderThread:7276 [sender.py:send_request():406] send_request: stop_status
+2024-09-24 13:50:26,976 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:50:27,179 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: status_report
+2024-09-24 13:50:27,975 INFO    Thread-16 :7276 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_134440-a03jas5j\files\output.log
+2024-09-24 13:50:27,991 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:50:29,006 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:50:30,005 INFO    Thread-16 :7276 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_134440-a03jas5j\files\output.log
+2024-09-24 13:50:30,021 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:50:31,037 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:50:32,036 INFO    Thread-16 :7276 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_134440-a03jas5j\files\output.log
+2024-09-24 13:50:32,052 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:50:32,194 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: status_report
+2024-09-24 13:50:33,053 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:50:34,053 INFO    Thread-16 :7276 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_134440-a03jas5j\files\output.log
+2024-09-24 13:50:34,069 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:50:35,084 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:50:36,066 INFO    Thread-16 :7276 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_134440-a03jas5j\files\output.log
+2024-09-24 13:50:36,098 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:50:37,100 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:50:37,209 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: status_report
+2024-09-24 13:50:38,083 INFO    Thread-16 :7276 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_134440-a03jas5j\files\output.log
+2024-09-24 13:50:38,115 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:50:39,130 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:50:40,101 INFO    Thread-16 :7276 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_134440-a03jas5j\files\output.log
+2024-09-24 13:50:40,132 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:50:41,145 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:50:41,207 DEBUG   SenderThread:7276 [sender.py:send():379] send: stats
+2024-09-24 13:50:41,677 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: stop_status
+2024-09-24 13:50:41,677 DEBUG   SenderThread:7276 [sender.py:send_request():406] send_request: stop_status
+2024-09-24 13:50:42,119 INFO    Thread-16 :7276 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_134440-a03jas5j\files\output.log
+2024-09-24 13:50:42,149 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:50:42,225 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: status_report
+2024-09-24 13:50:43,179 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:50:44,144 INFO    Thread-16 :7276 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_134440-a03jas5j\files\output.log
+2024-09-24 13:50:44,192 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:50:45,217 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:50:46,147 INFO    Thread-16 :7276 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_134440-a03jas5j\files\output.log
+2024-09-24 13:50:46,236 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:50:47,240 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:50:47,241 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: status_report
+2024-09-24 13:50:48,165 INFO    Thread-16 :7276 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_134440-a03jas5j\files\output.log
+2024-09-24 13:50:48,241 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:50:49,255 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:50:50,178 INFO    Thread-16 :7276 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_134440-a03jas5j\files\output.log
+2024-09-24 13:50:50,256 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:50:51,256 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:50:52,210 INFO    Thread-16 :7276 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_134440-a03jas5j\files\output.log
+2024-09-24 13:50:52,257 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: status_report
+2024-09-24 13:50:52,271 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:50:53,272 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:50:54,239 INFO    Thread-16 :7276 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_134440-a03jas5j\files\output.log
+2024-09-24 13:50:54,287 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:50:55,305 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:50:56,256 INFO    Thread-16 :7276 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_134440-a03jas5j\files\output.log
+2024-09-24 13:50:56,318 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:50:56,679 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: stop_status
+2024-09-24 13:50:56,679 DEBUG   SenderThread:7276 [sender.py:send_request():406] send_request: stop_status
+2024-09-24 13:50:57,257 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: status_report
+2024-09-24 13:50:57,319 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:50:58,271 INFO    Thread-16 :7276 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_134440-a03jas5j\files\output.log
+2024-09-24 13:50:58,332 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:50:59,336 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:51:00,287 INFO    Thread-16 :7276 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_134440-a03jas5j\files\output.log
+2024-09-24 13:51:00,351 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:51:01,364 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:51:02,276 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: status_report
+2024-09-24 13:51:02,305 INFO    Thread-16 :7276 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_134440-a03jas5j\files\output.log
+2024-09-24 13:51:02,367 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:51:03,381 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:51:04,319 INFO    Thread-16 :7276 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_134440-a03jas5j\files\output.log
+2024-09-24 13:51:04,393 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:51:05,397 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:51:06,333 INFO    Thread-16 :7276 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_134440-a03jas5j\files\output.log
+2024-09-24 13:51:06,412 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:51:07,298 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: status_report
+2024-09-24 13:51:07,432 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:51:08,349 INFO    Thread-16 :7276 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_134440-a03jas5j\files\output.log
+2024-09-24 13:51:08,444 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:51:09,481 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:51:10,367 INFO    Thread-16 :7276 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_134440-a03jas5j\files\output.log
+2024-09-24 13:51:10,475 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:51:11,209 DEBUG   SenderThread:7276 [sender.py:send():379] send: stats
+2024-09-24 13:51:11,491 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:51:11,678 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: stop_status
+2024-09-24 13:51:11,678 DEBUG   SenderThread:7276 [sender.py:send_request():406] send_request: stop_status
+2024-09-24 13:51:12,302 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: status_report
+2024-09-24 13:51:12,397 INFO    Thread-16 :7276 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_134440-a03jas5j\files\output.log
+2024-09-24 13:51:12,505 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:51:13,520 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:51:14,411 INFO    Thread-16 :7276 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_134440-a03jas5j\files\output.log
+2024-09-24 13:51:14,521 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:51:15,536 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:51:16,444 INFO    Thread-16 :7276 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_134440-a03jas5j\files\output.log
+2024-09-24 13:51:16,549 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:51:17,318 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: status_report
+2024-09-24 13:51:17,554 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:51:18,460 INFO    Thread-16 :7276 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_134440-a03jas5j\files\output.log
+2024-09-24 13:51:18,568 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:51:19,569 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:51:20,490 INFO    Thread-16 :7276 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_134440-a03jas5j\files\output.log
+2024-09-24 13:51:20,584 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:51:21,586 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:51:22,319 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: status_report
+2024-09-24 13:51:22,506 INFO    Thread-16 :7276 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_134440-a03jas5j\files\output.log
+2024-09-24 13:51:22,600 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:51:23,616 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:51:24,507 INFO    Thread-16 :7276 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_134440-a03jas5j\files\output.log
+2024-09-24 13:51:24,631 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:51:25,646 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:51:26,522 INFO    Thread-16 :7276 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_134440-a03jas5j\files\output.log
+2024-09-24 13:51:26,661 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:51:26,677 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: stop_status
+2024-09-24 13:51:26,677 DEBUG   SenderThread:7276 [sender.py:send_request():406] send_request: stop_status
+2024-09-24 13:51:27,334 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: status_report
+2024-09-24 13:51:27,662 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:51:28,678 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:51:29,693 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:51:30,698 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:51:31,710 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:51:32,350 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: status_report
+2024-09-24 13:51:32,725 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:51:33,743 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:51:34,756 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:51:35,776 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:51:36,585 INFO    Thread-16 :7276 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_134440-a03jas5j\files\output.log
+2024-09-24 13:51:36,772 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:51:37,365 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: status_report
+2024-09-24 13:51:37,784 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:51:38,793 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:51:39,800 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:51:40,806 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:51:41,213 DEBUG   SenderThread:7276 [sender.py:send():379] send: stats
+2024-09-24 13:51:41,695 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: stop_status
+2024-09-24 13:51:41,695 DEBUG   SenderThread:7276 [sender.py:send_request():406] send_request: stop_status
+2024-09-24 13:51:41,819 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:51:42,379 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: status_report
+2024-09-24 13:51:42,829 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:51:43,838 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:51:44,844 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:51:45,853 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:51:46,859 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:51:47,386 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: status_report
+2024-09-24 13:51:47,868 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:51:48,876 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:51:49,885 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:51:50,894 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:51:51,908 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:51:52,912 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:51:53,381 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: status_report
+2024-09-24 13:51:53,925 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:51:54,940 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:51:55,956 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:51:56,705 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: stop_status
+2024-09-24 13:51:56,705 DEBUG   SenderThread:7276 [sender.py:send_request():406] send_request: stop_status
+2024-09-24 13:51:56,972 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:51:57,982 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:51:58,389 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: status_report
+2024-09-24 13:51:58,991 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:51:59,992 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:52:01,004 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:52:02,017 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:52:03,027 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:52:03,400 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: status_report
+2024-09-24 13:52:04,040 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:52:05,053 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:52:06,069 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:52:07,077 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:52:08,088 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:52:09,098 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:52:09,411 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: status_report
+2024-09-24 13:52:10,111 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:52:11,121 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:52:11,215 DEBUG   SenderThread:7276 [sender.py:send():379] send: stats
+2024-09-24 13:52:11,715 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: stop_status
+2024-09-24 13:52:11,715 DEBUG   SenderThread:7276 [sender.py:send_request():406] send_request: stop_status
+2024-09-24 13:52:12,135 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:52:13,151 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:52:14,162 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:52:14,424 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: status_report
+2024-09-24 13:52:15,175 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:52:16,186 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:52:17,197 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:52:18,210 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:52:19,222 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:52:19,440 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: status_report
+2024-09-24 13:52:20,236 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:52:21,247 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:52:22,260 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:52:23,271 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:52:24,287 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:52:24,442 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: status_report
+2024-09-24 13:52:25,301 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:52:26,311 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:52:26,714 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: stop_status
+2024-09-24 13:52:26,715 DEBUG   SenderThread:7276 [sender.py:send_request():406] send_request: stop_status
+2024-09-24 13:52:27,323 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:52:28,334 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:52:29,345 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:52:30,357 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:52:30,450 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: status_report
+2024-09-24 13:52:31,367 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:52:32,372 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:52:33,379 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:52:34,385 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:52:35,394 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:52:36,402 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:52:36,449 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: status_report
+2024-09-24 13:52:37,411 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:52:38,424 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:52:39,429 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:52:40,440 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:52:41,219 DEBUG   SenderThread:7276 [sender.py:send():379] send: stats
+2024-09-24 13:52:41,450 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:52:41,714 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: stop_status
+2024-09-24 13:52:41,714 DEBUG   SenderThread:7276 [sender.py:send_request():406] send_request: stop_status
+2024-09-24 13:52:41,955 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: status_report
+2024-09-24 13:52:42,457 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:52:43,468 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:52:44,479 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:52:45,484 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:52:46,485 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:52:47,443 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: status_report
+2024-09-24 13:52:47,491 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:52:48,504 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:52:49,517 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:52:50,529 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:52:51,539 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:52:52,445 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: status_report
+2024-09-24 13:52:52,552 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:52:52,890 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: partial_history
+2024-09-24 13:52:52,892 DEBUG   SenderThread:7276 [sender.py:send():379] send: history
+2024-09-24 13:52:52,892 DEBUG   SenderThread:7276 [sender.py:send_request():406] send_request: summary_record
+2024-09-24 13:52:52,893 INFO    SenderThread:7276 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-09-24 13:52:53,046 DEBUG   SenderThread:7276 [sender.py:send():379] send: telemetry
+2024-09-24 13:52:53,048 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: server_info
+2024-09-24 13:52:53,048 DEBUG   SenderThread:7276 [sender.py:send_request():406] send_request: server_info
+2024-09-24 13:52:53,200 DEBUG   SenderThread:7276 [sender.py:send():379] send: exit
+2024-09-24 13:52:53,200 INFO    SenderThread:7276 [sender.py:send_exit():586] handling exit code: 0
+2024-09-24 13:52:53,200 INFO    SenderThread:7276 [sender.py:send_exit():588] handling runtime: 492
+2024-09-24 13:52:53,201 INFO    SenderThread:7276 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-09-24 13:52:53,201 INFO    SenderThread:7276 [sender.py:send_exit():594] send defer
+2024-09-24 13:52:53,201 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: defer
+2024-09-24 13:52:53,201 INFO    HandlerThread:7276 [handler.py:handle_request_defer():184] handle defer: 0
+2024-09-24 13:52:53,202 DEBUG   SenderThread:7276 [sender.py:send_request():406] send_request: defer
+2024-09-24 13:52:53,202 INFO    SenderThread:7276 [sender.py:send_request_defer():610] handle sender defer: 0
+2024-09-24 13:52:53,202 INFO    SenderThread:7276 [sender.py:transition_state():614] send defer: 1
+2024-09-24 13:52:53,202 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: defer
+2024-09-24 13:52:53,202 INFO    HandlerThread:7276 [handler.py:handle_request_defer():184] handle defer: 1
+2024-09-24 13:52:53,202 DEBUG   SenderThread:7276 [sender.py:send_request():406] send_request: defer
+2024-09-24 13:52:53,202 INFO    SenderThread:7276 [sender.py:send_request_defer():610] handle sender defer: 1
+2024-09-24 13:52:53,202 INFO    SenderThread:7276 [sender.py:transition_state():614] send defer: 2
+2024-09-24 13:52:53,202 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: defer
+2024-09-24 13:52:53,203 INFO    HandlerThread:7276 [handler.py:handle_request_defer():184] handle defer: 2
+2024-09-24 13:52:53,203 INFO    HandlerThread:7276 [system_monitor.py:finish():203] Stopping system monitor
+2024-09-24 13:52:53,206 INFO    HandlerThread:7276 [interfaces.py:finish():200] Joined cpu monitor
+2024-09-24 13:52:53,207 DEBUG   SystemMonitor:7276 [system_monitor.py:_start():179] Finished system metrics aggregation loop
+2024-09-24 13:52:53,207 DEBUG   SystemMonitor:7276 [system_monitor.py:_start():183] Publishing last batch of metrics
+2024-09-24 13:52:53,207 INFO    HandlerThread:7276 [interfaces.py:finish():200] Joined disk monitor
+2024-09-24 13:52:53,233 INFO    HandlerThread:7276 [interfaces.py:finish():200] Joined gpu monitor
+2024-09-24 13:52:53,233 INFO    HandlerThread:7276 [interfaces.py:finish():200] Joined memory monitor
+2024-09-24 13:52:53,233 INFO    HandlerThread:7276 [interfaces.py:finish():200] Joined network monitor
+2024-09-24 13:52:53,233 DEBUG   SenderThread:7276 [sender.py:send_request():406] send_request: defer
+2024-09-24 13:52:53,233 INFO    SenderThread:7276 [sender.py:send_request_defer():610] handle sender defer: 2
+2024-09-24 13:52:53,234 INFO    SenderThread:7276 [sender.py:transition_state():614] send defer: 3
+2024-09-24 13:52:53,234 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: defer
+2024-09-24 13:52:53,234 INFO    HandlerThread:7276 [handler.py:handle_request_defer():184] handle defer: 3
+2024-09-24 13:52:53,234 DEBUG   SenderThread:7276 [sender.py:send():379] send: stats
+2024-09-24 13:52:53,235 DEBUG   SenderThread:7276 [sender.py:send_request():406] send_request: defer
+2024-09-24 13:52:53,235 INFO    SenderThread:7276 [sender.py:send_request_defer():610] handle sender defer: 3
+2024-09-24 13:52:53,235 INFO    SenderThread:7276 [sender.py:transition_state():614] send defer: 4
+2024-09-24 13:52:53,235 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: defer
+2024-09-24 13:52:53,235 INFO    HandlerThread:7276 [handler.py:handle_request_defer():184] handle defer: 4
+2024-09-24 13:52:53,235 DEBUG   SenderThread:7276 [sender.py:send_request():406] send_request: defer
+2024-09-24 13:52:53,235 INFO    SenderThread:7276 [sender.py:send_request_defer():610] handle sender defer: 4
+2024-09-24 13:52:53,235 INFO    SenderThread:7276 [sender.py:transition_state():614] send defer: 5
+2024-09-24 13:52:53,235 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: defer
+2024-09-24 13:52:53,235 INFO    HandlerThread:7276 [handler.py:handle_request_defer():184] handle defer: 5
+2024-09-24 13:52:53,236 DEBUG   SenderThread:7276 [sender.py:send():379] send: summary
+2024-09-24 13:52:53,237 INFO    SenderThread:7276 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-09-24 13:52:53,237 DEBUG   SenderThread:7276 [sender.py:send_request():406] send_request: defer
+2024-09-24 13:52:53,237 INFO    SenderThread:7276 [sender.py:send_request_defer():610] handle sender defer: 5
+2024-09-24 13:52:53,237 INFO    SenderThread:7276 [sender.py:transition_state():614] send defer: 6
+2024-09-24 13:52:53,237 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: defer
+2024-09-24 13:52:53,237 INFO    HandlerThread:7276 [handler.py:handle_request_defer():184] handle defer: 6
+2024-09-24 13:52:53,237 DEBUG   SenderThread:7276 [sender.py:send_request():406] send_request: defer
+2024-09-24 13:52:53,237 INFO    SenderThread:7276 [sender.py:send_request_defer():610] handle sender defer: 6
+2024-09-24 13:52:53,240 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: status_report
+2024-09-24 13:52:53,381 INFO    Thread-16 :7276 [dir_watcher.py:_on_file_created():271] file/dir created: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_134440-a03jas5j\files\wandb-summary.json
+2024-09-24 13:52:53,401 INFO    SenderThread:7276 [sender.py:transition_state():614] send defer: 7
+2024-09-24 13:52:53,401 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: defer
+2024-09-24 13:52:53,401 INFO    HandlerThread:7276 [handler.py:handle_request_defer():184] handle defer: 7
+2024-09-24 13:52:53,401 DEBUG   SenderThread:7276 [sender.py:send_request():406] send_request: defer
+2024-09-24 13:52:53,401 INFO    SenderThread:7276 [sender.py:send_request_defer():610] handle sender defer: 7
+2024-09-24 13:52:54,203 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: poll_exit
+2024-09-24 13:52:54,392 INFO    Thread-16 :7276 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_134440-a03jas5j\files\config.yaml
+2024-09-24 13:52:55,737 INFO    SenderThread:7276 [sender.py:transition_state():614] send defer: 8
+2024-09-24 13:52:55,737 DEBUG   SenderThread:7276 [sender.py:send_request():406] send_request: poll_exit
+2024-09-24 13:52:55,737 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: defer
+2024-09-24 13:52:55,737 INFO    HandlerThread:7276 [handler.py:handle_request_defer():184] handle defer: 8
+2024-09-24 13:52:55,737 DEBUG   SenderThread:7276 [sender.py:send_request():406] send_request: defer
+2024-09-24 13:52:55,737 INFO    SenderThread:7276 [sender.py:send_request_defer():610] handle sender defer: 8
+2024-09-24 13:52:55,737 INFO    SenderThread:7276 [job_builder.py:build():440] Attempting to build job artifact
+2024-09-24 13:52:55,738 INFO    SenderThread:7276 [job_builder.py:_get_source_type():569] is repo sourced job
+2024-09-24 13:52:55,776 INFO    SenderThread:7276 [job_builder.py:build():545] adding wandb-job metadata file
+2024-09-24 13:52:55,781 INFO    SenderThread:7276 [sender.py:transition_state():614] send defer: 9
+2024-09-24 13:52:55,782 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: defer
+2024-09-24 13:52:55,782 INFO    HandlerThread:7276 [handler.py:handle_request_defer():184] handle defer: 9
+2024-09-24 13:52:55,782 DEBUG   SenderThread:7276 [sender.py:send():379] send: artifact
+2024-09-24 13:52:56,229 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: poll_exit
+2024-09-24 13:52:56,415 INFO    Thread-16 :7276 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_134440-a03jas5j\files\output.log
+2024-09-24 13:52:58,410 INFO    SenderThread:7276 [sender.py:send_artifact():1537] sent artifact job-https___github.com_PiotrPotrz_H_SEG.git_inference.py - {'id': 'QXJ0aWZhY3Q6MTI0NDA4MzMwMw==', 'state': 'COMMITTED', 'artifactSequence': {'id': 'QXJ0aWZhY3RDb2xsZWN0aW9uOjQ2MDMyMTQ5MQ==', 'latestArtifact': {'id': 'QXJ0aWZhY3Q6MTI0NDA4MzMwMw==', 'versionIndex': 1}}}
+2024-09-24 13:52:58,410 DEBUG   SenderThread:7276 [sender.py:send_request():406] send_request: defer
+2024-09-24 13:52:58,410 INFO    SenderThread:7276 [sender.py:send_request_defer():610] handle sender defer: 9
+2024-09-24 13:52:58,410 INFO    SenderThread:7276 [dir_watcher.py:finish():358] shutting down directory watcher
+2024-09-24 13:52:58,410 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: status_report
+2024-09-24 13:52:58,434 INFO    SenderThread:7276 [dir_watcher.py:finish():388] scan: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_134440-a03jas5j\files
+2024-09-24 13:52:58,434 INFO    SenderThread:7276 [dir_watcher.py:finish():402] scan save: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_134440-a03jas5j\files\conda-environment.yaml conda-environment.yaml
+2024-09-24 13:52:58,434 INFO    SenderThread:7276 [dir_watcher.py:finish():402] scan save: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_134440-a03jas5j\files\config.yaml config.yaml
+2024-09-24 13:52:58,435 INFO    SenderThread:7276 [dir_watcher.py:finish():402] scan save: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_134440-a03jas5j\files\output.log output.log
+2024-09-24 13:52:58,437 INFO    SenderThread:7276 [dir_watcher.py:finish():402] scan save: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_134440-a03jas5j\files\requirements.txt requirements.txt
+2024-09-24 13:52:58,437 INFO    SenderThread:7276 [dir_watcher.py:finish():402] scan save: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_134440-a03jas5j\files\wandb-metadata.json wandb-metadata.json
+2024-09-24 13:52:58,437 INFO    SenderThread:7276 [dir_watcher.py:finish():402] scan save: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_134440-a03jas5j\files\wandb-summary.json wandb-summary.json
+2024-09-24 13:52:58,440 INFO    SenderThread:7276 [sender.py:transition_state():614] send defer: 10
+2024-09-24 13:52:58,440 DEBUG   SenderThread:7276 [sender.py:send_request():406] send_request: poll_exit
+2024-09-24 13:52:58,441 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: defer
+2024-09-24 13:52:58,441 INFO    HandlerThread:7276 [handler.py:handle_request_defer():184] handle defer: 10
+2024-09-24 13:52:58,441 DEBUG   SenderThread:7276 [sender.py:send_request():406] send_request: defer
+2024-09-24 13:52:58,441 INFO    SenderThread:7276 [sender.py:send_request_defer():610] handle sender defer: 10
+2024-09-24 13:52:58,441 INFO    SenderThread:7276 [file_pusher.py:finish():169] shutting down file pusher
+2024-09-24 13:52:59,006 INFO    wandb-upload_0:7276 [upload_job.py:push():130] Uploaded file D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_134440-a03jas5j\files\config.yaml
+2024-09-24 13:52:59,047 INFO    wandb-upload_3:7276 [upload_job.py:push():130] Uploaded file D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_134440-a03jas5j\files\wandb-summary.json
+2024-09-24 13:52:59,048 INFO    wandb-upload_1:7276 [upload_job.py:push():130] Uploaded file D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_134440-a03jas5j\files\output.log
+2024-09-24 13:52:59,061 INFO    wandb-upload_2:7276 [upload_job.py:push():130] Uploaded file D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_134440-a03jas5j\files\requirements.txt
+2024-09-24 13:52:59,251 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: poll_exit
+2024-09-24 13:52:59,251 DEBUG   SenderThread:7276 [sender.py:send_request():406] send_request: poll_exit
+2024-09-24 13:52:59,267 INFO    Thread-15 (_thread_body):7276 [sender.py:transition_state():614] send defer: 11
+2024-09-24 13:52:59,267 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: defer
+2024-09-24 13:52:59,267 INFO    HandlerThread:7276 [handler.py:handle_request_defer():184] handle defer: 11
+2024-09-24 13:52:59,267 DEBUG   SenderThread:7276 [sender.py:send_request():406] send_request: defer
+2024-09-24 13:52:59,267 INFO    SenderThread:7276 [sender.py:send_request_defer():610] handle sender defer: 11
+2024-09-24 13:52:59,267 INFO    SenderThread:7276 [file_pusher.py:join():175] waiting for file pusher
+2024-09-24 13:52:59,268 INFO    SenderThread:7276 [sender.py:transition_state():614] send defer: 12
+2024-09-24 13:52:59,268 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: defer
+2024-09-24 13:52:59,268 INFO    HandlerThread:7276 [handler.py:handle_request_defer():184] handle defer: 12
+2024-09-24 13:52:59,268 DEBUG   SenderThread:7276 [sender.py:send_request():406] send_request: defer
+2024-09-24 13:52:59,268 INFO    SenderThread:7276 [sender.py:send_request_defer():610] handle sender defer: 12
+2024-09-24 13:52:59,268 INFO    SenderThread:7276 [file_stream.py:finish():601] file stream finish called
+2024-09-24 13:52:59,781 INFO    SenderThread:7276 [file_stream.py:finish():605] file stream finish is done
+2024-09-24 13:52:59,781 INFO    SenderThread:7276 [sender.py:transition_state():614] send defer: 13
+2024-09-24 13:52:59,781 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: defer
+2024-09-24 13:52:59,781 INFO    HandlerThread:7276 [handler.py:handle_request_defer():184] handle defer: 13
+2024-09-24 13:52:59,781 DEBUG   SenderThread:7276 [sender.py:send_request():406] send_request: defer
+2024-09-24 13:52:59,781 INFO    SenderThread:7276 [sender.py:send_request_defer():610] handle sender defer: 13
+2024-09-24 13:52:59,781 INFO    SenderThread:7276 [sender.py:transition_state():614] send defer: 14
+2024-09-24 13:52:59,781 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: defer
+2024-09-24 13:52:59,781 INFO    HandlerThread:7276 [handler.py:handle_request_defer():184] handle defer: 14
+2024-09-24 13:52:59,782 DEBUG   SenderThread:7276 [sender.py:send():379] send: final
+2024-09-24 13:52:59,782 DEBUG   SenderThread:7276 [sender.py:send():379] send: footer
+2024-09-24 13:52:59,782 DEBUG   SenderThread:7276 [sender.py:send_request():406] send_request: defer
+2024-09-24 13:52:59,782 INFO    SenderThread:7276 [sender.py:send_request_defer():610] handle sender defer: 14
+2024-09-24 13:52:59,782 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: poll_exit
+2024-09-24 13:52:59,783 DEBUG   SenderThread:7276 [sender.py:send_request():406] send_request: poll_exit
+2024-09-24 13:52:59,783 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-24 13:52:59,784 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: get_summary
+2024-09-24 13:52:59,784 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: sampled_history
+2024-09-24 13:52:59,785 DEBUG   HandlerThread:7276 [handler.py:handle_request():158] handle_request: shutdown
+2024-09-24 13:52:59,785 INFO    HandlerThread:7276 [handler.py:finish():882] shutting down handler
+2024-09-24 13:53:00,785 INFO    WriterThread:7276 [datastore.py:close():296] close: D:\SEGMENTACJA\pythonProject\H_SEG\wandb\run-20240924_134440-a03jas5j\run-a03jas5j.wandb
+2024-09-24 13:53:00,785 INFO    SenderThread:7276 [sender.py:finish():1615] shutting down sender
+2024-09-24 13:53:00,785 INFO    SenderThread:7276 [file_pusher.py:finish():169] shutting down file pusher
+2024-09-24 13:53:00,785 INFO    SenderThread:7276 [file_pusher.py:join():175] waiting for file pusher

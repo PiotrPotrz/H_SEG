@@ -1,0 +1,51 @@
+wandb_version: 1
+
+model:
+  desc: null
+  value: smpUNet++
+batch_size:
+  desc: null
+  value: 1
+annotator:
+  desc: null
+  value: 1
+_wandb:
+  desc: null
+  value:
+    python_version: 3.11.9
+    cli_version: 0.17.5
+    framework: torch
+    is_jupyter_run: false
+    is_kaggle_kernel: false
+    start_time: 1727180195
+    t:
+      1:
+      - 1
+      - 5
+      - 41
+      - 49
+      - 53
+      - 55
+      - 63
+      - 74
+      2:
+      - 1
+      - 5
+      - 41
+      - 49
+      - 53
+      - 55
+      - 63
+      - 74
+      3:
+      - 2
+      - 16
+      - 17
+      - 23
+      - 37
+      4: 3.11.9
+      5: 0.17.5
+      8:
+      - 3
+      - 5
+      13: windows-amd64
