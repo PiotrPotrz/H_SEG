@@ -8,6 +8,10 @@ import wandb
 from utils.metrics import calculate_iou, calculate_ap_for_segmentation
 from utils.transformation import transform_mask, transform_batch
 
+# augmentacja z artykułu
+from utils.better_aug import BetterAugmentation
+
+
 """config = {"epochs": 200,
             "batch_size": 6, # zmieniam na 2 z 6, żeby zobaczyć co się stanie
             "lr": 1e-3,
@@ -40,9 +44,6 @@ def train(model: torch.nn, train_loader, optimizer, scheduler, loss_fn, augmenta
     total_iou_multiclass = 0
 
     for i, data in enumerate(train_loader):
-        if T_aug == True:
-            raise NotImplementedError
-
         if len(data) == 2:
             inputs, labels = data
             if (i+1) == 1 or (i+1) % (4 * inputs.size(0)) == 0:
@@ -58,6 +59,12 @@ def train(model: torch.nn, train_loader, optimizer, scheduler, loss_fn, augmenta
 
         elif len(data) == 6:
             raise NotImplementedError
+
+        if T_aug == True:
+            for i in inputs.shape[0]:
+                if len(data) == 2:
+                    inputs[i], labels[i] = augmentation(inputs[i], labels[i])
+
 
         labels1 = transform_batch(labels.cpu(),1)
         labels2 = transform_batch(labels.cpu(), 2)
