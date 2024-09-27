@@ -117,7 +117,7 @@ def val(model: torch.nn, validation_loader, loss_fn, epoch_number, scheduler, de
                 inputs = inputs.to(device)
                 outputs = model(inputs)
                 output1 = outputs[:, :3, :, :]
-                output2 = outputs[:, [0, 1], :, :]
+                output2 = outputs[:, [0, -1], :, :]
 
                 preds1 = torch.argmax(output1, dim=1)
                 preds2 = torch.argmax(output2, dim=1)
