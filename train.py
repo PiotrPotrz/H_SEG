@@ -16,6 +16,9 @@ def train(model: torch.nn, train_loader, optimizer, scheduler, loss_fn, augmenta
         config = yaml.safe_load(file)
         file.close()
 
+    if T_aug == True:
+        augmentation = BetterAugmentation()
+
     model.train()
 
     total_loss = 0

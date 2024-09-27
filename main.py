@@ -167,3 +167,12 @@ for epoch in range(config["epochs"]):
         model_path = path_config['save_model_path'] + '/' + name + '_last_model'
         torch.save(model.state_dict(), model_path)
         print('Model saved')
+
+# zapisywanie modelów na wandb
+
+wandb.save(path_config['save_model_path'] + '/' + name + '_best_model_iou_oneclass')
+wandb.save(path_config['save_model_path'] + '/' + name + '_best_model_ap_oneclass')
+wandb.save(path_config['save_model_path'] + '/' + name + '_best_model_ap_head')
+wandb.save(path_config['save_model_path'] + '/' + name + '_best_model_ap_tail')
+wandb.save(path_config['save_model_path'] + '/' + name + '_best_model_iou_multiclass')
+wandb.save(path_config['save_model_path'] + '/' + name + '_last_model')

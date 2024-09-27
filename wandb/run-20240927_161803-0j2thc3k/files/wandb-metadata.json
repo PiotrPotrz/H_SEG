@@ -1,0 +1,53 @@
+{
+    "os": "Windows-10-10.0.19045-SP0",
+    "python": "3.11.9",
+    "heartbeatAt": "2024-09-27T14:18:04.253890",
+    "startedAt": "2024-09-27T14:18:03.454915",
+    "docker": null,
+    "cuda": null,
+    "args": [],
+    "state": "running",
+    "program": "D:\\SEGMENTACJA\\pythonProject\\H_SEG\\main.py",
+    "codePathLocal": "main.py",
+    "codePath": "main.py",
+    "git": {
+        "remote": "https://github.com/PiotrPotrz/H_SEG.git",
+        "commit": "9b63a73587672ccb01212a7c8f524ced3fef9918"
+    },
+    "email": "piotr.potrzebowski@interia.pl",
+    "root": "D:/SEGMENTACJA/pythonProject/H_SEG",
+    "host": "DESKTOP-JQBABD4",
+    "username": "Piotr",
+    "executable": "D:\\anaconda\\envs\\pythonProject\\python.exe",
+    "cpu_count": 6,
+    "cpu_count_logical": 6,
+    "cpu_freq": {
+        "current": 3696.0,
+        "min": 0.0,
+        "max": 3696.0
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 3696.0,
+            "min": 0.0,
+            "max": 3696.0
+        }
+    ],
+    "disk": {
+        "/": {
+            "total": 753.3037071228027,
+            "used": 669.5477867126465
+        }
+    },
+    "gpu": "NVIDIA GeForce RTX 2060",
+    "gpu_count": 1,
+    "gpu_devices": [
+        {
+            "name": "NVIDIA GeForce RTX 2060",
+            "memory_total": 6442450944
+        }
+    ],
+    "memory": {
+        "total": 15.912944793701172
+    }
+}
