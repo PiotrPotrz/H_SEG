@@ -11,24 +11,6 @@ from utils.transformation import transform_mask, transform_batch
 # augmentacja z artykułu
 from utils.better_aug import BetterAugmentation
 
-
-"""config = {"epochs": 200,
-            "batch_size": 6, # zmieniam na 2 z 6, żeby zobaczyć co się stanie
-            "lr": 1e-3,
-            "annotator": 1, # zmieniam na jeden
-            "model": 'smpUNet++',
-            "augmentation": False,
-            "loss": "CrossEntropyLoss",
-            "optimizer": "Adam",
-            "scheduler": "CosineAnnealingLR",
-            "place": "lab",
-            "mode": "multiclass", # zmieniam z normal na multiclass
-            "aug_type": "BetterAugmentation",
-            "k": 5
-          } # TODO WPISAĆ DO YAMLA"""
-# będzie to updatowane do yamla w mainie i wykorzystywane w calym pliku !!!
-
-
 def train(model: torch.nn, train_loader, optimizer, scheduler, loss_fn, augmentation, T_aug, epoch_number, device: torch.device):
     with open("train_config.yaml","r") as file:
         config = yaml.safe_load(file)
@@ -142,40 +124,3 @@ def train(model: torch.nn, train_loader, optimizer, scheduler, loss_fn, augmenta
     wandb.log(metrics)
 
     return avg_loss, avg_iou_multiclass, avg_iou_oneclass
-# z tutorialów torcha
-
-"""def train_one_epoch(epoch_index, tb_writer):
-    running_loss = 0.
-    last_loss = 0.
-
-    # Here, we use enumerate(training_loader) instead of
-    # iter(training_loader) so that we can track the batch
-    # index and do some intra-epoch reporting
-    for i, data in enumerate(training_loader):
-        # Every data instance is an input + label pair
-        inputs, labels = data
-
-        # Zero your gradients for every batch!
-        optimizer.zero_grad()
-
-        # Make predictions for this batch
-        outputs = model(inputs)
-
-        # Compute the loss and its gradients
-        loss = loss_fn(outputs, labels)
-        loss.backward()
-
-        # Adjust learning weights
-        optimizer.step()
-
-        # Gather data and report
-        running_loss += loss.item()
-        if i % 1000 == 999:
-            last_loss = running_loss / 1000 # loss per batch
-            print('  batch {} loss: {}'.format(i + 1, last_loss))
-            tb_x = epoch_index * len(training_loader) + i + 1
-            tb_writer.add_scalar('Loss/train', last_loss, tb_x)
-            running_loss = 0.
-
-    return last_loss
-"""
