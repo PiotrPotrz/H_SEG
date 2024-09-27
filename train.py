@@ -34,7 +34,7 @@ def train(model: torch.nn, train_loader, optimizer, scheduler, loss_fn, augmenta
         config = yaml.safe_load(file)
         file.close()
 
-    model.eval()
+    model.train()
 
     total_loss = 0
     total_loss_oneclass = 0
@@ -142,9 +142,6 @@ def train(model: torch.nn, train_loader, optimizer, scheduler, loss_fn, augmenta
     wandb.log(metrics)
 
     return avg_loss, avg_iou_multiclass, avg_iou_oneclass
-
-    return
-
 # z tutorialów torcha
 
 """def train_one_epoch(epoch_index, tb_writer):
