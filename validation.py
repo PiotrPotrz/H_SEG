@@ -69,7 +69,6 @@ def val(model: torch.nn, validation_loader, loss_fn, epoch_number, scheduler, de
 
     with open("train_config.yaml","r") as file:
         config = yaml.safe_load(file)
-        file.close()
 
 
     softmask_oneclass_list = []
@@ -82,14 +81,14 @@ def val(model: torch.nn, validation_loader, loss_fn, epoch_number, scheduler, de
         for i, val_data in enumerate(validation_loader):
             if len(val_data) == 2:
                 inputs, labels = val_data
-                labels_y1 = labels.type(torch.FloatTensor).to(device)
+                labels_y1 = labels.type(torch.FloatTensor)
                 if (i + 1) == 1 or (i + 1) % (4 * inputs.size(0)) == 0:
                     print(f"validation {(i + 1) * inputs.size(0)} / {len(validation_loader.dataset)}")
             elif len(val_data) == 6:
                 raise NotImplementedError
             
-            labels = labels.to(device)
-            images = labels.detach().cpu().numpy().transpose(0, 2, 3, 1)
+            inputs = inputs.to(device)
+            images = inputs.detach().cpu().numpy().transpose(0, 2, 3, 1)
             if config["annotator"] == 1:
                 labels = labels_y1.to(device)
             elif config["annotator"] == 2:

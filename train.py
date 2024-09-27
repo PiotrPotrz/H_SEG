@@ -49,14 +49,6 @@ def train(model: torch.nn, train_loader, optimizer, scheduler, loss_fn, augmenta
             if (i+1) == 1 or (i+1) % (4 * inputs.size(0)) == 0:
                 print(f"training {(i+1)*inputs.size(0)} / {len(train_loader.dataset)}")
 
-            if config["loss"] == "CrossEntropyLoss" or loss_fn == nn.CrossEntropyLoss:
-                labels = labels.type(torch.LongTensor)
-            if config["loss"] == "BCEWithLogitsLoss" or loss_fn == nn.BCEWithLogitsLoss:
-                labels = labels.type(torch.FloatTensor)
-            labels = labels.to(device)
-            labelsBCE = labels[:, [0, -1], :, :]
-            labelsBCE = labelsBCE.to(device)
-
         elif len(data) == 6:
             raise NotImplementedError
 
@@ -64,6 +56,15 @@ def train(model: torch.nn, train_loader, optimizer, scheduler, loss_fn, augmenta
             for i in inputs.shape[0]:
                 if len(data) == 2:
                     inputs[i], labels[i] = augmentation(inputs[i], labels[i])
+
+        labels = labels.to(device)
+        if len(data) == 2:
+            if config["loss"] == "CrossEntropyLoss" or loss_fn == nn.CrossEntropyLoss:
+                labels = labels.type(torch.LongTensor)
+            if config["loss"] == "BCEWithLogitsLoss" or loss_fn == nn.BCEWithLogitsLoss:
+                labels = labels.type(torch.FloatTensor)
+            labelsBCE = labels[:, [0, -1], :, :]
+            labelsBCE = labelsBCE.to(device)
 
 
         labels1 = transform_batch(labels.cpu(),1)
