@@ -126,9 +126,12 @@ for epoch in range(config["epochs"]):
     epoch_number = epoch + 1
     # train_loss, train_iou_multiclass, train_iou_oneclass = train.train(model, train_loader, optimizer, scheduler,
     #                                                                    loss_fn, config["augmentation"], config["aug_type"], epoch_number, device)
+    # train_loss, train_iou_multiclass, train_iou_oneclass = train.train(model, train_loader, optimizer, scheduler,
+    #                                                                    loss_fn, aug,
+    #                                                                    config["aug_type"], epoch_number, device)
     train_loss, train_iou_multiclass, train_iou_oneclass = train.train(model, train_loader, optimizer, scheduler,
                                                                        loss_fn, aug,
-                                                                       config["aug_type"], epoch_number, device)
+                                                                       True, epoch_number, device)
     validation_iou_multiclass, validation_iou_oneclass, vimages, vlbls_multiclass, vlbls_oneclass, vpreds_multiclass, vpreds_oneclass, ap_score_oneclass, ap_score_head, ap_score_tail = validation.val(model, val_loader, loss_fn, epoch_number, scheduler, device)
     validation.plot_results(vimages, vlbls_multiclass, vpreds_multiclass, index=0, mode="val", number="1")
     validation.plot_results(vimages, vlbls_oneclass, vpreds_oneclass, index=0, mode="val", number="2")

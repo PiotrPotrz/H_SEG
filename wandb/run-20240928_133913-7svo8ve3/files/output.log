@@ -1,0 +1,9 @@
+D:\SEGMENTACJA\SegSperm_part\SegSperm_part/train/GT1_mixed
+(432,)
+X shape: (432, 512, 512, 3)
+y shape: (432, 512, 512, 4)
+D:\SEGMENTACJA\SegSperm_part\SegSperm_part/test/GT1_mixed
+(119,)
+X shape: (119, 512, 512, 3)
+y shape: (119, 512, 512, 4)
+Backend tkagg is interactive backend. Turning interactive mode on.
