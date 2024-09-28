@@ -42,7 +42,7 @@ def train(model: torch.nn, train_loader, optimizer, scheduler, loss_fn, augmenta
                 if len(data) == 2:
                     inputs[i], labels[i] = augmentation(inputs[i], labels[i])
 
-        labels = labels.to(device)
+        inputs = inputs.to(device)
         if len(data) == 2:
             if config["loss"] == "CrossEntropyLoss" or loss_fn == nn.CrossEntropyLoss:
                 labels = labels.type(torch.LongTensor)
@@ -60,7 +60,7 @@ def train(model: torch.nn, train_loader, optimizer, scheduler, loss_fn, augmenta
 
         optimizer.zero_grad()
 
-        inputs = inputs.to(device)
+        # inputs = inputs.to(device)
 
         output = model(inputs)
         output1 = output[:, :3, :, :]
