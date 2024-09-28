@@ -48,6 +48,7 @@ def train(model: torch.nn, train_loader, optimizer, scheduler, loss_fn, augmenta
                 labels = labels.type(torch.LongTensor)
             if config["loss"] == "BCEWithLogitsLoss" or loss_fn == nn.BCEWithLogitsLoss:
                 labels = labels.type(torch.FloatTensor)
+            labels = labels.to(device)
             labelsBCE = labels[:, [0, -1], :, :]
             labelsBCE = labelsBCE.to(device)
 
