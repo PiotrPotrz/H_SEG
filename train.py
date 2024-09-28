@@ -38,9 +38,9 @@ def train(model: torch.nn, train_loader, optimizer, scheduler, loss_fn, augmenta
             raise NotImplementedError
 
         if T_aug == True:
-            for i in range(inputs.shape[0]):
+            for qnumber in range(inputs.shape[0]):
                 if len(data) == 2:
-                    inputs[i], labels[i] = augmentation(inputs[i], labels[i])
+                    inputs[qnumber], labels[qnumber] = augmentation(inputs[qnumber], labels[qnumber])
 
         inputs = inputs.to(device)
         if len(data) == 2:
